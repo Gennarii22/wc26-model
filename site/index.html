@@ -55,6 +55,10 @@ h1 .hl{background:linear-gradient(120deg,#FF4D75,#E8003D);-webkit-background-cli
 .bb .t{font-size:16px;font-weight:800}.bb .d{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px}
 .bb.a{background:rgba(59,130,246,.16);border:1px solid rgba(59,130,246,.4)}
 .bb.b{background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.35)}
+.savelink{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.55);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 14px}
+.savelink a{color:#7FB2FF;text-decoration:none;font-weight:600;word-break:break-all}
+.savelink button{margin-left:auto;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:8px;color:#fff;font-size:12px;font-weight:600;padding:6px 12px;cursor:pointer;font-family:inherit}
+.savelink button:hover{background:rgba(255,255,255,.16)}
 .foot{font-size:11.5px;color:rgba(255,255,255,.38);line-height:1.6;text-align:center;padding:0 10px}
 @media(max-width:560px){h1{font-size:27px}.teasers{grid-template-columns:1fr 1fr}.bigbtns{grid-template-columns:1fr}}
 </style>
@@ -104,6 +108,11 @@ h1 .hl{background:linear-gradient(120deg,#FF4D75,#E8003D);-webkit-background-cli
     <div class="bigbtns">
       <a class="bb a" href="dashboard.html"><div class="t">🏆 Modello & Antepost →</div><div class="d">Titolo, gironi, tabellone, capocannoniere</div></a>
       <a class="bb b" href="betting.html"><div class="t">💰 Value Bet partite →</div><div class="d">Tutte le partite, quote fair, edge vs book</div></a>
+    </div>
+    <div class="savelink">
+      <span>🔖 Salva questo link per tornare quando vuoi:</span>
+      <a id="directlink" href="dashboard.html"></a>
+      <button id="copylink" type="button">Copia</button>
     </div>
   </div>
 
@@ -158,6 +167,16 @@ async function submit(){
 }
 go.onclick=submit;
 [name,email].forEach(el=>el.addEventListener('keydown',ev=>{if(ev.key==='Enter')submit();}));
+
+// link diretto da salvare (apre il modello saltando il gate)
+(function(){
+  const dl=document.getElementById('directlink');
+  const url=location.origin+location.pathname.replace(/index\.html?$/,'')+'dashboard.html';
+  dl.textContent=url;
+  const cp=document.getElementById('copylink');
+  cp.onclick=()=>{(navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject())
+    .then(()=>{cp.textContent='Copiato ✓';setTimeout(()=>cp.textContent='Copia',1500);}).catch(()=>{});};
+})();
 </script>
 </body>
 </html>
