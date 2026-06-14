@@ -45,6 +45,8 @@ h1 .hl{background:linear-gradient(120deg,#FF4D75,#E8003D);-webkit-background-cli
 .cta:hover{filter:brightness(1.08)}.cta:active{transform:scale(.98)}.cta:disabled{opacity:.6;cursor:wait}
 .consent{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.5}
 .consent a{color:rgba(255,255,255,.6)}
+.check{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:rgba(255,255,255,.55);line-height:1.45;cursor:pointer}
+.check input{margin-top:2px;width:16px;height:16px;accent-color:#E8003D;flex-shrink:0;cursor:pointer}
 .err{font-size:13px;color:#FF6B81;font-weight:600;display:none}
 .unlocked{display:none;flex-direction:column;gap:12px}
 .bigbtns{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -88,11 +90,13 @@ h1 .hl{background:linear-gradient(120deg,#FF4D75,#E8003D);-webkit-background-cli
     <h2>Sblocca il modello — gratis</h2>
     <p>Inserisci la tua email: ti apro subito il modello completo e ti avviso quando esce un aggiornamento importante (fine gironi, ottavi, quarti). Niente spam.</p>
     <div class="form">
+      <input type="text" id="name" placeholder="Il tuo nome" autocomplete="given-name">
       <input type="email" id="email" placeholder="latua@email.com" autocomplete="email" inputmode="email">
-      <button class="cta" id="go">Sblocca il modello →</button>
     </div>
-    <div class="err" id="err">Inserisci un'email valida.</div>
-    <div class="consent">Inviando accetti di ricevere aggiornamenti sul modello. Puoi disiscriverti quando vuoi. ⚠️ Solo a scopo informativo · 18+ · scommettere comporta rischi.</div>
+    <label class="check"><input type="checkbox" id="consent"><span>Acconsento al trattamento dei miei dati (nome ed email) per ricevere aggiornamenti sul modello del Mondiale. Posso revocare il consenso e disiscrivermi in qualsiasi momento.</span></label>
+    <button class="cta" id="go" style="align-self:flex-start">Sblocca il modello →</button>
+    <div class="err" id="err">Compila nome, email valida e spunta il consenso.</div>
+    <div class="consent">⚠️ Solo a scopo informativo e di intrattenimento · 18+ · scommettere comporta rischi.</div>
   </div>
 
   <div class="unlocked glass" id="unlocked" style="border-radius:20px;padding:24px">
@@ -133,15 +137,17 @@ const gate=document.getElementById('gate'), unlocked=document.getElementById('un
 function showUnlocked(){gate.style.display='none';unlocked.style.display='flex';}
 if(localStorage.getItem(UNLOCK_KEY)==='1') showUnlocked();
 
-const go=document.getElementById('go'), email=document.getElementById('email'), err=document.getElementById('err');
+const go=document.getElementById('go'), name=document.getElementById('name'),
+      email=document.getElementById('email'), consent=document.getElementById('consent'),
+      err=document.getElementById('err');
 function valid(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
 async function submit(){
-  const e=email.value.trim();
-  if(!valid(e)){err.style.display='block';return;}
+  const n=name.value.trim(), e=email.value.trim();
+  if(n.length<2 || !valid(e) || !consent.checked){err.style.display='block';return;}
   err.style.display='none'; go.disabled=true; go.textContent='Sblocco…';
   try{
     if(APPS_SCRIPT_URL && !APPS_SCRIPT_URL.startsWith('PASTE')){
-      const body=new URLSearchParams({email:e, src:'wc26'});
+      const body=new URLSearchParams({name:n, email:e, consent:'true', src:'wc26'});
       await fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',body});
     }
   }catch(_){}
@@ -151,7 +157,7 @@ async function submit(){
   unlocked.scrollIntoView({behavior:'smooth',block:'center'});
 }
 go.onclick=submit;
-email.addEventListener('keydown',ev=>{if(ev.key==='Enter')submit();});
+[name,email].forEach(el=>el.addEventListener('keydown',ev=>{if(ev.key==='Enter')submit();}));
 </script>
 </body>
 </html>

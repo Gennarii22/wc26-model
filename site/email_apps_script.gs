@@ -4,7 +4,7 @@
  *
  * SETUP (5 minuti):
  * 1. Vai su https://sheets.new → crea un foglio, chiamalo "WC26 Iscritti".
- *    Nella riga 1 metti le intestazioni: A1=Data  B1=Email  C1=Fonte
+ *    Riga 1 intestazioni: A1=Data  B1=Nome  C1=Email  D1=Consenso  E1=Fonte
  * 2. Copia l'ID del foglio dall'URL:
  *    docs.google.com/spreadsheets/d/ >>> QUESTO_E_L_ID <<< /edit
  *    e incollalo qui sotto in SHEET_ID.
@@ -28,9 +28,11 @@ function doPost(e) {
   try {
     var ss = SpreadsheetApp.openById(SHEET_ID);
     var sheet = ss.getSheetByName("WC26 Iscritti") || ss.getActiveSheet();
+    var name = (e.parameter.name || "").toString().trim();
     var email = (e.parameter.email || "").toString().trim();
+    var consent = (e.parameter.consent || "").toString();
     var src = (e.parameter.src || "wc26").toString();
-    if (email) sheet.appendRow([new Date(), email, src]);
+    if (email) sheet.appendRow([new Date(), name, email, consent, src]);
     return ContentService
       .createTextOutput(JSON.stringify({ ok: true }))
       .setMimeType(ContentService.MimeType.JSON);
