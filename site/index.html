@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mondiale 2026 — Il Modello | 20.000 simulazioni, aggiornato ogni giornata</title>
+<meta name="description" content="Modello probabilistico del Mondiale 2026: 20.000 simulazioni Monte Carlo, tutte le partite, value bet vs i bookmaker. Gratis, aggiornato dopo ogni giornata.">
+<meta property="og:title" content="Mondiale 2026 — Il Modello (20.000 simulazioni)">
+<meta property="og:description" content="Probabilità titolo, tabellone, capocannoniere e value bet. Aggiornato ogni giornata. Gratis per gli iscritti.">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;color:rgba(255,255,255,.92);min-height:100vh;background:#070712;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-1;background:
+ radial-gradient(ellipse 90% 70% at 10% 10%,rgba(110,30,200,.20)0,transparent 55%),
+ radial-gradient(ellipse 80% 90% at 90% 90%,rgba(20,70,220,.15)0,transparent 55%),
+ radial-gradient(ellipse 60% 50% at 50% 110%,rgba(220,0,60,.10)0,transparent 55%),
+ linear-gradient(160deg,#08071a 0,#0b1230 40%,#08101e 100%)}
+.glass{background:rgba(255,255,255,.06);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border:1px solid rgba(255,255,255,.11)}
+.wrap{max-width:760px;margin:0 auto;padding:54px 22px 70px;display:flex;flex-direction:column;gap:22px}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#E8003D,#A8002D);display:flex;align-items:center;justify-content:center;font-size:23px}
+.brand .nm{font-size:15px;font-weight:800;letter-spacing:-.01em}
+.brand .sb{font-size:11.5px;color:rgba(255,255,255,.45)}
+.badge{margin-left:auto;font-size:11px;padding:5px 12px;border-radius:20px;background:rgba(0,230,118,.14);border:1px solid rgba(0,230,118,.35);color:#00E676;font-weight:700}
+h1{font-size:34px;font-weight:850;letter-spacing:-.03em;line-height:1.08}
+h1 .hl{background:linear-gradient(120deg,#FF4D75,#E8003D);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lead{font-size:16px;color:rgba(255,255,255,.62);line-height:1.55;margin-top:-6px}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tz{border-radius:16px;padding:16px 14px;text-align:center}
+.tz .v{font-size:26px;font-weight:850;color:#fff;letter-spacing:-.02em}
+.tz .v .s{font-size:14px;color:rgba(255,255,255,.5);font-weight:700}
+.tz .k{font-size:11px;color:rgba(255,255,255,.5);margin-top:4px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.feat{display:flex;flex-direction:column;gap:11px;border-radius:18px;padding:20px 22px}
+.feat .row{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:rgba(255,255,255,.82);line-height:1.4}
+.feat .row .ic{font-size:17px;line-height:1.25}
+.gate{border-radius:20px;padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.gate h2{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.gate p{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.5}
+.form{display:flex;gap:10px;flex-wrap:wrap}
+.form input{flex:1;min-width:220px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none}
+.form input:focus{border-color:rgba(0,230,118,.55)}
+.form input::placeholder{color:rgba(255,255,255,.35)}
+.cta{background:linear-gradient(135deg,#E8003D,#A8002D);border:none;border-radius:12px;padding:14px 24px;color:#fff;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:-.01em;transition:transform .12s,filter .12s}
+.cta:hover{filter:brightness(1.08)}.cta:active{transform:scale(.98)}.cta:disabled{opacity:.6;cursor:wait}
+.consent{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.5}
+.consent a{color:rgba(255,255,255,.6)}
+.err{font-size:13px;color:#FF6B81;font-weight:600;display:none}
+.unlocked{display:none;flex-direction:column;gap:12px}
+.bigbtns{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bb{display:block;text-decoration:none;border-radius:16px;padding:20px 18px;color:#fff;transition:transform .12s,background .15s}
+.bb:hover{transform:translateY(-2px)}
+.bb .t{font-size:16px;font-weight:800}.bb .d{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px}
+.bb.a{background:rgba(59,130,246,.16);border:1px solid rgba(59,130,246,.4)}
+.bb.b{background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.35)}
+.foot{font-size:11.5px;color:rgba(255,255,255,.38);line-height:1.6;text-align:center;padding:0 10px}
+@media(max-width:560px){h1{font-size:27px}.teasers{grid-template-columns:1fr 1fr}.bigbtns{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="logo">⚽</div>
+    <div><div class="nm">Mondiale 2026 — Il Modello</div>
+      <div class="sb">20.000 simulazioni · aggiornato ogni giornata</div></div>
+    <div class="badge">● LIVE</div>
+  </div>
+
+  <h1>Il Mondiale 2026,<br><span class="hl">previsto coi numeri.</span></h1>
+  <p class="lead">Non pronostici a sensazione. Un modello Monte Carlo con <b>20.000 simulazioni</b> dell'intero torneo, costruito su <b>32.282 partite internazionali</b>. Probabilità titolo, tabellone, capocannoniere e <b>value bet vs i bookmaker</b>. Si ri-simula dopo ogni giornata. <b>Gratis.</b></p>
+
+  <div class="teasers">
+    <div class="tz glass"><div class="v" id="t1">—</div><div class="k" id="t1k">Favorita</div></div>
+    <div class="tz glass"><div class="v" id="t2">—</div><div class="k" id="t2k">Capocannoniere</div></div>
+    <div class="tz glass"><div class="v">104</div><div class="k">Partite coperte</div></div>
+  </div>
+
+  <div class="feat glass">
+    <div class="row"><span class="ic">🏆</span><span><b>Probabilità titolo e tabellone</b> — ogni squadra, ri-simulate dopo ogni giornata reale</span></div>
+    <div class="row"><span class="ic">⚽</span><span><b>Tutte le partite</b> — 1/X/2 + risultato più probabile</span></div>
+    <div class="row"><span class="ic">💰</span><span><b>Value bet</b> — la probabilità del modello vs le quote del book, edge calcolato (de-vigato, onesto)</span></div>
+    <div class="row"><span class="ic">👟</span><span><b>Capocannoniere</b> — corsa al Golden Boot con probabilità per giocatore</span></div>
+  </div>
+
+  <div class="gate glass" id="gate">
+    <h2>Sblocca il modello — gratis</h2>
+    <p>Inserisci la tua email: ti apro subito il modello completo e ti avviso quando esce un aggiornamento importante (fine gironi, ottavi, quarti). Niente spam.</p>
+    <div class="form">
+      <input type="email" id="email" placeholder="latua@email.com" autocomplete="email" inputmode="email">
+      <button class="cta" id="go">Sblocca il modello →</button>
+    </div>
+    <div class="err" id="err">Inserisci un'email valida.</div>
+    <div class="consent">Inviando accetti di ricevere aggiornamenti sul modello. Puoi disiscriverti quando vuoi. ⚠️ Solo a scopo informativo · 18+ · scommettere comporta rischi.</div>
+  </div>
+
+  <div class="unlocked glass" id="unlocked" style="border-radius:20px;padding:24px">
+    <h2 style="font-size:19px;font-weight:800">✅ Accesso sbloccato — buon Mondiale</h2>
+    <div class="bigbtns">
+      <a class="bb a" href="dashboard.html"><div class="t">🏆 Modello & Antepost →</div><div class="d">Titolo, gironi, tabellone, capocannoniere</div></a>
+      <a class="bb b" href="betting.html"><div class="t">💰 Value Bet partite →</div><div class="d">Tutte le partite, quote fair, edge vs book</div></a>
+    </div>
+  </div>
+
+  <div class="foot">Modello indipendente · approccio alla Groll/Zeileis/Silver · nessuna garanzia di vincita.<br>Solo a scopo informativo e di intrattenimento · 18+ · scommettere comporta rischi.</div>
+
+</div>
+
+<script src="dashboard_data.js"></script>
+<script>
+// ====== CONFIG: incolla qui l'URL della tua Web App Google Apps Script ======
+const APPS_SCRIPT_URL = "PASTE_APPS_SCRIPT_URL_HERE";
+// ============================================================================
+const UNLOCK_KEY = 'wc26_unlocked';
+
+// teaser live dal modello
+try{
+  const D=window.WC;
+  if(D&&D.teams&&D.teams.length){
+    const top=[...D.teams].sort((a,b)=>b.p_win-a.p_win)[0];
+    document.getElementById('t1').innerHTML=top.p_win.toFixed(1)+'<span class="s">%</span>';
+    document.getElementById('t1k').textContent=top.team+' campione';
+  }
+  if(D&&D.scorers&&D.scorers.length){
+    const gb=[...D.scorers].sort((a,b)=>b.p_gb-a.p_gb)[0];
+    document.getElementById('t2').innerHTML=gb.p_gb.toFixed(0)+'<span class="s">%</span>';
+    document.getElementById('t2k').textContent=gb.player.replace(' (captain)','')+' Golden Boot';
+  }
+}catch(e){}
+
+const gate=document.getElementById('gate'), unlocked=document.getElementById('unlocked');
+function showUnlocked(){gate.style.display='none';unlocked.style.display='flex';}
+if(localStorage.getItem(UNLOCK_KEY)==='1') showUnlocked();
+
+const go=document.getElementById('go'), email=document.getElementById('email'), err=document.getElementById('err');
+function valid(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
+async function submit(){
+  const e=email.value.trim();
+  if(!valid(e)){err.style.display='block';return;}
+  err.style.display='none'; go.disabled=true; go.textContent='Sblocco…';
+  try{
+    if(APPS_SCRIPT_URL && !APPS_SCRIPT_URL.startsWith('PASTE')){
+      const body=new URLSearchParams({email:e, src:'wc26'});
+      await fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',body});
+    }
+  }catch(_){}
+  localStorage.setItem(UNLOCK_KEY,'1');
+  go.disabled=false; go.textContent='Sblocca il modello →';
+  showUnlocked();
+  unlocked.scrollIntoView({behavior:'smooth',block:'center'});
+}
+go.onclick=submit;
+email.addEventListener('keydown',ev=>{if(ev.key==='Enter')submit();});
+</script>
+</body>
+</html>

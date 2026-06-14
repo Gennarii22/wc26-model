@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mondiale 2026 — Model vs Market</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;color:rgba(255,255,255,.92);min-height:100vh;background:#070712;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-1;background:
+ radial-gradient(ellipse 90% 70% at 10% 10%,rgba(110,30,200,.20)0,transparent 55%),
+ radial-gradient(ellipse 80% 90% at 90% 90%,rgba(20,70,220,.15)0,transparent 55%),
+ radial-gradient(ellipse 60% 50% at 50% 110%,rgba(220,0,60,.10)0,transparent 55%),
+ linear-gradient(160deg,#08071a 0,#0b1230 40%,#08101e 100%)}
+.glass{background:rgba(255,255,255,.06);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border:1px solid rgba(255,255,255,.11)}
+.root{max-width:1500px;margin:0 auto;padding:22px 24px 60px;display:flex;flex-direction:column;gap:16px}
+.header{display:flex;align-items:center;gap:16px;padding:16px 22px;border-radius:20px;flex-wrap:wrap}
+.logo{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,#E8003D,#A8002D);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px}
+h1{font-size:18px;font-weight:800;letter-spacing:-.02em}
+.sub{font-size:12px;color:rgba(255,255,255,.45);margin-top:2px}
+.badge{margin-left:auto;font-size:11px;padding:5px 12px;border-radius:20px;background:rgba(0,230,118,.14);border:1px solid rgba(0,230,118,.35);color:#00E676;font-weight:700}
+.tabs{display:flex;gap:6px;padding:12px 18px;border-radius:18px;flex-wrap:wrap}
+.tab{padding:8px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:11px;color:rgba(255,255,255,.55);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.tab:hover{background:rgba(255,255,255,.11);color:#fff}
+.tab.active{background:rgba(59,130,246,.22);border-color:rgba(59,130,246,.6);color:#fff;box-shadow:0 0 14px rgba(59,130,246,.2)}
+.panel{border-radius:20px;overflow:hidden}
+.panel-h{padding:16px 22px 10px;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:9px 11px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap}
+th:nth-child(1),th:nth-child(2){text-align:left}
+td{padding:8px 11px;text-align:right;border-bottom:1px solid rgba(255,255,255,.04);white-space:nowrap}
+td:nth-child(1),td:nth-child(2){text-align:left}
+tr:hover td{background:rgba(255,255,255,.03)}
+.pos{color:rgba(255,255,255,.35);width:26px}
+.team{font-weight:600}.muted{color:rgba(255,255,255,.5)}.big{font-weight:700}
+.pwin{font-weight:800;color:#fff}
+.val-row{background:rgba(0,230,118,.07)!important}.val-row:hover td{background:rgba(0,230,118,.11)!important}
+.pos-edge{color:#00E676;font-weight:700}.neg-edge{color:rgba(255,255,255,.32)}
+.ev-pos{color:#00E676;font-weight:800}.ev-neg{color:rgba(255,255,255,.4)}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;display:inline-block;width:48px;vertical-align:middle;margin-left:6px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,#E8003D,#FF4D75)}
+.qin{width:60px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:5px 7px;color:#fff;font-size:12.5px;text-align:right;font-family:inherit;outline:none}
+.qin:focus{border-color:rgba(0,230,118,.5)}
+.qin::placeholder{color:rgba(255,255,255,.25)}
+.foot{font-size:11px;color:rgba(255,255,255,.4);padding:10px 22px;line-height:1.6}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:16px}
+.gcard{border-radius:18px;overflow:hidden}
+.gcard h3{padding:13px 18px 6px;font-size:13px;font-weight:800;letter-spacing:.04em}
+.gcard table{font-size:12px}
+.gcard td,.gcard th{padding:6px 9px}
+.match{display:flex;align-items:center;gap:8px;padding:7px 18px;font-size:12px;border-top:1px solid rgba(255,255,255,.04)}
+.match .t{width:118px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.match .t.r{text-align:right}
+.match .p{display:flex;flex:1;height:14px;border-radius:7px;overflow:hidden;font-size:8.5px;line-height:14px;color:rgba(0,0,0,.75);font-weight:700;text-align:center}
+.match .p>div:nth-child(1){background:#60A5FA}.match .p>div:nth-child(2){background:rgba(255,255,255,.35)}.match .p>div:nth-child(3){background:#FBBF24}
+.match .sc{width:32px;text-align:center;color:rgba(255,255,255,.55);font-weight:700}
+.mx{font-size:9px;color:#FF4D75;font-weight:800;margin-left:4px}
+.toolbar{display:flex;align-items:center;gap:12px;padding:12px 20px;border-radius:16px;flex-wrap:wrap;font-size:12px}
+.toolbar .info{color:rgba(255,255,255,.55)}
+.btn{padding:7px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:rgba(255,255,255,.8);font-size:12px;font-weight:600;cursor:pointer}
+.btn:hover{background:rgba(255,255,255,.13)}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="root">
+  <div class="header glass">
+    <div class="logo">⚽</div>
+    <div><h1>Mondiale 2026 — Model vs Market</h1>
+      <div class="sub">48 squadre · 20.000 simulazioni · modello Poisson ELO+rosa+macro · tabellone FIFA ufficiale (Annexe C)</div></div>
+    <a href="betting.html" style="margin-left:auto;text-decoration:none;font-size:13px;font-weight:700;color:#00E676;padding:9px 16px;border-radius:12px;background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.35)">€ Betting partite →</a>
+    <div class="badge" id="badge">● LIVE</div>
+  </div>
+  <div class="tabs glass">
+    <button class="tab active" data-v="antepost">🏆 Antepost</button>
+    <button class="tab" data-v="gironi">🌍 Gironi</button>
+    <button class="tab" data-v="partite">📋 Partite</button>
+    <button class="tab" data-v="bomber">👟 Capocannoniere</button>
+  </div>
+
+  <div id="v-antepost">
+    <div class="toolbar glass" style="margin-bottom:16px">
+      <span class="info" style="font-weight:700">Mercato:</span>
+      <select id="mksel" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:9px;padding:7px 11px;color:#fff;font-size:13px;font-family:inherit;outline:none">
+        <option value="p_win">🏆 Vincente Mondiale</option>
+        <option value="p_final">Arriva in finale</option>
+        <option value="p_sf">Arriva in semifinale</option>
+        <option value="p_qf">Arriva ai quarti</option>
+        <option value="p_r16">Arriva agli ottavi</option>
+        <option value="p_win_group">Vincente girone</option>
+        <option value="p_r32">Si qualifica (R32)</option>
+      </select>
+      <span class="info" style="margin-left:8px">Bankroll €</span>
+      <input class="qin" id="bank" type="number" value="1000" step="50" style="width:80px">
+      <span class="info">Kelly ×</span>
+      <input class="qin" id="kfrac" type="number" value="0.25" step="0.05" min="0.05" max="1" style="width:60px">
+      <button class="btn" id="clearq" style="margin-left:auto">Cancella quote mercato</button>
+    </div>
+    <div class="panel glass">
+      <div class="panel-h" id="ante-title">Probabilità torneo (20.000 simulazioni)</div>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>#</th><th>Squadra</th><th>Gir.</th><th>ELO</th><th>Rosa</th>
+        <th>P(1° gir.)</th><th>P(R16)</th><th>P(QF)</th><th>P(SF)</th><th>P(Finale)</th><th>P(🏆)</th>
+        <th id="th-pmk">P(mercato)</th><th>Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th>Stake</th></tr></thead>
+        <tbody id="tb-ante"></tbody></table></div>
+      <div class="foot">Scegli il mercato in alto, inserisci le quote del bookmaker → Edge, EV e <b>stake Kelly</b> si calcolano da soli (le quote restano salvate per ogni mercato). Righe verdi = value. Benchmark titolo: Zeileis Spagna 14.5%, Silver ~16%, Klement scelse l'Olanda — il nostro 35% sulla Spagna è la lettura più aggressiva: la divergenza è il segnale.</div>
+    </div>
+  </div>
+
+  <div id="v-gironi" style="display:none"><div class="grid2" id="groups"></div></div>
+
+  <div id="v-partite" style="display:none">
+    <div class="panel glass">
+      <div class="panel-h">Pronostici — 72 partite della fase a gironi</div>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>Data</th><th>Gir.</th><th>Partita</th><th>Sede</th><th>1</th><th>X</th><th>2</th><th>Risultato più prob.</th><th>xG</th></tr></thead>
+        <tbody id="tb-matches"></tbody></table></div>
+    </div>
+  </div>
+
+  <div id="v-bomber" style="display:none">
+    <div class="panel glass">
+      <div class="panel-h">Capocannoniere — Golden Boot (gol del vincitore: mediana 9) · inserisci le quote per il valore</div>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>#</th><th>Giocatore</th><th>Squadra</th><th>Ruolo</th><th>Età</th><th>Gol/Caps naz.</th><th>Gol attesi</th><th>P(Golden Boot)</th><th>Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th>Stake</th></tr></thead>
+        <tbody id="tb-gb"></tbody></table></div>
+      <div class="foot">Modello: quota-gol del giocatore nella squadra (rate in nazionale shrinkato per ruolo × titolarità) × gol simulati della squadra. Bankroll e frazione Kelly si impostano nel tab Antepost. Limiti onesti: non vede rigoristi designati né minutaggio reale; per veterani (Messi 38, Ronaldo 41) non modella il declino — prendili con cautela.</div>
+    </div>
+  </div>
+</div>
+
+<script src="dashboard_data.js"></script>
+<script>
+const D=window.WC, LS='wc26_quote_v2';
+const quote=JSON.parse(localStorage.getItem(LS)||'{}');   // chiave: mercato|nome
+const MKLBL={p_win:'Vincente Mondiale',p_final:'Arriva in finale',p_sf:'Arriva in semifinale',
+  p_qf:'Arriva ai quarti',p_r16:'Arriva agli ottavi',p_win_group:'Vincente girone',p_r32:'Si qualifica'};
+let MK='p_win';
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
+  ['antepost','gironi','partite','bomber'].forEach(v=>document.getElementById('v-'+v).style.display=(b.dataset.v===v?'':'none'));
+});
+document.getElementById('mksel').onchange=e=>{MK=e.target.value;ante();};
+document.getElementById('clearq').onclick=()=>{
+  Object.keys(quote).filter(k=>k.startsWith(MK+'|')).forEach(k=>delete quote[k]);
+  localStorage.setItem(LS,JSON.stringify(quote));ante();
+};
+['bank','kfrac'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{ante();bomber();}));
+function pct(v){return v.toFixed(1)+'%';}
+function bankKelly(){return [parseFloat(document.getElementById('bank').value)||1000,
+                             parseFloat(document.getElementById('kfrac').value)||0.25];}
+function valueCells(p,q){
+  // p in %, q quota; ritorna celle P.mkt/Edge/EV/Stake + flag value
+  if(!q||q<=1) return {html:`<td class="muted">—</td><td class="muted">—</td><td class="muted">—</td><td class="muted">—</td>`,val:false};
+  const[bank,kf]=bankKelly();
+  const pm=100/q,edge=p-pm,ev=p/100*q-1,kelly=Math.max(0,(p/100*q-1)/(q-1)),stake=bank*kelly*kf;
+  return {val:ev>0,html:
+   `<td class="muted">${pct(pm)}</td>
+    <td class="${edge>0?'pos-edge':'neg-edge'}">${edge>0?'+':''}${edge.toFixed(1)}</td>
+    <td class="${ev>0?'ev-pos':'ev-neg'}">${ev>0?'+':''}${ev.toFixed(2)}</td>
+    <td class="${ev>0?'ev-pos':'muted'}">${ev>0?stake.toFixed(0)+'€':'—'}</td>`};
+}
+function ante(){
+  document.getElementById('th-pmk').textContent='P('+MKLBL[MK]+')';
+  document.getElementById('ante-title').textContent='Probabilità torneo — quote per: '+MKLBL[MK];
+  const tb=document.getElementById('tb-ante');tb.innerHTML='';
+  const rows=[...D.teams].sort((a,b)=>b[MK]-a[MK]);
+  const mx=Math.max(...rows.map(t=>t[MK]));
+  rows.forEach((t,i)=>{
+    const q=quote[MK+'|'+t.team];
+    const vc=valueCells(t[MK],q);
+    const tr=document.createElement('tr');if(vc.val)tr.className='val-row';
+    tr.innerHTML=`<td class="pos">${i+1}</td><td class="team">${t.team}</td><td class="muted">${t.group}</td>
+    <td class="muted">${t.elo}</td><td class="muted">${t.mv?'€'+t.mv+'m':'—'}</td>
+    <td>${pct(t.p_win_group)}</td><td>${pct(t.p_r16)}</td><td>${pct(t.p_qf)}</td><td>${pct(t.p_sf)}</td><td>${pct(t.p_final)}</td>
+    <td>${t.p_win.toFixed(2)}%</td>
+    <td class="pwin">${t[MK].toFixed(2)}%<span class="bar"><i style="width:${t[MK]/mx*100}%"></i></span></td>
+    <td><input class="qin" type="number" step="0.05" min="1.01" placeholder="—" value="${q&&q>1?q:''}" data-t="${t.team}"></td>
+    ${vc.html}`;
+    tb.appendChild(tr);
+  });
+  tb.querySelectorAll('.qin').forEach(inp=>inp.onchange=()=>{
+    const v=parseFloat(inp.value);const k=MK+'|'+inp.dataset.t;
+    if(v&&v>1)quote[k]=v;else delete quote[k];
+    localStorage.setItem(LS,JSON.stringify(quote));ante();
+  });
+}
+function gironi(){
+  const el=document.getElementById('groups');el.innerHTML='';
+  Object.keys(D.groups).sort().forEach(g=>{
+    const card=document.createElement('div');card.className='gcard glass';
+    const teams=D.teams.filter(t=>t.group===g).sort((a,b)=>b.p_win_group-a.p_win_group);
+    let rows=teams.map(t=>`<tr><td class="team">${t.team}</td><td class="muted">${t.elo}</td>
+      <td class="big">${pct(t.p_win_group)}</td><td>${pct(t.p_r32)}</td><td>${pct(t.p_win)}</td></tr>`).join('');
+    const ms=D.matches.filter(m=>m.group===g);
+    let mrows=ms.map(m=>{
+      const mx=m.venue==='Mexico'?'<span class="mx">MEX⛰</span>':'';
+      return `<div class="match"><div class="t r">${m.home}</div>
+      <div class="p"><div style="width:${m.p1}%">${m.p1>14?m.p1+'%':''}</div><div style="width:${m.px}%">${m.px>14?m.px+'%':''}</div><div style="width:${m.p2}%">${m.p2>14?m.p2+'%':''}</div></div>
+      <div class="t">${m.away}</div><div class="sc">${m.score}</div>${mx}</div>`;}).join('');
+    card.innerHTML=`<h3>Girone ${g}</h3><table><thead><tr><th>Squadra</th><th>ELO</th><th>1° gir.</th><th>Qualif.</th><th>🏆</th></tr></thead><tbody>${rows}</tbody></table>${mrows}`;
+    el.appendChild(card);
+  });
+}
+function partite(){
+  const tb=document.getElementById('tb-matches');tb.innerHTML='';
+  D.matches.forEach(m=>{
+    const tr=document.createElement('tr');
+    const strong=Math.max(m.p1,m.px,m.p2);
+    tr.innerHTML=`<td class="muted">${m.date}</td><td class="muted">${m.group}</td>
+    <td class="team">${m.home} — ${m.away}</td><td class="muted">${m.city}${m.venue==='Mexico'?' 🇲🇽':''}</td>
+    <td class="${m.p1===strong?'big':''}">${m.p1}%</td><td class="${m.px===strong?'big':''}">${m.px}%</td><td class="${m.p2===strong?'big':''}">${m.p2}%</td>
+    <td class="big">${m.score}</td><td class="muted">${m.lh} — ${m.la}</td>`;
+    tb.appendChild(tr);
+  });
+}
+function bomber(){
+  const tb=document.getElementById('tb-gb');tb.innerHTML='';
+  D.scorers.forEach((s,i)=>{
+    const q=quote['gb|'+s.player];
+    const vc=valueCells(s.p_gb,q);
+    const tr=document.createElement('tr');if(vc.val)tr.className='val-row';
+    tr.innerHTML=`<td class="pos">${i+1}</td><td class="team">${s.player}</td><td>${s.team}</td>
+    <td class="muted">${s.pos}</td><td class="muted">${s.age??'—'}</td><td class="muted">${s.goals_nat}/${s.caps}</td>
+    <td class="big">${s.exp_goals}</td><td class="pwin">${pct(s.p_gb)}</td>
+    <td><input class="qin" type="number" step="0.5" min="1.01" placeholder="—" value="${q&&q>1?q:''}" data-p="${s.player}"></td>
+    ${vc.html}`;
+    tb.appendChild(tr);
+  });
+  tb.querySelectorAll('.qin').forEach(inp=>inp.onchange=()=>{
+    const v=parseFloat(inp.value);const k='gb|'+inp.dataset.p;
+    if(v&&v>1)quote[k]=v;else delete quote[k];
+    localStorage.setItem(LS,JSON.stringify(quote));bomber();
+  });
+}
+ante();gironi();partite();bomber();
+</script>
+</body>
+</html>

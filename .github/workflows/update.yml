@@ -1,0 +1,43 @@
+name: Aggiorna modello Mondiale
+
+# Gira ogni mattina (06:00 UTC) dopo le partite della notte + a richiesta.
+# Scarica i risultati (ESPN), ri-simula il torneo, rigenera le dashboard,
+# committa i dati nuovi → Netlify ripubblica da solo a ogni push.
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installa dipendenze
+        run: pip install -r requirements.txt
+
+      - name: Rigenera il modello
+        run: |
+          cd model
+          python update_tournament.py
+          python simulate.py
+          python top_scorer.py
+          python gen_dashboard.py
+          python gen_betting.py
+          cp dashboard_data.js betting_data.js ../site/
+
+      - name: Commit & push (se ci sono cambiamenti)
+        run: |
+          git config user.name "wc26-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "auto-update modello $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

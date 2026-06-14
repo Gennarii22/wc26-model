@@ -1,0 +1,73 @@
+date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
+2026-06-11,A,Mexico,South Africa,Mexico,Mexico City,79.2,13.8,7.0,2.6,0.65,2-0
+2026-06-11,A,South Korea,Czech Republic,Mexico,Zapopan,45.6,27.1,27.3,1.39,1.01,1-1
+2026-06-12,B,Canada,Bosnia and Herzegovina,Canada,Toronto,64.0,20.8,15.2,1.99,0.85,1-0
+2026-06-12,D,United States,Paraguay,United States,Inglewood,57.5,23.0,19.4,1.8,0.94,1-0
+2026-06-13,B,Qatar,Switzerland,United States,Santa Clara,4.6,11.4,84.1,0.51,2.76,0-2
+2026-06-13,C,Brazil,Morocco,United States,East Rutherford,31.4,27.7,41.0,1.09,1.29,1-1
+2026-06-13,C,Haiti,Scotland,United States,Foxborough,20.8,25.1,54.0,0.88,1.59,0-1
+2026-06-13,D,Australia,Turkey,Canada,Vancouver,37.2,27.9,35.0,1.21,1.16,1-1
+2026-06-14,E,Germany,Curaçao,United States,Houston,84.6,11.0,4.4,2.79,0.5,2-0
+2026-06-14,E,Ivory Coast,Ecuador,United States,Philadelphia,17.0,23.3,59.7,0.8,1.74,0-1
+2026-06-14,F,Netherlands,Japan,United States,Arlington,42.8,27.5,29.7,1.33,1.06,1-1
+2026-06-14,F,Sweden,Tunisia,United States,Guadalupe,43.2,27.4,29.4,1.34,1.05,1-1
+2026-06-15,G,Belgium,Egypt,United States,Seattle,68.1,19.9,12.0,2.0,0.7,2-0
+2026-06-15,G,Iran,New Zealand,United States,Inglewood,39.6,27.8,32.6,1.26,1.11,1-1
+2026-06-15,H,Spain,Cape Verde,United States,Atlanta,96.8,1.6,0.3,4.92,0.28,4-0
+2026-06-15,H,Saudi Arabia,Uruguay,United States,Miami Gardens,8.9,17.0,74.1,0.63,2.24,0-2
+2026-06-16,I,France,Senegal,United States,East Rutherford,67.0,20.4,12.6,1.97,0.71,1-0
+2026-06-16,I,Iraq,Norway,United States,Foxborough,7.5,15.4,77.1,0.59,2.37,0-2
+2026-06-16,J,Argentina,Algeria,United States,Kansas City,64.7,21.4,13.9,1.89,0.74,1-0
+2026-06-16,J,Austria,Jordan,United States,Santa Clara,59.1,23.5,17.4,1.73,0.81,1-0
+2026-06-17,K,Portugal,DR Congo,United States,Houston,83.3,11.8,4.8,2.71,0.52,2-0
+2026-06-17,K,Uzbekistan,Colombia,Mexico,Mexico City,16.8,23.2,60.0,0.8,1.75,0-1
+2026-06-17,L,England,Croatia,United States,Arlington,57.4,24.1,18.5,1.68,0.84,1-0
+2026-06-17,L,Ghana,Panama,Canada,Toronto,30.1,27.5,42.3,1.06,1.32,1-1
+2026-06-18,A,Czech Republic,South Africa,United States,Atlanta,53.5,25.3,21.2,1.58,0.89,1-0
+2026-06-18,A,Mexico,South Korea,Mexico,Zapopan,52.5,24.4,23.1,1.66,1.01,1-1
+2026-06-18,B,Switzerland,Bosnia and Herzegovina,United States,Inglewood,58.5,23.7,17.8,1.71,0.82,1-0
+2026-06-18,B,Canada,Qatar,Canada,Vancouver,88.1,8.5,3.3,3.21,0.53,3-0
+2026-06-19,C,Scotland,Morocco,United States,Foxborough,12.8,20.6,66.6,0.72,1.95,0-1
+2026-06-19,C,Brazil,Haiti,United States,Philadelphia,78.0,14.9,7.1,2.41,0.58,2-0
+2026-06-19,D,United States,Australia,United States,Seattle,39.9,26.3,33.7,1.37,1.23,1-1
+2026-06-19,D,Turkey,Paraguay,United States,Santa Clara,51.5,25.8,22.7,1.53,0.92,1-0
+2026-06-20,E,Germany,Ivory Coast,Canada,Toronto,49.7,26.2,24.0,1.48,0.94,1-0
+2026-06-20,E,Ecuador,Curaçao,United States,Kansas City,90.2,7.3,2.4,3.28,0.43,3-0
+2026-06-20,F,Netherlands,Sweden,United States,Houston,63.6,21.8,14.6,1.86,0.75,1-0
+2026-06-20,F,Tunisia,Japan,United States,Guadalupe,14.3,21.7,64.0,0.75,1.87,0-1
+2026-06-21,G,Belgium,Iran,United States,Inglewood,68.9,19.6,11.6,2.03,0.69,2-0
+2026-06-21,G,New Zealand,Egypt,Canada,Vancouver,31.8,27.7,40.5,1.1,1.28,1-1
+2026-06-21,H,Spain,Saudi Arabia,United States,Atlanta,95.8,3.1,0.7,4.25,0.33,4-0
+2026-06-21,H,Uruguay,Cape Verde,United States,Miami Gardens,81.4,13.0,5.6,2.59,0.54,2-0
+2026-06-22,I,France,Iraq,United States,Philadelphia,88.5,8.5,2.9,3.11,0.45,3-0
+2026-06-22,I,Norway,Senegal,United States,East Rutherford,50.4,26.1,23.5,1.5,0.93,1-0
+2026-06-22,J,Argentina,Austria,United States,Arlington,68.8,19.6,11.6,2.03,0.69,2-0
+2026-06-22,J,Jordan,Algeria,United States,Santa Clara,14.7,21.9,63.4,0.76,1.85,0-1
+2026-06-23,K,Portugal,Uzbekistan,United States,Houston,73.7,17.2,9.1,2.22,0.63,2-0
+2026-06-23,K,Colombia,DR Congo,Mexico,Zapopan,71.7,18.2,10.1,2.14,0.66,2-0
+2026-06-23,L,England,Ghana,United States,Foxborough,88.8,8.3,2.9,3.13,0.45,3-0
+2026-06-23,L,Panama,Croatia,Canada,Toronto,12.3,20.2,67.5,0.71,1.99,0-1
+2026-06-24,A,Mexico,Czech Republic,Mexico,Mexico City,62.8,21.2,16.0,1.95,0.86,1-0
+2026-06-24,A,South Africa,South Korea,United States,Guadalupe,14.7,21.9,63.4,0.76,1.85,0-1
+2026-06-24,B,Canada,Switzerland,Canada,Vancouver,40.4,26.3,33.3,1.38,1.22,1-1
+2026-06-24,B,Bosnia and Herzegovina,Qatar,United States,Seattle,65.3,21.2,13.6,1.91,0.73,1-0
+2026-06-24,C,Scotland,Brazil,United States,Miami Gardens,15.8,22.6,61.6,0.78,1.8,0-1
+2026-06-24,C,Morocco,Haiti,United States,Atlanta,81.9,12.7,5.4,2.62,0.53,2-0
+2026-06-25,D,United States,Turkey,United States,Inglewood,41.1,26.2,32.6,1.39,1.21,1-1
+2026-06-25,D,Paraguay,Australia,United States,Santa Clara,21.8,25.5,52.7,0.9,1.56,0-1
+2026-06-25,E,Curaçao,Ivory Coast,United States,Philadelphia,9.0,17.1,73.9,0.63,2.23,0-2
+2026-06-25,E,Ecuador,Germany,United States,East Rutherford,45.6,27.1,27.3,1.39,1.01,1-1
+2026-06-25,F,Japan,Sweden,United States,Arlington,56.6,24.3,19.0,1.66,0.85,1-0
+2026-06-25,F,Tunisia,Netherlands,United States,Kansas City,10.6,18.7,70.6,0.67,2.1,0-2
+2026-06-26,G,Egypt,Iran,United States,Seattle,36.9,27.9,35.2,1.2,1.17,1-1
+2026-06-26,G,New Zealand,Belgium,Canada,Vancouver,9.8,17.9,72.3,0.65,2.16,0-2
+2026-06-26,H,Cape Verde,Saudi Arabia,United States,Houston,28.0,27.2,44.9,1.02,1.37,1-1
+2026-06-26,H,Uruguay,Spain,Mexico,Zapopan,8.7,16.8,74.4,0.62,2.25,0-2
+2026-06-26,I,Norway,France,United States,Foxborough,21.9,25.5,52.6,0.9,1.55,0-1
+2026-06-26,I,Senegal,Iraq,Canada,Toronto,63.9,21.7,14.4,1.87,0.75,1-0
+2026-06-27,J,Algeria,Austria,United States,Kansas City,40.2,27.7,32.1,1.27,1.1,1-1
+2026-06-27,J,Jordan,Argentina,United States,Arlington,3.5,9.6,86.8,0.47,2.96,0-2
+2026-06-27,K,Colombia,Portugal,United States,Miami Gardens,23.5,26.1,50.4,0.93,1.5,0-1
+2026-06-27,K,DR Congo,Uzbekistan,United States,Atlanta,25.3,26.6,48.1,0.97,1.45,0-1
+2026-06-27,L,Panama,England,United States,East Rutherford,4.2,10.8,84.9,0.5,2.82,0-2
+2026-06-27,L,Croatia,Ghana,United States,Philadelphia,73.4,17.3,9.2,2.21,0.63,2-0

@@ -1,0 +1,9 @@
+# Netlify: pubblica la cartella statica `site/`. Nessuna build (file statici).
+[build]
+  publish = "site"
+  command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
