@@ -1,11 +1,12 @@
 name: Aggiorna modello Mondiale
 
-# Gira ogni mattina (06:00 UTC) dopo le partite della notte + a richiesta.
+# Gira ogni mattina alle 11:00 ora italiana (= 09:00 UTC, ora legale estate)
+# dopo le partite della notte + a richiesta.
 # Scarica i risultati (ESPN), ri-simula il torneo, rigenera le dashboard,
 # committa i dati nuovi → Netlify ripubblica da solo a ogni push.
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 permissions:
