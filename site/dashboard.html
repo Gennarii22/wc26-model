@@ -67,6 +67,7 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
     <button class="tab" data-v="gironi" data-i18n="d.tab_gironi">Gironi</button>
     <button class="tab" data-v="partite" data-i18n="d.tab_partite">Partite</button>
     <button class="tab" data-v="bomber" data-i18n="d.tab_bomber">Capocannoniere</button>
+    <button class="tab" data-v="prewc" data-i18n="d.tab_prewc">Pre-Mondiale</button>
   </div>
 
   <div id="v-antepost">
@@ -118,6 +119,15 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
       <div class="foot" style="padding:12px 22px" data-i18n="d.foot_bomber">Modello: quota-gol del giocatore × gol simulati della squadra. Limiti: non vede rigoristi né minutaggio.</div>
     </div>
   </div>
+
+  <div id="v-prewc" style="display:none">
+    <div class="panel">
+      <div class="panel-h" data-i18n="d.pw_h">Pre-Mondiale → ora · come si muovono le probabilità titolo</div>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>#</th><th data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_gir">Gir.</th><th>ELO</th><th data-i18n="d.pw_pre">P(titolo) pre</th><th data-i18n="d.pw_now">P(titolo) ora</th><th data-i18n="d.pw_delta">Δ</th></tr></thead>
+        <tbody id="tb-prewc"></tbody></table></div>
+    </div>
+  </div>
 </div>
 
 <script src="dashboard_data.js"></script>
@@ -128,7 +138,7 @@ let MK='p_win';
 function mklbl(k){return t('mk.'+k);}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
-  ['antepost','gironi','partite','bomber'].forEach(v=>document.getElementById('v-'+v).style.display=(b.dataset.v===v?'':'none'));
+  ['antepost','gironi','partite','bomber','prewc'].forEach(v=>document.getElementById('v-'+v).style.display=(b.dataset.v===v?'':'none'));
 });
 document.getElementById('mksel').onchange=e=>{MK=e.target.value;ante();};
 document.getElementById('clearq').onclick=()=>{
@@ -222,8 +232,22 @@ function bomber(){
     localStorage.setItem(LS,JSON.stringify(quote));bomber();
   });
 }
-window.onLangChange=()=>{ante();gironi();partite();bomber();};
-ante();gironi();partite();bomber();
+function prewc(){
+  const tb=document.getElementById('tb-prewc');tb.innerHTML='';
+  const rows=D.teams.filter(t=>t.p_win_pre!=null).sort((a,b)=>b.p_win_pre-a.p_win_pre);
+  rows.forEach((t,i)=>{
+    const d=t.p_win-t.p_win_pre;
+    const col=d>0.05?'var(--olive-signal)':(d<-0.05?'var(--neg)':'var(--moss)');
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td class="pos">${i+1}</td><td class="team">${t.team}</td><td class="muted">${t.group}</td>
+    <td class="muted">${t.elo}</td><td class="muted">${t.p_win_pre.toFixed(2)}%</td>
+    <td class="pwin">${t.p_win.toFixed(2)}%</td>
+    <td style="color:${col};font-family:var(--font-mono)">${d>0?'+':''}${d.toFixed(2)}</td>`;
+    tb.appendChild(tr);
+  });
+}
+window.onLangChange=()=>{ante();gironi();partite();bomber();prewc();};
+ante();gironi();partite();bomber();prewc();
 </script>
 </body>
 </html>

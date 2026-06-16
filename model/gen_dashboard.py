@@ -16,12 +16,20 @@ groups = json.load(open(f"{BASE}/groups_resolved.json"))
 
 out = {"generated": "11 giugno 2026", "teams": [], "groups": {}, "matches": [], "scorers": []}
 
+# snapshot PRE-MONDIALE congelato (giorno-0, prima di ogni risultato)
+pre_map = {}
+_pre = f"{BASE}/data/pretournament_teams.csv"
+if os.path.exists(_pre):
+    pdf = pd.read_csv(_pre)
+    pre_map = dict(zip(pdf.team, pdf.p_win))
+
 for _, r in tp.iterrows():
     out["teams"].append({"team": r.team, "group": r.group, "elo": int(r.elo),
         "mv": int(r.mv_meur) if pd.notna(r.mv_meur) else None,
         "p_win_group": round(r.p_win_group, 1), "p_r32": round(r.p_r32, 1),
         "p_r16": round(r.p_r16, 1), "p_qf": round(r.p_qf, 1), "p_sf": round(r.p_sf, 1),
-        "p_final": round(r.p_final, 1), "p_win": round(r.p_win, 2)})
+        "p_final": round(r.p_final, 1), "p_win": round(r.p_win, 2),
+        "p_win_pre": round(pre_map[r.team], 2) if r.team in pre_map else None})
 
 out["groups"] = groups
 
