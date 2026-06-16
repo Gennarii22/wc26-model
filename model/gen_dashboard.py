@@ -1,4 +1,4 @@
-import os
+import os, re
 """Compatta i risultati del modello Mondiale in dashboard_data.js per la dashboard."""
 import json
 import pandas as pd
@@ -8,7 +8,10 @@ BASE = os.environ.get("WC_BASE") or os.path.dirname(os.path.abspath(__file__))
 
 tp = pd.read_csv(f"{BASE}/team_probs.csv")
 mp = pd.read_csv(f"{BASE}/match_predictions.csv")
-ts = pd.read_csv(f"{BASE}/top_scorer.csv")
+# capocannoniere v2 (golden_boot_v2.csv) + info rosa per età/ruolo/caps
+gb = pd.read_csv(f"{BASE}/data/golden_boot_v2.csv")
+sqd = pd.read_csv(f"{BASE}/data/squads_2026.csv")[["player","pos","age","caps","goals"]]
+ts = gb.merge(sqd, on="player", how="left").sort_values("p_gb", ascending=False)
 groups = json.load(open(f"{BASE}/groups_resolved.json"))
 
 out = {"generated": "11 giugno 2026", "teams": [], "groups": {}, "matches": [], "scorers": []}
@@ -28,10 +31,13 @@ for _, r in mp.sort_values("date").iterrows():
         "score": r.score_ml, "lh": r.lh, "la": r.la})
 
 for _, r in ts.head(40).iterrows():
-    out["scorers"].append({"player": r.player, "team": r.team_sim, "pos": r.pos,
-        "age": int(r.age) if pd.notna(r.age) else None, "caps": int(r.caps), "goals_nat": int(r.goals),
-        "exp_goals": round(r.exp_goals, 2), "p90": round(r.goals_90pct, 0),
-        "p_gb": round(r.p_golden_boot, 1)})
+    nm = re.sub(r'\s*\(captain\)', '', str(r.player)).strip()
+    out["scorers"].append({"player": nm, "team": r.team, "pos": r.pos,
+        "age": int(r.age) if pd.notna(r.age) else None,
+        "caps": int(r.caps) if pd.notna(r.caps) else 0,
+        "goals_nat": int(r.goals) if pd.notna(r.goals) else 0,
+        "exp_goals": round(r.exp_goals, 2), "p90": 0,
+        "p_gb": round(r.p_gb, 1)})
 
 with open(f"{BASE}/dashboard_data.js", "w") as f:
     f.write("window.WC = " + json.dumps(out, ensure_ascii=False) + ";")

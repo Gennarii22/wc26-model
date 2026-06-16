@@ -35,7 +35,8 @@ jobs:
           cd model
           python update_tournament.py
           python simulate.py
-          python top_scorer.py
+          python espn_goals.py
+          python top_scorer_v2.py
           python gen_dashboard.py
           python gen_betting.py
           cp dashboard_data.js betting_data.js ../site/

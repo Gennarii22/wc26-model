@@ -13,10 +13,13 @@ cd "$BASE/model"
 echo "═══ Aggiornamento Mondiale $(date '+%Y-%m-%d %H:%M') ═══"
 "$PY" update_tournament.py
 "$PY" simulate.py
-"$PY" top_scorer.py
+"$PY" espn_goals.py        # gol live dei marcatori (ESPN)
+"$PY" top_scorer_v2.py     # capocannoniere v2 (rate xG × cammino + rigori + gol live)
 "$PY" gen_dashboard.py
 "$PY" gen_betting.py
 cp dashboard_data.js betting_data.js "$BASE/site/"
+# NB: i TASSI (player_rates.csv) si rigenerano a parte con `python3 model/sb_rates.py`
+#     (serve la cartella Football BoxScore, solo in locale) — non a ogni aggiornamento.
 
 echo ""
 echo "✓ Tutto aggiornato. Lancia 'git push' per pubblicare online."
