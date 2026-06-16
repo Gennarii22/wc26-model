@@ -7,3 +7,7 @@ __pycache__/
 # Database completo dei Mondiali (139MB): vive nella cartella ma NON va su Git.
 # Il deploy usa solo i 5 estratti in model/data/. Per ri-addestrare serve in locale.
 WorldCup DB/
+
+# Segreti (chiavi API X/Gemini): vivono in locale, MAI su Git (repo pubblico).
+.env
+**/.env
