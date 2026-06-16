@@ -28,5 +28,19 @@
     "type": "model_meta",
     "team": "_model",
     "text": "20,000 World Cups. That is what my model runs after every single final whistle. \n\nNot a static prediction, but a living, breathing simulation adjusting to real-time form. This isn't hype, it is just relentless math.\n\n#WorldCup2026 #DataScience #Football"
+  },
+  {
+    "date": "2026-06-15",
+    "type": "value_upset",
+    "team": "Cape Verde",
+    "text": "Is €1.2 billion in squad value worth anything if you can't break down a €54 million defense? \n\nSpain just got completely suffocated by Cape Verde. Money doesn't kick the ball. My simulator saw this grit coming. \n\n#WorldCup2026 #Spain #CapeVerde",
+    "posted": false
+  },
+  {
+    "date": "2026-06-15",
+    "type": "value_upset",
+    "team": "Egypt",
+    "text": "Why do we still pretend squad value wins World Cups? \n\nEgypt just held Belgium to a 1-1 draw. That is a €116M squad stopping €548M in its tracks. My model does not care about your price tags. Heart always beats spreadsheets.\n\n#WorldCup2026 #Belgium #Egypt",
+    "posted": false
   }
 ]
