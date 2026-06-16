@@ -114,6 +114,16 @@ td:first-child{font-family:var(--font-body);font-weight:500}
         </div>
       </div>
       <div class="cols">
+        <div class="panel">
+          <div class="panel-h"><span data-i18n="b.scorers">Marcatori</span> · <span id="sc-home-team" style="color:var(--parchment)"></span></div>
+          <table><thead><tr><th data-i18n="b.sc_player">Giocatore</th><th data-i18n="b.sc_p1">Segna</th><th data-i18n="b.sc_p2">2+</th><th data-i18n="b.sc_p3">3+</th></tr></thead><tbody id="sc-home"></tbody></table>
+        </div>
+        <div class="panel">
+          <div class="panel-h"><span data-i18n="b.scorers">Marcatori</span> · <span id="sc-away-team" style="color:var(--parchment)"></span></div>
+          <table><thead><tr><th data-i18n="b.sc_player">Giocatore</th><th data-i18n="b.sc_p1">Segna</th><th data-i18n="b.sc_p2">2+</th><th data-i18n="b.sc_p3">3+</th></tr></thead><tbody id="sc-away"></tbody></table>
+        </div>
+      </div>
+      <div class="cols">
         <div class="panel hm">
           <div class="panel-h" style="padding:0 0 12px" data-i18n="b.heat">Mappa risultati esatti (P%)</div>
           <div id="heat"></div>
@@ -166,6 +176,12 @@ function render(){
   document.getElementById('cmk').textContent=selMk?`${t(MKORDER.find(x=>x[0]===selMk)[1])} — ${t('b.pmod')} ${(m.markets[selMk]*100).toFixed(1)}% (${t('b.fair')} ${(1/m.markets[selMk]).toFixed(2)})`:t('b.sel_prompt');
   calc();
   document.getElementById('topsc').innerHTML=m.top_scores.map(s=>`<tr><td>${s.s}</td><td>${s.p}%<span class="pbar"><i style="width:${s.p*4}%"></i></span></td></tr>`).join('');
+  // marcatori per partita (segna / 2+ / 3+)
+  const scRow=s=>`<tr><td>${s.player}</td><td class="pwin">${s.p1}%</td><td>${s.p2}%</td><td>${s.p3}%</td></tr>`;
+  document.getElementById('sc-home-team').textContent=m.home;
+  document.getElementById('sc-away-team').textContent=m.away;
+  document.getElementById('sc-home').innerHTML=(m.scorers_h||[]).map(scRow).join('')||'<tr><td class="muted">—</td></tr>';
+  document.getElementById('sc-away').innerHTML=(m.scorers_a||[]).map(scRow).join('')||'<tr><td class="muted">—</td></tr>';
   const mx=Math.max(...m.matrix.flat());
   let h='<div class="hmgrid"><div class="hml"></div>';
   for(let j=0;j<7;j++)h+=`<div class="hml">${m.away.slice(0,3)} ${j}</div>`;

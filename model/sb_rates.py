@@ -83,6 +83,17 @@ m['is_taker']=False
 for team,grp in m.groupby('team'):
     cand=grp[(grp.pen_per90>0.03)&(grp.mn>=600)]
     if len(cand): m.loc[cand.pen_per90.idxmax(),'is_taker']=True
+# override rigoristi designati 2026 (RotoWire/noti) — 1 per nazionale, fix dei casi mancati (es. Messi)
+TAKER_OVERRIDE={'France':'Mbapp','England':'Kane','Portugal':'Ronaldo','Argentina':'Messi','Norway':'Haaland',
+  'Egypt':'Salah','Netherlands':'Depay','Spain':'Oyarzabal','Brazil':'Raphinha','Belgium':'De Bruyne',
+  'Uruguay':'Araujo','Germany':'Havertz','Croatia':'Modric','Mexico':'Gimenez','Colombia':'James'}
+floor=m.loc[m.is_taker,'pen_per90'].median() if m.is_taker.any() else 0.10
+for team,sub in TAKER_OVERRIDE.items():
+    mask=(m.team==team)&(m.player.str.contains(sub,case=False,na=False))
+    if mask.any():
+        i=m[mask].index[0]
+        m.loc[(m.team==team),'is_taker']=False; m.loc[i,'is_taker']=True   # uno solo
+        if m.loc[i,'pen_per90']<0.03: m.loc[i,'pen_per90']=floor
 m['pen_rate90']=np.where(m.is_taker, m.pen_per90*(PEN_CONV/PEN_XG), 0.0)
 m['exp_g90']=m.op_rate90+m.pen_rate90
 m['exp_g_match']=m.exp_g90*(m.exp_min/90.0)
