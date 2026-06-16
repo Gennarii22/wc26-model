@@ -102,7 +102,8 @@ STYLE = (
     "NOT formal, NOT an essay, NOT LinkedIn, NOT a tipster, no betting or odds language. "
     "HARD RULES: under 250 characters TOTAL including hashtags. No em-dashes. No arrow characters. Vary structure, sound human not AI. English. "
     "END with 2 to 3 relevant hashtags on their own line: always include #WorldCup2026, plus one team or topic tag (e.g. #Spain, #Ecuador, #football). "
-    "Lead with the hook, the model/numbers support it. Do not start with 'The model'."
+    "Lead with the hook, the model/numbers support it. Do not start with 'The model'. "
+    "NEVER use betting slang: no 'bet', 'odds', 'lock', 'units', 'value', 'tips', 'parlay', 'lock of the day'."
 )
 def gemini(prompt):
     key = os.environ.get("GEMINI_API_KEY")
@@ -146,14 +147,78 @@ def post_to_x(text):
     except Exception as e:
         return False, str(e)
 
+import datetime as _dt
+_ALIAS = {"Czechia": "Czech Republic", "USA": "United States", "Türkiye": "Turkey",
+          "Cabo Verde": "Cape Verde", "Congo DR": "DR Congo", "Côte d'Ivoire": "Ivory Coast",
+          "Curacao": "Curaçao", "Bosnia-Herzegovina": "Bosnia and Herzegovina", "Korea Republic": "South Korea"}
+def _canon(n): return _ALIAS.get(n, n)
+
+def fetch_upcoming():
+    out = []
+    today = _dt.datetime.now(_dt.timezone.utc).date()
+    for off in (0, 1):
+        d = today + _dt.timedelta(days=off)
+        u = f"https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates={d.strftime('%Y%m%d')}"
+        try:
+            data = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=20))
+        except Exception:
+            continue
+        for e in data.get("events", []):
+            c = e["competitions"][0]
+            if c["status"]["type"]["name"] != "STATUS_SCHEDULED":
+                continue
+            try:
+                kt = _dt.datetime.fromisoformat(e["date"].replace("Z", "+00:00"))
+            except Exception:
+                continue
+            comp = {x["homeAway"]: x["team"]["displayName"] for x in c["competitors"]}
+            out.append((kt, _canon(comp.get("home", "")), _canon(comp.get("away", ""))))
+    return out
+
+def prematch_stories(lo=20, hi=80):
+    try:
+        mp = pd.read_csv(f"{BASE}/match_predictions.csv")
+    except Exception:
+        return []
+    try:
+        tp = pd.read_csv(f"{BASE}/team_probs.csv").set_index("team")
+    except Exception:
+        tp = None
+    now = _dt.datetime.now(_dt.timezone.utc)
+    S = []
+    for kt, h, a in fetch_upcoming():
+        mins = (kt - now).total_seconds() / 60
+        if not (lo <= mins <= hi):
+            continue
+        row = mp[((mp.home == h) & (mp.away == a)) | ((mp.home == a) & (mp.away == h))]
+        if not len(row):
+            continue
+        r = row.iloc[0]
+        mv = ""
+        if tp is not None and h in tp.index and a in tp.index:
+            mv = f" Squad value: {h} EUR {tp.loc[h,'mv_meur']:.0f}M vs {a} EUR {tp.loc[a,'mv_meur']:.0f}M."
+        fact = (f"{r.home} vs {r.away} kicks off in about {int(mins)} minutes. "
+                f"Model: {r.home} win {r.p1:.0f}%, draw {r.px:.0f}%, {r.away} win {r.p2:.0f}%. "
+                f"Most likely score {r.score_ml}.{mv}")
+        S.append(dict(type="prematch", team=f"{h}_vs_{a}", fact=fact,
+                      brief=("A PRE-MATCH post a few minutes before kickoff. Punchy hook on the lean "
+                             "(clear favourite, coin flip, or a live underdog) or the most likely score. "
+                             "Make people want to tune in. Do not just list the three percentages. "
+                             "Use both team hashtags plus #WorldCup2026.")))
+    return S
+
 def main():
     n = 2; do_post = "--post" in sys.argv
     if "--n" in sys.argv:
         try: n = int(sys.argv[sys.argv.index("--n")+1])
         except Exception: pass
-    F = load_facts()
-    stories = fresh_stories(build_stories(F), n)
-    print(f"WC X ENGINE — risultati al {F['last_date']} — {len(stories)} post")
+    if "--prematch" in sys.argv:
+        stories = fresh_stories(prematch_stories(), n if "--n" in sys.argv else 5)
+        print(f"WC X ENGINE [PRE-MATCH] — {len(stories)} post")
+    else:
+        F = load_facts()
+        stories = fresh_stories(build_stories(F), n)
+        print(f"WC X ENGINE — risultati al {F['last_date']} — {len(stories)} post")
     log = json.load(open(LOG)) if os.path.exists(LOG) else []
     for i, s in enumerate(stories, 1):
         txt = make_post(s)
