@@ -1,12 +1,14 @@
 name: Aggiorna modello Mondiale
 
-# Gira ogni mattina alle 11:00 ora italiana (= 09:00 UTC, ora legale estate)
-# dopo le partite della notte + a richiesta.
-# Scarica i risultati (ESPN), ri-simula il torneo, rigenera le dashboard,
-# committa i dati nuovi → Netlify ripubblica da solo a ogni push.
+# Gira ogni mattina ~11:17 ora italiana (= 09:17 UTC, ora legale estate).
+# Minuto DISPARI fuori dall'ora: i cron GitHub all'ora tonda (es. 09:00) sono
+# molto congestionati e vengono spesso ritardati o SALTATI. Off-the-hour = affidabile.
+# Secondo slot 13:17 IT come rete di sicurezza se il primo viene saltato.
+# Scarica i risultati (ESPN), ri-simula, rigenera le dashboard, committa → Netlify ripubblica.
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '17 9 * * *'
+    - cron: '17 11 * * *'
   workflow_dispatch:
 
 permissions:
