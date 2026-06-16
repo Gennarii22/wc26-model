@@ -8,14 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="brand.css" rel="stylesheet">
+<script src="i18n.js"></script>
 <style>
 .root{max-width:1500px;margin:0 auto;padding:24px 24px 64px;display:flex;flex-direction:column;gap:16px}
 .header{display:flex;align-items:center;gap:15px;padding:18px 22px}
 .header .title{display:flex;flex-direction:column;gap:3px}
 .header h1{font-size:20px}
 .header .sub{font-family:var(--font-mono);font-size:11px;color:var(--moss);letter-spacing:.03em}
-.tolink{margin-left:auto;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--olive-signal);border:.5px solid var(--line);border-radius:8px;padding:9px 14px;transition:all .2s var(--ease)}
+.tolink{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--olive-signal);border:.5px solid var(--line);border-radius:8px;padding:9px 14px;transition:all .2s var(--ease)}
 .tolink:hover{border-color:var(--olive-signal);color:var(--sage-live)}
+.hgroup{margin-left:auto;display:flex;align-items:center;gap:13px}
 .tabs{display:flex;gap:8px;padding:12px 16px;flex-wrap:wrap}
 .tab{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:11px;padding:9px 16px;background:transparent;border:.5px solid var(--line);border-radius:8px;color:var(--moss);cursor:pointer;transition:all .2s var(--ease)}
 .tab:hover{color:var(--parchment);border-color:var(--olive-signal)}
@@ -52,44 +54,47 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
 <div class="root">
   <div class="header panel">
     <span class="gp-cell">GP<span class="cur">▮</span></span>
-    <div class="title"><h1>Mondiale 2026 — Modello vs Mercato</h1>
-      <div class="sub">48 squadre · 20.000 simulazioni · Poisson ELO + rosa + macro · tabellone FIFA ufficiale (Annexe C)</div></div>
-    <a href="betting.html" class="tolink">Value partite →</a>
-    <span class="badge-live" id="badge">Live</span>
+    <div class="title"><h1 data-i18n="d.h1">Mondiale 2026 — Modello vs Mercato</h1>
+      <div class="sub" data-i18n="d.sub">48 squadre · 20.000 simulazioni · Poisson ELO + rosa + macro · tabellone FIFA ufficiale (Annexe C)</div></div>
+    <div class="hgroup">
+      <a href="betting.html" class="tolink" data-i18n="d.tolink">Value partite →</a>
+      <span class="badge-live" data-i18n="live">Live</span>
+      <div class="langtog"><button data-lang-btn="it" onclick="setLang('it')">IT</button><button data-lang-btn="en" onclick="setLang('en')">EN</button></div>
+    </div>
   </div>
   <div class="tabs panel">
-    <button class="tab active" data-v="antepost">Antepost</button>
-    <button class="tab" data-v="gironi">Gironi</button>
-    <button class="tab" data-v="partite">Partite</button>
-    <button class="tab" data-v="bomber">Capocannoniere</button>
+    <button class="tab active" data-v="antepost" data-i18n="d.tab_ante">Antepost</button>
+    <button class="tab" data-v="gironi" data-i18n="d.tab_gironi">Gironi</button>
+    <button class="tab" data-v="partite" data-i18n="d.tab_partite">Partite</button>
+    <button class="tab" data-v="bomber" data-i18n="d.tab_bomber">Capocannoniere</button>
   </div>
 
   <div id="v-antepost">
     <div class="toolbar panel" style="margin-bottom:16px">
-      <span class="info">Mercato</span>
+      <span class="info" data-i18n="d.mercato">Mercato</span>
       <select id="mksel">
-        <option value="p_win">Vincente Mondiale</option>
-        <option value="p_final">Arriva in finale</option>
-        <option value="p_sf">Arriva in semifinale</option>
-        <option value="p_qf">Arriva ai quarti</option>
-        <option value="p_r16">Arriva agli ottavi</option>
-        <option value="p_win_group">Vincente girone</option>
-        <option value="p_r32">Si qualifica (R32)</option>
+        <option value="p_win" data-i18n="mk.p_win">Vincente Mondiale</option>
+        <option value="p_final" data-i18n="mk.p_final">Arriva in finale</option>
+        <option value="p_sf" data-i18n="mk.p_sf">Arriva in semifinale</option>
+        <option value="p_qf" data-i18n="mk.p_qf">Arriva ai quarti</option>
+        <option value="p_r16" data-i18n="mk.p_r16">Arriva agli ottavi</option>
+        <option value="p_win_group" data-i18n="mk.p_win_group">Vincente girone</option>
+        <option value="p_r32" data-i18n="mk.p_r32_full">Si qualifica (R32)</option>
       </select>
-      <span class="info" style="margin-left:8px">Bankroll €</span>
+      <span class="info" style="margin-left:8px" data-i18n="d.bankroll">Bankroll €</span>
       <input class="qin" id="bank" type="number" value="1000" step="50" style="width:80px">
-      <span class="info">Kelly ×</span>
+      <span class="info" data-i18n="d.kelly">Kelly ×</span>
       <input class="qin" id="kfrac" type="number" value="0.25" step="0.05" min="0.05" max="1" style="width:60px">
-      <button class="btn btn-ghost" id="clearq" style="margin-left:auto;padding:8px 14px">Cancella quote</button>
+      <button class="btn btn-ghost" id="clearq" style="margin-left:auto;padding:8px 14px" data-i18n="d.clearq">Cancella quote</button>
     </div>
     <div class="panel">
-      <div class="panel-h" id="ante-title">Probabilità torneo — 20.000 simulazioni</div>
+      <div class="panel-h" id="ante-title" data-i18n="d.ante_title">Probabilità torneo — 20.000 simulazioni</div>
       <div style="overflow-x:auto"><table>
-        <thead><tr><th>#</th><th>Squadra</th><th>Gir.</th><th>ELO</th><th>Rosa</th>
-        <th>P(1° gir.)</th><th>P(R16)</th><th>P(QF)</th><th>P(SF)</th><th>P(Finale)</th><th>P(titolo)</th>
-        <th id="th-pmk">P(mercato)</th><th>Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th>Stake</th></tr></thead>
+        <thead><tr><th>#</th><th data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_gir">Gir.</th><th>ELO</th><th data-i18n="d.th_rosa">Rosa</th>
+        <th data-i18n="d.th_pgir">P(1° gir.)</th><th>P(R16)</th><th>P(QF)</th><th>P(SF)</th><th data-i18n="d.th_pfin">P(Finale)</th><th data-i18n="d.th_ptit">P(titolo)</th>
+        <th id="th-pmk">P(mercato)</th><th data-i18n="d.th_quota">Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th data-i18n="d.th_stake">Stake</th></tr></thead>
         <tbody id="tb-ante"></tbody></table></div>
-      <div class="foot" style="padding:12px 22px">Scegli il mercato, inserisci le quote del book → Edge, EV e stake Kelly si calcolano da soli (le quote restano salvate per ogni mercato). Righe oliva = value. Benchmark titolo: Zeileis Spagna 14,5% · Silver ~16% · Klement scelse l'Olanda — il 35% sulla Spagna è la lettura più aggressiva: la divergenza è il segnale.</div>
+      <div class="foot" style="padding:12px 22px" data-i18n="d.foot_ante">Scegli il mercato, inserisci le quote del book → Edge, EV e stake Kelly si calcolano da soli. Righe oliva = value.</div>
     </div>
   </div>
 
@@ -97,20 +102,20 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
 
   <div id="v-partite" style="display:none">
     <div class="panel">
-      <div class="panel-h">Pronostici — 72 partite della fase a gironi</div>
+      <div class="panel-h" data-i18n="d.partite_title">Pronostici — 72 partite della fase a gironi</div>
       <div style="overflow-x:auto"><table>
-        <thead><tr><th>Data</th><th>Gir.</th><th>Partita</th><th>Sede</th><th>1</th><th>X</th><th>2</th><th>Risultato più prob.</th><th>xG</th></tr></thead>
+        <thead><tr><th data-i18n="d.th_data">Data</th><th data-i18n="d.th_gir">Gir.</th><th data-i18n="d.th_partita">Partita</th><th data-i18n="d.th_sede">Sede</th><th>1</th><th>X</th><th>2</th><th data-i18n="d.th_ris">Risultato più prob.</th><th>xG</th></tr></thead>
         <tbody id="tb-matches"></tbody></table></div>
     </div>
   </div>
 
   <div id="v-bomber" style="display:none">
     <div class="panel">
-      <div class="panel-h">Capocannoniere — Golden Boot · gol del vincitore: mediana 9 · inserisci le quote per il valore</div>
+      <div class="panel-h" data-i18n="d.bomber_title">Capocannoniere — Golden Boot · gol del vincitore: mediana 9</div>
       <div style="overflow-x:auto"><table>
-        <thead><tr><th>#</th><th>Giocatore</th><th>Squadra</th><th>Ruolo</th><th>Età</th><th>Gol/Caps naz.</th><th>Gol attesi</th><th>P(Golden Boot)</th><th>Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th>Stake</th></tr></thead>
+        <thead><tr><th>#</th><th data-i18n="d.th_giocatore">Giocatore</th><th data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_ruolo">Ruolo</th><th data-i18n="d.th_eta">Età</th><th data-i18n="d.th_golcaps">Gol/Caps naz.</th><th data-i18n="d.th_golatt">Gol attesi</th><th>P(Golden Boot)</th><th data-i18n="d.th_quota">Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th data-i18n="d.th_stake">Stake</th></tr></thead>
         <tbody id="tb-gb"></tbody></table></div>
-      <div class="foot" style="padding:12px 22px">Modello: quota-gol del giocatore nella squadra (rate in nazionale shrinkato per ruolo × titolarità) × gol simulati della squadra. Bankroll e frazione Kelly si impostano nel tab Antepost. Limiti onesti: non vede rigoristi designati né minutaggio reale; per i veterani (Messi 38, Ronaldo 41) non modella il declino — da prendere con cautela.</div>
+      <div class="foot" style="padding:12px 22px" data-i18n="d.foot_bomber">Modello: quota-gol del giocatore × gol simulati della squadra. Limiti: non vede rigoristi né minutaggio.</div>
     </div>
   </div>
 </div>
@@ -119,9 +124,8 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
 <script>
 const D=window.WC, LS='wc26_quote_v2';
 const quote=JSON.parse(localStorage.getItem(LS)||'{}');   // chiave: mercato|nome
-const MKLBL={p_win:'Vincente Mondiale',p_final:'Arriva in finale',p_sf:'Arriva in semifinale',
-  p_qf:'Arriva ai quarti',p_r16:'Arriva agli ottavi',p_win_group:'Vincente girone',p_r32:'Si qualifica'};
 let MK='p_win';
+function mklbl(k){return t('mk.'+k);}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
   ['antepost','gironi','partite','bomber'].forEach(v=>document.getElementById('v-'+v).style.display=(b.dataset.v===v?'':'none'));
@@ -146,21 +150,21 @@ function valueCells(p,q){
     <td class="${ev>0?'ev-pos':'muted'}">${ev>0?stake.toFixed(0)+'€':'—'}</td>`};
 }
 function ante(){
-  document.getElementById('th-pmk').textContent='P('+MKLBL[MK]+')';
-  document.getElementById('ante-title').textContent='Probabilità torneo — quote per: '+MKLBL[MK];
+  document.getElementById('th-pmk').textContent='P('+mklbl(MK)+')';
+  document.getElementById('ante-title').textContent=t('d.ante_quote_for')+mklbl(MK);
   const tb=document.getElementById('tb-ante');tb.innerHTML='';
   const rows=[...D.teams].sort((a,b)=>b[MK]-a[MK]);
   const mx=Math.max(...rows.map(t=>t[MK]));
-  rows.forEach((t,i)=>{
-    const q=quote[MK+'|'+t.team];
-    const vc=valueCells(t[MK],q);
+  rows.forEach((tm,i)=>{
+    const q=quote[MK+'|'+tm.team];
+    const vc=valueCells(tm[MK],q);
     const tr=document.createElement('tr');if(vc.val)tr.className='val-row';
-    tr.innerHTML=`<td class="pos">${i+1}</td><td class="team">${t.team}</td><td class="muted">${t.group}</td>
-    <td class="muted">${t.elo}</td><td class="muted">${t.mv?'€'+t.mv+'m':'—'}</td>
-    <td>${pct(t.p_win_group)}</td><td>${pct(t.p_r16)}</td><td>${pct(t.p_qf)}</td><td>${pct(t.p_sf)}</td><td>${pct(t.p_final)}</td>
-    <td>${t.p_win.toFixed(2)}%</td>
-    <td class="pwin">${t[MK].toFixed(2)}%<span class="bar"><i style="width:${t[MK]/mx*100}%"></i></span></td>
-    <td><input class="qin" type="number" step="0.05" min="1.01" placeholder="—" value="${q&&q>1?q:''}" data-t="${t.team}"></td>
+    tr.innerHTML=`<td class="pos">${i+1}</td><td class="team">${tm.team}</td><td class="muted">${tm.group}</td>
+    <td class="muted">${tm.elo}</td><td class="muted">${tm.mv?'€'+tm.mv+'m':'—'}</td>
+    <td>${pct(tm.p_win_group)}</td><td>${pct(tm.p_r16)}</td><td>${pct(tm.p_qf)}</td><td>${pct(tm.p_sf)}</td><td>${pct(tm.p_final)}</td>
+    <td>${tm.p_win.toFixed(2)}%</td>
+    <td class="pwin">${tm[MK].toFixed(2)}%<span class="bar"><i style="width:${tm[MK]/mx*100}%"></i></span></td>
+    <td><input class="qin" type="number" step="0.05" min="1.01" placeholder="—" value="${q&&q>1?q:''}" data-t="${tm.team}"></td>
     ${vc.html}`;
     tb.appendChild(tr);
   });
@@ -174,16 +178,16 @@ function gironi(){
   const el=document.getElementById('groups');el.innerHTML='';
   Object.keys(D.groups).sort().forEach(g=>{
     const card=document.createElement('div');card.className='gcard panel';
-    const teams=D.teams.filter(t=>t.group===g).sort((a,b)=>b.p_win_group-a.p_win_group);
-    let rows=teams.map(t=>`<tr><td class="team">${t.team}</td><td class="muted">${t.elo}</td>
-      <td class="big">${pct(t.p_win_group)}</td><td>${pct(t.p_r32)}</td><td>${pct(t.p_win)}</td></tr>`).join('');
+    const teams=D.teams.filter(tm=>tm.group===g).sort((a,b)=>b.p_win_group-a.p_win_group);
+    let rows=teams.map(tm=>`<tr><td class="team">${tm.team}</td><td class="muted">${tm.elo}</td>
+      <td class="big">${pct(tm.p_win_group)}</td><td>${pct(tm.p_r32)}</td><td>${pct(tm.p_win)}</td></tr>`).join('');
     const ms=D.matches.filter(m=>m.group===g);
     let mrows=ms.map(m=>{
-      const mx=m.venue==='Mexico'?'<span class="mx">MEX ALT</span>':'';
+      const mx=m.venue==='Mexico'?'<span class="mx">MEX</span>':'';
       return `<div class="match"><div class="t r">${m.home}</div>
       <div class="p"><div style="width:${m.p1}%">${m.p1>14?m.p1+'%':''}</div><div style="width:${m.px}%">${m.px>14?m.px+'%':''}</div><div style="width:${m.p2}%">${m.p2>14?m.p2+'%':''}</div></div>
       <div class="t">${m.away}</div><div class="sc">${m.score}</div>${mx}</div>`;}).join('');
-    card.innerHTML=`<h3>Girone ${g}</h3><table><thead><tr><th>Squadra</th><th>ELO</th><th>1° gir.</th><th>Qualif.</th><th>Titolo</th></tr></thead><tbody>${rows}</tbody></table>${mrows}`;
+    card.innerHTML=`<h3>${t('d.girone')} ${g}</h3><table><thead><tr><th data-i18n="d.th_squadra">${t('d.th_squadra')}</th><th>ELO</th><th>${t('d.th_1gir')}</th><th>${t('d.th_qualif')}</th><th>${t('d.th_titolo')}</th></tr></thead><tbody>${rows}</tbody></table>${mrows}`;
     el.appendChild(card);
   });
 }
@@ -218,6 +222,7 @@ function bomber(){
     localStorage.setItem(LS,JSON.stringify(quote));bomber();
   });
 }
+window.onLangChange=()=>{ante();gironi();partite();bomber();};
 ante();gironi();partite();bomber();
 </script>
 </body>

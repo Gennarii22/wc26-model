@@ -97,5 +97,11 @@ tr:hover td{background:rgba(110,138,60,.06)}
 a{color:var(--olive-signal);text-decoration:none}
 a:hover{color:var(--sage-live)}
 
+/* selettore lingua */
+.langtog{display:inline-flex;border:.5px solid var(--line);border-radius:8px;overflow:hidden}
+.langtog button{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;background:transparent;color:var(--moss);border:none;cursor:pointer;transition:all .2s var(--ease)}
+.langtog button.on{background:var(--olive);color:var(--parchment)}
+.langtog button:hover:not(.on){color:var(--parchment)}
+
 /* grana sottilissima opzionale (off di default) */
 .foot{font-family:var(--font-mono);font-size:11px;color:var(--moss);line-height:1.7;letter-spacing:.02em}

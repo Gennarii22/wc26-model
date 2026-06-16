@@ -4,18 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mondiale 2026 — Il Modello · Gennaro Pancia</title>
-<meta name="description" content="Modello probabilistico del Mondiale 2026: 20.000 simulazioni Monte Carlo, tutte le partite, edge vs le quote di mercato. Calibrato su 32.282 partite internazionali. Si ri-simula dopo ogni giornata.">
-<meta property="og:title" content="Mondiale 2026 — Il Modello">
-<meta property="og:description" content="20.000 simulazioni. Probabilità titolo, tabellone, capocannoniere ed edge vs il mercato. Si aggiorna dopo ogni giornata.">
+<meta name="description" content="Modello probabilistico del Mondiale 2026: 20.000 simulazioni Monte Carlo, tutte le partite, edge vs le quote di mercato. / Probabilistic 2026 World Cup model: 20,000 Monte Carlo simulations, every match, edge vs market odds.">
+<meta property="og:title" content="Mondiale 2026 — Il Modello / The 2026 World Cup Model">
+<meta property="og:description" content="20.000 simulazioni. Probabilità titolo, tabellone, capocannoniere ed edge vs il mercato. / 20,000 simulations. Title, bracket, top scorer and edge vs the market.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="brand.css" rel="stylesheet">
+<script src="i18n.js"></script>
 <style>
 .wrap{max-width:820px;margin:0 auto;padding:34px 22px 72px;display:flex;flex-direction:column;gap:30px}
 .topbar{display:flex;align-items:center;gap:13px}
-.topbar .right{margin-left:auto;display:flex;align-items:center;gap:16px}
+.topbar .right{margin-left:auto;display:flex;align-items:center;gap:14px}
 .hero .label{display:block;margin-bottom:18px}
 .hero h1.display{margin-bottom:18px}
 .hero .lead{max-width:640px}
@@ -58,58 +59,62 @@
     <span class="gp-cell">GP<span class="cur">▮</span></span>
     <span class="wordmark">Gennaro Pancia<span class="dot">.</span></span>
     <div class="right">
-      <span class="label">Mondiale 2026</span>
-      <span class="badge-live">Live</span>
+      <span class="label" data-i18n="l.badge">Mondiale 2026</span>
+      <span class="badge-live" data-i18n="live">Live</span>
+      <div class="langtog">
+        <button data-lang-btn="it" onclick="setLang('it')">IT</button>
+        <button data-lang-btn="en" onclick="setLang('en')">EN</button>
+      </div>
     </div>
   </div>
 
   <div class="hero">
-    <span class="label">Modello probabilistico · 20.000 simulazioni</span>
-    <h1 class="display">Il Mondiale 2026,<br>in <span class="serif-it">probabilità.</span></h1>
-    <p class="lead">Non pronostici. Un modello Monte Carlo che simula <b>20.000 volte</b> l'intero torneo, calibrato su <b>32.282 partite internazionali</b> (1990–2026) con forza ELO, valore rosa e covariate strutturali. Probabilità per ogni squadra, tutte le partite, ed <b>edge calcolato vs le quote di mercato</b>. Si ri-simula dopo ogni giornata.</p>
+    <span class="label" data-i18n="l.hero_label">Modello probabilistico · 20.000 simulazioni</span>
+    <h1 class="display" data-i18n-html="l.hero_head">Il Mondiale 2026,<br>in <span class="serif-it">probabilità.</span></h1>
+    <p class="lead" data-i18n-html="l.hero_lead">Non pronostici. Un modello Monte Carlo che simula <b>20.000 volte</b> l'intero torneo, calibrato su <b>32.282 partite internazionali</b> (1990–2026) con forza ELO, valore rosa e covariate strutturali. Probabilità per ogni squadra, tutte le partite, ed <b>edge calcolato vs le quote di mercato</b>. Si ri-simula dopo ogni giornata.</p>
   </div>
 
   <div class="teasers">
-    <div class="tile"><span class="label">Favorita · P(titolo)</span><div class="v" id="t1">—</div><div class="k" id="t1k">—</div></div>
-    <div class="tile"><span class="label">Capocannoniere</span><div class="v" id="t2">—</div><div class="k" id="t2k">—</div></div>
-    <div class="tile"><span class="label">Copertura</span><div class="v">104</div><div class="k">partite del torneo</div></div>
+    <div class="tile"><span class="label" data-i18n="l.t1">Favorita · P(titolo)</span><div class="v" id="t1">—</div><div class="k" id="t1k">—</div></div>
+    <div class="tile"><span class="label" data-i18n="l.t2">Capocannoniere</span><div class="v" id="t2">—</div><div class="k" id="t2k">—</div></div>
+    <div class="tile"><span class="label" data-i18n="l.t3">Copertura</span><div class="v">104</div><div class="k" data-i18n="l.t3k">partite del torneo</div></div>
   </div>
 
   <div class="feat panel panel-pad">
-    <div class="row"><span class="l">Titolo & tabellone</span><span class="d">Probabilità per ogni squadra — girone, ottavi, quarti, semifinale, titolo. <b>Ri-simulate dopo ogni giornata reale.</b></span></div>
-    <div class="row"><span class="l">104 partite</span><span class="d">Esito <b>1 / X / 2</b> e risultato più probabile per ogni gara.</span></div>
-    <div class="row"><span class="l">Edge vs mercato</span><span class="d">La probabilità del modello contro le quote del book — <b>edge de-vigato</b>, calcolo onesto.</span></div>
-    <div class="row"><span class="l">Capocannoniere</span><span class="d">Corsa al Golden Boot con probabilità per giocatore.</span></div>
+    <div class="row"><span class="l" data-i18n="l.f1l">Titolo & tabellone</span><span class="d" data-i18n-html="l.f1d">Probabilità per ogni squadra — girone, ottavi, quarti, semifinale, titolo. <b>Ri-simulate dopo ogni giornata reale.</b></span></div>
+    <div class="row"><span class="l" data-i18n="l.f2l">104 partite</span><span class="d" data-i18n-html="l.f2d">Esito <b>1 / X / 2</b> e risultato più probabile per ogni gara.</span></div>
+    <div class="row"><span class="l" data-i18n="l.f3l">Edge vs mercato</span><span class="d" data-i18n-html="l.f3d">La probabilità del modello contro le quote del book — <b>edge de-vigato</b>, calcolo onesto.</span></div>
+    <div class="row"><span class="l" data-i18n="l.f4l">Capocannoniere</span><span class="d" data-i18n-html="l.f4d">Corsa al Golden Boot con probabilità per giocatore.</span></div>
   </div>
 
   <div class="gate panel panel-pad" id="gate">
-    <h2>Sblocca il modello</h2>
-    <p class="lead">Lascia nome ed email: apro subito il modello completo e ti avviso quando esce un aggiornamento rilevante — fine gironi, ottavi, quarti. Gratuito.</p>
+    <h2 data-i18n="l.gate_h">Sblocca il modello</h2>
+    <p class="lead" data-i18n="l.gate_lead">Lascia nome ed email: apro subito il modello completo e ti avviso quando esce un aggiornamento rilevante — fine gironi, ottavi, quarti. Gratuito.</p>
     <div class="form">
-      <input type="text" id="name" placeholder="Nome" autocomplete="given-name">
-      <input type="email" id="email" placeholder="email@dominio.com" autocomplete="email" inputmode="email">
+      <input type="text" id="name" data-i18n-ph="l.ph_name" placeholder="Nome" autocomplete="given-name">
+      <input type="email" id="email" data-i18n-ph="l.ph_email" placeholder="email@dominio.com" autocomplete="email" inputmode="email">
     </div>
-    <label class="check"><input type="checkbox" id="consent"><span>Acconsento al trattamento di nome ed email per ricevere aggiornamenti sul modello. Posso revocare il consenso e disiscrivermi in qualsiasi momento.</span></label>
-    <div class="err" id="err">Compila nome, email valida e spunta il consenso.</div>
-    <button class="btn" id="go">Sblocca il modello</button>
-    <p class="disc" style="margin-top:18px">Solo a scopo informativo · 18+ · scommettere comporta rischi.</p>
+    <label class="check"><input type="checkbox" id="consent"><span data-i18n="l.consent">Acconsento al trattamento di nome ed email per ricevere aggiornamenti sul modello. Posso revocare il consenso e disiscrivermi in qualsiasi momento.</span></label>
+    <div class="err" id="err" data-i18n="l.err">Compila nome, email valida e spunta il consenso.</div>
+    <button class="btn" id="go" data-i18n="l.btn">Sblocca il modello</button>
+    <p class="disc" style="margin-top:18px" data-i18n="l.disc">Solo a scopo informativo · 18+ · scommettere comporta rischi.</p>
   </div>
 
   <div class="unlocked" id="unlocked">
-    <span class="label">Accesso sbloccato</span>
+    <span class="label" data-i18n="l.unlocked">Accesso sbloccato</span>
     <div class="bigbtns">
-      <a class="bb" href="dashboard.html"><span class="l">Modello & antepost</span><span class="t">Titolo, gironi, tabellone <span class="ar">→</span></span><span class="d">Probabilità torneo, capocannoniere, calcolo edge.</span></a>
-      <a class="bb" href="betting.html"><span class="l">Value · partite</span><span class="t">Quote fair & edge <span class="ar">→</span></span><span class="d">Tutte le partite, mercati, edge vs il book.</span></a>
+      <a class="bb" href="dashboard.html"><span class="l" data-i18n="l.bb1l">Modello & antepost</span><span class="t"><span data-i18n="l.bb1t">Titolo, gironi, tabellone</span> <span class="ar">→</span></span><span class="d" data-i18n="l.bb1d">Probabilità torneo, capocannoniere, calcolo edge.</span></a>
+      <a class="bb" href="betting.html"><span class="l" data-i18n="l.bb2l">Value · partite</span><span class="t"><span data-i18n="l.bb2t">Quote fair & edge</span> <span class="ar">→</span></span><span class="d" data-i18n="l.bb2d">Tutte le partite, mercati, edge vs il book.</span></a>
     </div>
     <div class="savelink">
-      <span>Salva questo link per tornare:</span>
+      <span data-i18n="l.savelink">Salva questo link per tornare:</span>
       <a id="directlink" href="dashboard.html"></a>
-      <button class="btn btn-ghost" id="copylink" type="button" style="padding:7px 13px">Copia</button>
+      <button class="btn btn-ghost" id="copylink" type="button" style="padding:7px 13px" data-i18n="l.copy">Copia</button>
     </div>
   </div>
 
   <div class="foot">
-    <p class="disc">Gennaro Pancia · modello probabilistico Mondiale 2026 · si aggiorna automaticamente dopo ogni giornata. The numbers don't lie.</p>
+    <p class="disc" data-i18n="l.foot">Gennaro Pancia · modello probabilistico Mondiale 2026 · si aggiorna automaticamente dopo ogni giornata. The numbers don't lie.</p>
   </div>
 
 </div>
@@ -119,7 +124,7 @@
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz2XGGiv25S1BQp8QqRD4B8DBYCiG_e7mS0CSAXn8s-lEFixpAb286NLC1CAUeL5_bf/exec";
 const UNLOCK_KEY = 'wc26_unlocked';
 
-// teaser live dal modello
+// teaser live dal modello (i nomi non si traducono)
 try{
   const D=window.WC;
   if(D&&D.teams&&D.teams.length){
@@ -138,14 +143,14 @@ const gate=document.getElementById('gate'), unlocked=document.getElementById('un
 function showUnlocked(){gate.style.display='none';unlocked.style.display='flex';}
 if(localStorage.getItem(UNLOCK_KEY)==='1') showUnlocked();
 
-const go=document.getElementById('go'), name=document.getElementById('name'),
+const go=document.getElementById('go'), nameI=document.getElementById('name'),
       email=document.getElementById('email'), consent=document.getElementById('consent'),
       err=document.getElementById('err');
 function valid(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
 async function submit(){
-  const n=name.value.trim(), e=email.value.trim();
+  const n=nameI.value.trim(), e=email.value.trim();
   if(n.length<2 || !valid(e) || !consent.checked){err.style.display='block';return;}
-  err.style.display='none'; go.disabled=true; go.textContent='Sblocco…';
+  err.style.display='none'; go.disabled=true; go.textContent=t('l.btn_loading');
   try{
     if(APPS_SCRIPT_URL && !APPS_SCRIPT_URL.startsWith('PASTE')){
       const body=new URLSearchParams({name:n, email:e, consent:'true', src:'wc26'});
@@ -153,22 +158,19 @@ async function submit(){
     }
   }catch(_){}
   localStorage.setItem(UNLOCK_KEY,'1');
-  go.disabled=false; go.textContent='Sblocca il modello';
+  go.disabled=false; go.textContent=t('l.btn');
   showUnlocked();
   unlocked.scrollIntoView({behavior:'smooth',block:'center'});
 }
 go.onclick=submit;
-[name,email].forEach(el=>el.addEventListener('keydown',ev=>{if(ev.key==='Enter')submit();}));
+[nameI,email].forEach(el=>el.addEventListener('keydown',ev=>{if(ev.key==='Enter')submit();}));
 
 // link diretto salvabile (apre il modello saltando il gate)
-(function(){
-  const dl=document.getElementById('directlink');
-  const url=location.origin+location.pathname.replace(/index\.html?$/,'')+'dashboard.html';
-  dl.textContent=url;
-  const cp=document.getElementById('copylink');
-  cp.onclick=()=>{(navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject())
-    .then(()=>{cp.textContent='Copiato';setTimeout(()=>cp.textContent='Copia',1500);}).catch(()=>{});};
-})();
+const directUrl=location.origin+location.pathname.replace(/index\.html?$/,'')+'dashboard.html';
+document.getElementById('directlink').textContent=directUrl;
+document.getElementById('copylink').onclick=()=>{const cp=document.getElementById('copylink');
+  (navigator.clipboard?navigator.clipboard.writeText(directUrl):Promise.reject())
+  .then(()=>{cp.textContent=t('l.copied');setTimeout(()=>cp.textContent=t('l.copy'),1500);}).catch(()=>{});};
 </script>
 </body>
 </html>

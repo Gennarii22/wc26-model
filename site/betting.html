@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="brand.css" rel="stylesheet">
+<script src="i18n.js"></script>
 <style>
 .root{max-width:1500px;margin:0 auto;padding:24px 24px 64px;display:flex;flex-direction:column;gap:16px}
 .header{display:flex;align-items:center;gap:15px;padding:18px 22px;flex-wrap:wrap}
 .header h1{font-size:20px}
 .sub{font-family:var(--font-mono);font-size:11px;color:var(--moss);letter-spacing:.03em;margin-top:2px}
-.lnk{margin-left:auto;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--olive-signal);border:.5px solid var(--line);border-radius:8px;padding:9px 14px}
+.hgroup{margin-left:auto;display:flex;align-items:center;gap:13px}
+.lnk{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--olive-signal);border:.5px solid var(--line);border-radius:8px;padding:9px 14px}
 .lnk:hover{border-color:var(--olive-signal);color:var(--sage-live)}
 .layout{display:grid;grid-template-columns:330px 1fr;gap:16px}
 @media(max-width:980px){.layout{grid-template-columns:1fr}}
@@ -75,8 +77,11 @@ td:first-child{font-family:var(--font-body);font-weight:500}
 <div class="root">
   <div class="header panel">
     <span class="gp-cell">GP<span class="cur">▮</span></span>
-    <div><h1>Mondiale 2026 — Value & Quote</h1><div class="sub" id="sub"></div></div>
-    <a class="lnk" href="dashboard.html">← Torneo & antepost</a>
+    <div><h1 data-i18n="b.h1">Mondiale 2026 — Value & Quote</h1><div class="sub" id="sub"></div></div>
+    <div class="hgroup">
+      <a class="lnk" href="dashboard.html" data-i18n="b.tolink">← Torneo & antepost</a>
+      <div class="langtog"><button data-lang-btn="it" onclick="setLang('it')">IT</button><button data-lang-btn="en" onclick="setLang('en')">EN</button></div>
+    </div>
   </div>
 
   <div class="layout">
@@ -86,35 +91,35 @@ td:first-child{font-family:var(--font-body);font-weight:500}
       <div class="mhead panel" id="mhead"></div>
       <div class="cols">
         <div class="panel">
-          <div class="panel-h">Mercati — clicca una riga per portarla nel calcolatore</div>
-          <table><thead><tr><th>Esito</th><th>Probabilità</th><th>Quota fair</th></tr></thead>
+          <div class="panel-h" data-i18n="b.mkts_h">Mercati — clicca una riga per portarla nel calcolatore</div>
+          <table><thead><tr><th data-i18n="b.th_esito">Esito</th><th data-i18n="b.th_prob">Probabilità</th><th data-i18n="b.th_fair">Quota fair</th></tr></thead>
           <tbody id="mkts"></tbody></table>
         </div>
         <div style="display:flex;flex-direction:column;gap:16px">
           <div class="panel calc">
-            <div class="panel-h" style="padding:0">Calcolatore di valore</div>
-            <div class="sel-mk" id="cmk">Seleziona un mercato dalla tabella ←</div>
+            <div class="panel-h" style="padding:0" data-i18n="b.calc_h">Calcolatore di valore</div>
+            <div class="sel-mk" id="cmk"></div>
             <div class="inrow">
-              <div><label>Quota bookmaker</label><input type="number" id="odds" step="0.01" min="1.01" placeholder="es. 2.10"></div>
-              <div><label>Bankroll €</label><input type="number" id="bank" value="1000" step="50"></div>
-              <div><label>Frazione Kelly</label><input type="number" id="kfrac" value="0.25" step="0.05" min="0.05" max="1"></div>
+              <div><label data-i18n="b.lbl_odds">Quota bookmaker</label><input type="number" id="odds" step="0.01" min="1.01" placeholder="2.10"></div>
+              <div><label data-i18n="b.lbl_bank">Bankroll €</label><input type="number" id="bank" value="1000" step="50"></div>
+              <div><label data-i18n="b.lbl_kelly">Frazione Kelly</label><input type="number" id="kfrac" value="0.25" step="0.05" min="0.05" max="1"></div>
             </div>
             <div class="res" id="cres"></div>
-            <div class="note">EV = P_modello × quota − 1 (valore atteso per 1€). Kelly pieno = edge/(quota−1); usa la frazione (0,25 consigliato) per gestire la varianza. Oliva = c'è valore.</div>
+            <div class="note" data-i18n="b.note">EV = P_modello × quota − 1. Oliva = c'è valore.</div>
           </div>
           <div class="panel">
-            <div class="panel-h">Risultati esatti più probabili</div>
+            <div class="panel-h" data-i18n="b.topsc">Risultati esatti più probabili</div>
             <table><tbody id="topsc"></tbody></table>
           </div>
         </div>
       </div>
       <div class="cols">
         <div class="panel hm">
-          <div class="panel-h" style="padding:0 0 12px">Mappa risultati esatti (P%)</div>
+          <div class="panel-h" style="padding:0 0 12px" data-i18n="b.heat">Mappa risultati esatti (P%)</div>
           <div id="heat"></div>
         </div>
         <div class="panel">
-          <div class="panel-h">Distribuzione gol attesi</div>
+          <div class="panel-h" data-i18n="b.dist">Distribuzione gol attesi</div>
           <div class="dist" id="dist"></div>
         </div>
       </div>
@@ -125,44 +130,42 @@ td:first-child{font-family:var(--font-body);font-weight:500}
 <script src="betting_data.js"></script>
 <script>
 const D=window.BET;let cur=null,selMk=null;
-document.getElementById('sub').textContent=`probabilità dal modello (ELO live) · aggiornato: ${D.updated}`;
+function setSub(){document.getElementById('sub').textContent=t('b.sub')+D.updated;}
 const upcoming=D.matches.filter(m=>!m.played);
 const list=document.getElementById('mlist');
 let lastDay='';
 upcoming.forEach((m,i)=>{
   if(m.date!==lastDay){lastDay=m.date;const d=document.createElement('div');d.className='mday';d.textContent=m.date;list.appendChild(d);}
   const r=document.createElement('div');r.className='mrow';r.dataset.i=i;
-  r.innerHTML=`<div class="t">${m.home} — ${m.away}</div><div class="meta">${m.stage}${m.group?' · Gir.'+m.group:''} · ${m.city}${m.venue==='Mexico'?' · MEX':''}</div>`;
+  r.innerHTML=`<div class="t">${m.home} — ${m.away}</div><div class="meta">${m.stage}${m.group?' · Gr.'+m.group:''} · ${m.city}${m.venue==='Mexico'?' · MEX':''}</div>`;
   r.onclick=()=>{cur=m;selMk=null;document.querySelectorAll('.mrow').forEach(x=>x.classList.toggle('active',x===r));render();};
   list.appendChild(r);
 });
 
-const MKORDER=[["1","1 (casa)"],["X","X (pareggio)"],["2","2 (trasferta)"],
- ["1X","Doppia chance 1X"],["12","Doppia chance 12"],["X2","Doppia chance X2"],
- ["GOL","Gol (BTTS sì)"],["NOGOL","No Gol (BTTS no)"],
- ["OVER 1.5","Over 1.5"],["UNDER 1.5","Under 1.5"],
- ["OVER 2.5","Over 2.5"],["UNDER 2.5","Under 2.5"],
- ["OVER 3.5","Over 3.5"],["UNDER 3.5","Under 3.5"]];
+const MKORDER=[["1","bm.1"],["X","bm.X"],["2","bm.2"],
+ ["1X","bm.1X"],["12","bm.12"],["X2","bm.X2"],
+ ["GOL","bm.GOL"],["NOGOL","bm.NOGOL"],
+ ["OVER 1.5","bm.O15"],["UNDER 1.5","bm.U15"],
+ ["OVER 2.5","bm.O25"],["UNDER 2.5","bm.U25"],
+ ["OVER 3.5","bm.O35"],["UNDER 3.5","bm.U35"]];
 
 function render(){
   const m=cur;if(!m)return;
   document.getElementById('mhead').innerHTML=`
-    <div class="tm"><div class="nm">${m.home}</div><div class="st">ELO ${m.elo_h} · €${m.mv_h}m</div><div class="xg">${m.lh}</div><div class="st">gol attesi</div></div>
+    <div class="tm"><div class="nm">${m.home}</div><div class="st">ELO ${m.elo_h} · €${m.mv_h}m</div><div class="xg">${m.lh}</div><div class="st">${t('b.gol_attesi')}</div></div>
     <div class="vs">${m.date}<br>${m.city}<br>${m.stage}</div>
-    <div class="tm"><div class="nm">${m.away}</div><div class="st">ELO ${m.elo_a} · €${m.mv_a}m</div><div class="xg">${m.la}</div><div class="st">gol attesi</div></div>`;
+    <div class="tm"><div class="nm">${m.away}</div><div class="st">ELO ${m.elo_a} · €${m.mv_a}m</div><div class="xg">${m.la}</div><div class="st">${t('b.gol_attesi')}</div></div>`;
   const tb=document.getElementById('mkts');tb.innerHTML='';
   MKORDER.forEach(([k,lbl])=>{
     const p=m.markets[k];if(p===undefined)return;
     const tr=document.createElement('tr');tr.className='mk'+(selMk===k?' sel':'');
-    tr.innerHTML=`<td>${lbl}</td><td>${(p*100).toFixed(1)}%<span class="pbar"><i style="width:${p*100}%"></i></span></td><td class="fair">${(1/p).toFixed(2)}</td>`;
+    tr.innerHTML=`<td>${t(lbl)}</td><td>${(p*100).toFixed(1)}%<span class="pbar"><i style="width:${p*100}%"></i></span></td><td class="fair">${(1/p).toFixed(2)}</td>`;
     tr.onclick=()=>{selMk=k;render();};
     tb.appendChild(tr);
   });
-  document.getElementById('cmk').textContent=selMk?`${MKORDER.find(x=>x[0]===selMk)[1]} — P modello ${(m.markets[selMk]*100).toFixed(1)}% (fair ${(1/m.markets[selMk]).toFixed(2)})`:'Seleziona un mercato dalla tabella ←';
+  document.getElementById('cmk').textContent=selMk?`${t(MKORDER.find(x=>x[0]===selMk)[1])} — ${t('b.pmod')} ${(m.markets[selMk]*100).toFixed(1)}% (${t('b.fair')} ${(1/m.markets[selMk]).toFixed(2)})`:t('b.sel_prompt');
   calc();
-  // top scores
   document.getElementById('topsc').innerHTML=m.top_scores.map(s=>`<tr><td>${s.s}</td><td>${s.p}%<span class="pbar"><i style="width:${s.p*4}%"></i></span></td></tr>`).join('');
-  // heatmap
   const mx=Math.max(...m.matrix.flat());
   let h='<div class="hmgrid"><div class="hml"></div>';
   for(let j=0;j<7;j++)h+=`<div class="hml">${m.away.slice(0,3)} ${j}</div>`;
@@ -171,7 +174,6 @@ function render(){
       h+=`<div class="hmc" style="background:rgba(110,138,60,${(al*0.9).toFixed(2)});color:${al>0.45?'#0B0F0A':'rgba(233,231,218,.7)'}">${(p*100).toFixed(1)}<span class="s">${i}-${j}</span></div>`;}}
   h+='</div>';
   document.getElementById('heat').innerHTML=h;
-  // dists
   let dd='';
   for(let g=0;g<7;g++){
     dd+=`<div class="row"><div class="lbl">${g}</div><div class="bar"><i class="bh" style="width:${m.gh_dist[g]*100}%"></i></div><div class="v">${(m.gh_dist[g]*100).toFixed(1)}% ${m.home.slice(0,12)}</div></div>`;
@@ -186,14 +188,16 @@ function calc(){
   const p=cur.markets[selMk],q=parseFloat(document.getElementById('odds').value),
         bank=parseFloat(document.getElementById('bank').value)||1000,
         kf=parseFloat(document.getElementById('kfrac').value)||0.25;
-  if(!q||q<=1){el.innerHTML='<div class="kpi"><div class="l">In attesa</div><div class="v">—</div><div class="note">inserisci la quota</div></div>';return;}
+  if(!q||q<=1){el.innerHTML=`<div class="kpi"><div class="l">${t('b.in_attesa')}</div><div class="v">—</div><div class="note">${t('b.insert_quota')}</div></div>`;return;}
   const ev=p*q-1, edge=p-1/q, kelly=Math.max(0,(p*q-1)/(q-1)), stake=bank*kelly*kf;
   el.innerHTML=`
-   <div class="kpi ${ev>0?'good':'bad'}"><div class="l">Valore (EV/1€)</div><div class="v">${ev>0?'+':''}${ev.toFixed(3)}</div></div>
-   <div class="kpi ${edge>0?'good':'bad'}"><div class="l">Edge</div><div class="v">${edge>0?'+':''}${(edge*100).toFixed(1)}%</div></div>
-   <div class="kpi"><div class="l">Kelly pieno</div><div class="v">${(kelly*100).toFixed(1)}%</div></div>
-   <div class="kpi ${ev>0?'good':''}"><div class="l">Stake (${kf}×K)</div><div class="v">${ev>0?stake.toFixed(2)+'€':'0€'}</div></div>`;
+   <div class="kpi ${ev>0?'good':'bad'}"><div class="l">${t('b.kpi_ev')}</div><div class="v">${ev>0?'+':''}${ev.toFixed(3)}</div></div>
+   <div class="kpi ${edge>0?'good':'bad'}"><div class="l">${t('b.kpi_edge')}</div><div class="v">${edge>0?'+':''}${(edge*100).toFixed(1)}%</div></div>
+   <div class="kpi"><div class="l">${t('b.kpi_kelly')}</div><div class="v">${(kelly*100).toFixed(1)}%</div></div>
+   <div class="kpi ${ev>0?'good':''}"><div class="l">${t('b.kpi_stake')} (${kf}×K)</div><div class="v">${ev>0?stake.toFixed(2)+'€':'0€'}</div></div>`;
 }
+setSub();
+window.onLangChange=()=>{setSub();render();};
 if(upcoming.length){cur=upcoming[0];document.querySelector('.mrow')?.classList.add('active');render();}
 </script>
 </body>
