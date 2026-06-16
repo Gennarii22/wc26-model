@@ -17,7 +17,7 @@ import joblib
 
 import os
 _HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.environ.get("WC_OUT") or os.path.join(_HERE, "..", "WorldCup DB", "output")
+OUT = os.environ.get("WC_OUT") or os.path.join(_HERE, "..", "..", "WorldCup DB", "output")
 BASE = os.environ.get("WC_BASE") or _HERE
 M = joblib.load(f"{BASE}/match_model.pkl")
 a, b, w = M["a"], M["b"], M["w"]

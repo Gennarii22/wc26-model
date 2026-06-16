@@ -20,8 +20,8 @@ from scipy.stats import poisson
 
 import os
 _HERE = os.path.dirname(os.path.abspath(__file__))
-RAW = os.environ.get("WC_RAW") or os.path.join(_HERE, "..", "WorldCup DB", "raw")
-OUT = os.environ.get("WC_OUT") or os.path.join(_HERE, "..", "WorldCup DB", "output")
+RAW = os.environ.get("WC_RAW") or os.path.join(_HERE, "..", "..", "WorldCup DB", "raw")
+OUT = os.environ.get("WC_OUT") or os.path.join(_HERE, "..", "..", "WorldCup DB", "output")
 BASE = os.environ.get("WC_BASE") or _HERE
 
 # ── 1. Partite internazionali (era moderna) ───────────────────────────────
