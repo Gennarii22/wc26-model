@@ -62,10 +62,9 @@ jobs:
           cd model
           python wc_x_engine.py --n 2 --post
 
-      - name: Commit & push (se ci sono cambiamenti)
+      - name: Commit & push sicuro (anti-race: vince chi ha più risultati)
         run: |
           git config user.name "wc26-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "auto-update modello $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          git config pull.rebase true
+          bash safe_push.sh "auto-update modello $(date -u +'%Y-%m-%d %H:%M UTC')"
