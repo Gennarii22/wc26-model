@@ -1,14 +1,23 @@
 name: Aggiorna modello Mondiale
 
-# Gira ogni mattina ~11:17 ora italiana (= 09:17 UTC, ora legale estate).
-# Minuto DISPARI fuori dall'ora: i cron GitHub all'ora tonda (es. 09:00) sono
-# molto congestionati e vengono spesso ritardati o SALTATI. Off-the-hour = affidabile.
-# Secondo slot 13:17 IT come rete di sicurezza se il primo viene saltato.
+# Durante il torneo le partite cadono in finestre lungo tutta la giornata.
+# I cron di GitHub sono BEST-EFFORT: all'ora tonda (es. 09:00) e quando un repo
+# ha pochi slot/giorno vengono spesso ritardati o SALTATI (il 17/06 sono stati
+# saltati ENTRAMBI gli slot → dati fermi tutto il giorno). Difesa: TANTI slot
+# distribuiti, a minuti DISPARI fuori dall'ora. Se GitHub ne salta qualcuno,
+# gli altri girano e i dati non restano mai fermi a lungo (idempotente: se non
+# ci sono partite nuove, il commit è vuoto e non cambia nulla).
+# Orari UTC (estate IT = UTC+2): 09:23→11:23 IT, 12:23→14:23, 15:23→17:23,
+# 18:23→20:23, 21:23→23:23, 23:43→01:43 (dopo le gare serali USA).
 # Scarica i risultati (ESPN), ri-simula, rigenera le dashboard, committa → Netlify ripubblica.
 on:
   schedule:
-    - cron: '17 9 * * *'
-    - cron: '17 11 * * *'
+    - cron: '23 9 * * *'
+    - cron: '23 12 * * *'
+    - cron: '23 15 * * *'
+    - cron: '23 18 * * *'
+    - cron: '23 21 * * *'
+    - cron: '43 23 * * *'
   workflow_dispatch:
 
 permissions:

@@ -60,7 +60,8 @@ S = (b * t26.elo_cur / 100
      + M["c_t5"] * t26.pct_top5_leagues)
 t26["S"] = S - S.mean()
 STR = dict(zip(t26.team_name, t26.S))
-ELO = dict(zip(t26.team_name, t26.elo_pre_tournament))
+ELO = dict(zip(t26.team_name, t26.elo_pre_tournament))   # spareggio FIFA (deterministico, pre-torneo)
+ELO_CUR = dict(zip(t26.team_name, t26.elo_cur))           # ELO live (aggiornato dai risultati) → display
 TEAMS = list(t26.team_name); IDX = {t: i for i, t in enumerate(TEAMS)}; nt = len(TEAMS)
 HOSTS = {"Mexico", "Canada", "United States"}
 
@@ -306,7 +307,9 @@ np.add.at(reach["W"], champ, 1)
 # ── 8. Output ──────────────────────────────────────────────────────────────
 res = pd.DataFrame({"team": TEAMS})
 res["group"] = res.team.map(GROUP_OF)
-res["elo"] = res.team.map(ELO).round(0)
+res["elo"] = res.team.map(ELO_CUR).round(0)              # ELO live aggiornato
+res["elo_pre"] = res.team.map(ELO).round(0)              # ELO pre-torneo (giorno 0)
+res["elo_delta"] = (res["elo"] - res["elo_pre"]).round(0)
 res["mv_meur"] = (res.team.map(dict(zip(t26.team_name, t26.market_value_eur)))/1e6).round(0)
 wg = np.zeros(nt)
 for g in GROUPS: np.add.at(wg, winners_g[g], 1)

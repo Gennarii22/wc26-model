@@ -24,7 +24,10 @@ if os.path.exists(_pre):
     pre_map = dict(zip(pdf.team, pdf.p_win))
 
 for _, r in tp.iterrows():
+    elo_pre = int(r.elo_pre) if "elo_pre" in tp.columns and pd.notna(r.elo_pre) else int(r.elo)
+    elo_delta = int(r.elo_delta) if "elo_delta" in tp.columns and pd.notna(r.elo_delta) else 0
     out["teams"].append({"team": r.team, "group": r.group, "elo": int(r.elo),
+        "elo_pre": elo_pre, "elo_delta": elo_delta,
         "mv": int(r.mv_meur) if pd.notna(r.mv_meur) else None,
         "p_win_group": round(r.p_win_group, 1), "p_r32": round(r.p_r32, 1),
         "p_r16": round(r.p_r16, 1), "p_qf": round(r.p_qf, 1), "p_sf": round(r.p_sf, 1),

@@ -125,7 +125,7 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
     <div class="panel">
       <div class="panel-h" data-i18n="d.pw_h">Pre-Mondiale → ora · come si muovono le probabilità titolo</div>
       <div style="overflow-x:auto"><table>
-        <thead><tr><th>#</th><th data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_gir">Gir.</th><th>ELO</th><th data-i18n="d.pw_pre">P(titolo) pre</th><th data-i18n="d.pw_now">P(titolo) ora</th><th data-i18n="d.pw_delta">Δ</th></tr></thead>
+        <thead><tr><th>#</th><th data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_gir">Gir.</th><th>ELO g0 ▸ Δ</th><th data-i18n="d.pw_pre">P(titolo) pre</th><th data-i18n="d.pw_now">P(titolo) ora</th><th data-i18n="d.pw_delta">Δ</th></tr></thead>
         <tbody id="tb-prewc"></tbody></table></div>
     </div>
   </div>
@@ -253,7 +253,7 @@ function prewc(){
     const col=d>0.05?'var(--olive-signal)':(d<-0.05?'var(--neg)':'var(--moss)');
     const tr=document.createElement('tr');
     tr.innerHTML=`<td class="pos">${i+1}</td><td class="team">${t.team}</td><td class="muted">${t.group}</td>
-    <td class="muted">${t.elo}</td><td class="muted">${t.p_win_pre.toFixed(2)}%</td>
+    <td class="muted">${t.elo_pre??t.elo}${t.elo_delta?` <span style="color:${t.elo_delta>0?'var(--olive-signal)':'var(--neg)'};font-family:var(--font-mono)">${t.elo_delta>0?'+':''}${t.elo_delta}</span>`:''}</td><td class="muted">${t.p_win_pre.toFixed(2)}%</td>
     <td class="pwin">${t.p_win.toFixed(2)}%</td>
     <td style="color:${col};font-family:var(--font-mono)">${d>0?'+':''}${d.toFixed(2)}</td>`;
     tb.appendChild(tr);
