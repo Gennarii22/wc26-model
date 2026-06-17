@@ -77,5 +77,19 @@
     "team": "_model",
     "text": "One match changes everything. \n\nMy simulator runs 20,000 full World Cup campaigns after every single final whistle. No static predictions, just pure, real-time adaptation as the tournament breathes. \n\nThat is how you find the real champion.\n\n#WorldCup2026 #DataScience",
     "posted": false
+  },
+  {
+    "date": "2026-06-17",
+    "type": "collapse",
+    "team": "Portugal",
+    "text": "One bad ninety minutes just erased a third of Portugal's hopes. \n\nTheir chance of winning the group plummeted from 63% to 44% tonight. In this tournament, you don't just lose three points, you lose your entire path to the final.\n\n#WorldCup2026 #Portugal",
+    "posted": false
+  },
+  {
+    "date": "2026-06-17",
+    "type": "riser",
+    "team": "Colombia",
+    "text": "Everyone is sleeping on Colombia. \n\nMy model just bumped their chances of winning the group from 29% to a massive 42% after the latest data run. Don't look now, but they are primed to disrupt the bracket.\n\n#WorldCup2026 #Colombia #football",
+    "posted": false
   }
 ]
