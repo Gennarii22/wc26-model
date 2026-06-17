@@ -49,5 +49,19 @@
     "team": "France",
     "text": "Everyone is staring at Brazil, but my model just quietly broke the scales for France. \n\nTheir chances of winning the group just jumped from 64% to 78%. Absolute dominance, undetected.\n\n#WorldCup2026 #France #LesBleus",
     "posted": false
+  },
+  {
+    "date": "2026-06-17",
+    "type": "fav_stumble_1",
+    "team": "Spain",
+    "text": "Spain just dropped points. Can they really win this?\n\nMy model still has them as the top title favorite at 29%, but the armor is cracking. One slip is a warning. Two is a crisis.\n\n#WorldCup2026 #Spain #football",
+    "posted": false
+  },
+  {
+    "date": "2026-06-17",
+    "type": "model_meta",
+    "team": "_model",
+    "text": "One single goal changes everything. That’s why we run 20,000 full World Cup simulations the second the whistle blows. \n\nNo static predictions, just pure, real-time data adapting to the chaos of the pitch.\n\n#WorldCup2026 #DataScience #football",
+    "posted": false
   }
 ]
