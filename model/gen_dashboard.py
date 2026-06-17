@@ -14,7 +14,20 @@ sqd = pd.read_csv(f"{BASE}/data/squads_2026.csv")[["player","pos","age","caps","
 ts = gb.merge(sqd, on="player", how="left").sort_values("p_gb", ascending=False)
 groups = json.load(open(f"{BASE}/groups_resolved.json"))
 
-out = {"generated": "11 giugno 2026", "teams": [], "groups": {}, "matches": [], "scorers": []}
+# data "aggiornato al" = timestamp reale dell'ultimo pull risultati (state_2026.json)
+_gen = "11 giugno 2026"
+_st = f"{BASE}/state_2026.json"
+if os.path.exists(_st):
+    _MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio",
+             "agosto","settembre","ottobre","novembre","dicembre"]
+    try:
+        _u = json.load(open(_st)).get("updated", "")          # "YYYY-MM-DD HH:MM"
+        _ymd, _hm = _u.split(" "); _y, _m, _d = _ymd.split("-")
+        _gen = f"{int(_d)} {_MESI[int(_m)-1]} {_y}, {_hm} UTC"
+    except Exception:
+        pass
+
+out = {"generated": _gen, "teams": [], "groups": {}, "matches": [], "scorers": []}
 
 # snapshot PRE-MONDIALE congelato (giorno-0, prima di ogni risultato)
 pre_map = {}
