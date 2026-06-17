@@ -22,6 +22,7 @@
 .tab{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:11px;padding:9px 16px;background:transparent;border:.5px solid var(--line);border-radius:8px;color:var(--moss);cursor:pointer;transition:all .2s var(--ease)}
 .tab:hover{color:var(--parchment);border-color:var(--olive-signal)}
 .tab.active{background:var(--olive);border-color:var(--olive-signal);color:var(--parchment)}
+.srt{cursor:pointer}.srt:hover{color:var(--parchment)}.srt.on{color:var(--brass)}
 .panel{overflow:hidden}
 .toolbar{display:flex;align-items:center;gap:12px;padding:13px 18px;flex-wrap:wrap;font-family:var(--font-mono);font-size:12px;color:var(--sage-muted);letter-spacing:.03em}
 .toolbar .info{color:var(--moss)}
@@ -91,8 +92,8 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
     <div class="panel">
       <div class="panel-h" id="ante-title" data-i18n="d.ante_title">Probabilità torneo — 20.000 simulazioni</div>
       <div style="overflow-x:auto"><table>
-        <thead><tr><th>#</th><th data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_gir">Gir.</th><th>ELO</th><th data-i18n="d.th_rosa">Rosa</th>
-        <th data-i18n="d.th_pgir">P(1° gir.)</th><th>P(R16)</th><th>P(QF)</th><th>P(SF)</th><th data-i18n="d.th_pfin">P(Finale)</th><th data-i18n="d.th_ptit">P(titolo)</th>
+        <thead><tr><th>#</th><th class="srt" data-k="team" data-i18n="d.th_squadra">Squadra</th><th data-i18n="d.th_gir">Gir.</th><th class="srt" data-k="elo">ELO</th><th class="srt" data-k="mv" data-i18n="d.th_rosa">Rosa</th>
+        <th class="srt" data-k="p_win_group" data-i18n="d.th_pgir">P(1° gir.)</th><th class="srt" data-k="p_r16">P(R16)</th><th class="srt" data-k="p_qf">P(QF)</th><th class="srt" data-k="p_sf">P(SF)</th><th class="srt" data-k="p_final" data-i18n="d.th_pfin">P(Finale)</th><th class="srt" data-k="p_win" data-i18n="d.th_ptit">P(titolo)</th>
         <th id="th-pmk">P(mercato)</th><th data-i18n="d.th_quota">Quota</th><th>P.mkt</th><th>Edge</th><th>EV</th><th data-i18n="d.th_stake">Stake</th></tr></thead>
         <tbody id="tb-ante"></tbody></table></div>
       <div class="foot" style="padding:12px 22px" data-i18n="d.foot_ante">Scegli il mercato, inserisci le quote del book → Edge, EV e stake Kelly si calcolano da soli. Righe oliva = value.</div>
@@ -135,12 +136,19 @@ select{font-family:var(--font-body);font-size:13px;padding:8px 11px}
 const D=window.WC, LS='wc26_quote_v2';
 const quote=JSON.parse(localStorage.getItem(LS)||'{}');   // chiave: mercato|nome
 let MK='p_win';
+let sortKey=null, sortAsc=false;   // ordinamento manuale colonna (null = per mercato)
 function mklbl(k){return t('mk.'+k);}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
   ['antepost','gironi','partite','bomber','prewc'].forEach(v=>document.getElementById('v-'+v).style.display=(b.dataset.v===v?'':'none'));
 });
-document.getElementById('mksel').onchange=e=>{MK=e.target.value;ante();};
+document.querySelectorAll('.srt').forEach(th=>th.onclick=()=>{
+  const k=th.dataset.k;
+  if(sortKey===k) sortAsc=!sortAsc; else {sortKey=k; sortAsc=(k==='team');}
+  document.querySelectorAll('.srt').forEach(x=>x.classList.toggle('on',x===th));
+  ante();
+});
+document.getElementById('mksel').onchange=e=>{MK=e.target.value;sortKey=null;document.querySelectorAll('.srt').forEach(x=>x.classList.remove('on'));ante();};
 document.getElementById('clearq').onclick=()=>{
   Object.keys(quote).filter(k=>k.startsWith(MK+'|')).forEach(k=>delete quote[k]);
   localStorage.setItem(LS,JSON.stringify(quote));ante();
@@ -163,7 +171,12 @@ function ante(){
   document.getElementById('th-pmk').textContent='P('+mklbl(MK)+')';
   document.getElementById('ante-title').textContent=t('d.ante_quote_for')+mklbl(MK);
   const tb=document.getElementById('tb-ante');tb.innerHTML='';
-  const rows=[...D.teams].sort((a,b)=>b[MK]-a[MK]);
+  const sk=sortKey||MK;
+  const rows=[...D.teams].sort((a,b)=>{
+    const va=a[sk],vb=b[sk];
+    if(typeof va==='string') return sortAsc?String(va).localeCompare(vb):String(vb).localeCompare(va);
+    return sortAsc?((va??-1)-(vb??-1)):((vb??-1)-(va??-1));
+  });
   const mx=Math.max(...rows.map(t=>t[MK]));
   rows.forEach((tm,i)=>{
     const q=quote[MK+'|'+tm.team];
