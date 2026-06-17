@@ -63,5 +63,19 @@
     "team": "_model",
     "text": "One single goal changes everything. That’s why we run 20,000 full World Cup simulations the second the whistle blows. \n\nNo static predictions, just pure, real-time data adapting to the chaos of the pitch.\n\n#WorldCup2026 #DataScience #football",
     "posted": false
+  },
+  {
+    "date": "2026-06-17",
+    "type": "fav_stumble_1",
+    "team": "Spain",
+    "text": "Spain just dropped points. Can they really win this?\n\nMy model still has them as the top title favorite at 29%, but the armor is cracking. One slip is fine. Two is a crisis.\n\n#WorldCup2026 #Spain",
+    "posted": false
+  },
+  {
+    "date": "2026-06-17",
+    "type": "model_meta",
+    "team": "_model",
+    "text": "One match changes everything. \n\nMy simulator runs 20,000 full World Cup campaigns after every single final whistle. No static predictions, just pure, real-time adaptation as the tournament breathes. \n\nThat is how you find the real champion.\n\n#WorldCup2026 #DataScience",
+    "posted": false
   }
 ]
