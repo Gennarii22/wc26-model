@@ -126,5 +126,19 @@
     "team": "_model",
     "text": "One result changes everything. \n\nThat is why my simulator runs 20,000 fresh World Cup campaigns the second a match ends. No stale stats, just real-time evolution. We adapt as fast as the pitch does.\n\n#WorldCup2026 #DataScience #football",
     "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "fav_stumble_1",
+    "team": "Spain",
+    "text": "Spain just slipped. Can they really win this? \n\nMy model still has them as the 29% favorite to lift the trophy, but this first dropped point exposes the cracks. True champions don't blink this early.\n\n#WorldCup2026 #Spain",
+    "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "model_meta",
+    "team": "_model",
+    "text": "One result changes everything. \n\nThat is why we re-run all 20,000 World Cup simulations the second the whistle blows. No static predictions, just real-time adaptation as the data shifts. \n\nThis isn't guessing. It's math in motion.\n\n#WorldCup2026 #DataScience #football",
+    "posted": false
   }
 ]
