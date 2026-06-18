@@ -140,5 +140,19 @@
     "team": "_model",
     "text": "One result changes everything. \n\nThat is why we re-run all 20,000 World Cup simulations the second the whistle blows. No static predictions, just real-time adaptation as the data shifts. \n\nThis isn't guessing. It's math in motion.\n\n#WorldCup2026 #DataScience #football",
     "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "collapse",
+    "team": "Bosnia and Herzegovina",
+    "text": "One bad day and it is officially over. Bosnia just saw their chances of winning the group collapse from 15% to a flat 0% in my simulator. 90 minutes didn't just cost them points, it killed their entire tournament path. Brutal.\n\n#WorldCup2026 #Bosnia",
+    "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "riser",
+    "team": "Switzerland",
+    "text": "Everyone is sleeping on Switzerland. \n\nMy model just saw something we all missed. Their chances of winning the group just leaped from 31% to 53%. They aren't just surviving, they are taking over. Ignore them at your own peril.\n\n#WorldCup2026 #Switzerland",
+    "posted": false
   }
 ]
