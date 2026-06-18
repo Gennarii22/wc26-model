@@ -112,5 +112,19 @@
     "team": "Spain",
     "text": "Spain just dropped points. Can they really win this? \n\nMy model still has them as the top title favorite at 29%, but the armor has its first crack. One slip is fine, two is a trend. Are they overrated?\n\n#WorldCup2026 #Spain",
     "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "fav_stumble_1",
+    "team": "Spain",
+    "text": "Spain just dropped points. Can they really win this? \n\nMy model still has them as the top title favorite at 29%, but the armor is cracking. One slip is fine. Two is a crisis. \n\nWhat went wrong?\n\n#WorldCup2026 #Spain #football",
+    "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "model_meta",
+    "team": "_model",
+    "text": "One result changes everything. \n\nThat is why my simulator runs 20,000 fresh World Cup campaigns the second a match ends. No stale stats, just real-time evolution. We adapt as fast as the pitch does.\n\n#WorldCup2026 #DataScience #football",
+    "posted": false
   }
 ]
