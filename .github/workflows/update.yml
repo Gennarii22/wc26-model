@@ -62,7 +62,7 @@ jobs:
           cd model
           python wc_x_engine.py --n 2 --post
 
-      - name: Commit & push sicuro (anti-race: vince chi ha più risultati)
+      - name: Commit e push sicuro (anti-race, vince chi ha piu risultati)
         run: |
           git config user.name "wc26-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
