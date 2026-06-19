@@ -196,5 +196,19 @@
     "team": "_model",
     "text": "Most \"predictions\" are just static guesses. \n\nEvery time a whistle blows, my code runs the entire World Cup 20,000 times based on the new reality. No vibes, just massive data adapting in real time. \n\nThat is how you find the real winner.\n\n#WorldCup2026 #Python #DataScience",
     "posted": true
+  },
+  {
+    "date": "2026-06-18",
+    "type": "fav_stumble_1",
+    "team": "Spain",
+    "text": "Spain just dropped points. Can they really win this?\n\nMy model still has them as the top title pick at 30%, but that first crack in the armor is showing. Teams are figuring them out.\n\n#WorldCup2026 #Spain",
+    "posted": true
+  },
+  {
+    "date": "2026-06-18",
+    "type": "model_meta",
+    "team": "_model",
+    "text": "One result changes everything. My model doesn't just predict; it adapts. \n\nAfter every final whistle, it re-runs the entire World Cup 20,000 times based on the new reality. No static spreadsheets, just pure, evolving math.\n\n#WorldCup2026 #football #data science",
+    "posted": true
   }
 ]
