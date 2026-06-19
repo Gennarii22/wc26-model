@@ -168,5 +168,19 @@
     "team": "Canada",
     "text": "While you're watching the usual giants, my simulator just broke for Canada. \n\nTheir chance of winning the group skyrocketed from 46% to 66%. This isn't a fluke, the data says they are legit. Ignore them at your own peril.\n\n#WorldCup2026 #Canada #CanMNT",
     "posted": false
+  },
+  {
+    "date": "2026-06-18",
+    "type": "collapse",
+    "team": "South Korea",
+    "text": "One bad day and it’s over. \n\nSouth Korea just went from a 32% chance to win the group straight to 0%. In this tournament, you don’t just lose three points, you lose every single path to the top. Brutal.\n\n#WorldCup2026 #SouthKorea #football",
+    "posted": true
+  },
+  {
+    "date": "2026-06-18",
+    "type": "riser",
+    "team": "Mexico",
+    "text": "While everyone is arguing over Brazil and France, my model just quietly locked in a 100% group-win probability.\n\nMexico is officially through. Underestimate them at your own risk.\n\n#WorldCup2026 #Mexico #ElTri",
+    "posted": true
   }
 ]
