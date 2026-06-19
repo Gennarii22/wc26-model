@@ -182,5 +182,19 @@
     "team": "Mexico",
     "text": "While everyone is arguing over Brazil and France, my model just quietly locked in a 100% group-win probability.\n\nMexico is officially through. Underestimate them at your own risk.\n\n#WorldCup2026 #Mexico #ElTri",
     "posted": true
+  },
+  {
+    "date": "2026-06-18",
+    "type": "fav_stumble_1",
+    "team": "Spain",
+    "text": "Spain are still my model's top pick at 30%, but that draw was ugly. Can they really win the World Cup playing like this? One slip is fine, two is a crisis. \n\n#WorldCup2026 #Spain #LaRoja",
+    "posted": true
+  },
+  {
+    "date": "2026-06-18",
+    "type": "model_meta",
+    "team": "_model",
+    "text": "Most \"predictions\" are just static guesses. \n\nEvery time a whistle blows, my code runs the entire World Cup 20,000 times based on the new reality. No vibes, just massive data adapting in real time. \n\nThat is how you find the real winner.\n\n#WorldCup2026 #Python #DataScience",
+    "posted": true
   }
 ]
