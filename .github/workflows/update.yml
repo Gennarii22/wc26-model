@@ -1,28 +1,18 @@
 name: Aggiorna modello Mondiale
 
-# Durante il torneo le partite cadono in finestre lungo tutta la giornata.
-# I cron di GitHub sono BEST-EFFORT: all'ora tonda (es. 09:00) e quando un repo
-# ha pochi slot/giorno vengono spesso ritardati o SALTATI (il 17/06 sono stati
-# saltati ENTRAMBI gli slot → dati fermi tutto il giorno). Difesa: TANTI slot
-# distribuiti, a minuti DISPARI fuori dall'ora. Se GitHub ne salta qualcuno,
-# gli altri girano e i dati non restano mai fermi a lungo (idempotente: se non
-# ci sono partite nuove, il commit è vuoto e non cambia nulla).
-# Copertura 24/7: il Mondiale e' negli USA, quindi i match 00:00-06:00 UTC sono
-# la SERA/prime-time americana (il pubblico principale). Niente buco notturno: il
-# dashboard deve aggiornarsi anche dopo le gare in orario USA. ~ogni 3h.
-# Orari UTC (estate IT = UTC+2): 02:23→04:23 IT, 05:23→07:23, 09:23→11:23,
-# 12:23→14:23, 15:23→17:23, 18:23→20:23, 21:23→23:23, 23:43→01:43.
-# Scarica i risultati (ESPN), ri-simula, rigenera le dashboard, committa → Netlify ripubblica.
+# UN SOLO loop ogni 30 minuti, 24/7. Fa tutto in sequenza (niente gara tra workflow):
+#  1) snapshot probabilita' (per i delta post-partita)
+#  2) refresh modello (risultati ESPN -> ri-simula 20k -> dashboard). La sim e' SEEDATA
+#     (default_rng 42): se non ci sono partite nuove l'output e' identico = commit vuoto,
+#     niente jitter dei numeri.
+#  3) post-partita su X: solo se un match e' finito DA POCO e c'e' un edge (recency + 6 regole)
+#  4) pre-partita su X: solo se un match inizia tra ~20 e ~80 min
+#  5) push sicuro (anti-race; vince chi ha piu' risultati sui file-dati)
+# Repo pubblica = minuti Actions illimitati. Copertura 24/7 perche' il Mondiale e' negli
+# USA: i match 00:00-06:00 UTC sono la sera/prime-time americana (pubblico principale).
 on:
   schedule:
-    - cron: '23 2 * * *'
-    - cron: '23 5 * * *'
-    - cron: '23 9 * * *'
-    - cron: '23 12 * * *'
-    - cron: '23 15 * * *'
-    - cron: '23 18 * * *'
-    - cron: '23 21 * * *'
-    - cron: '43 23 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,7 +29,10 @@ jobs:
           python-version: '3.12'
 
       - name: Installa dipendenze
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt tweepy
+
+      - name: Snapshot probabilita' (per i delta post-partita)
+        run: cp model/team_probs.csv model/team_probs_before.csv || true
 
       - name: Rigenera il modello
         run: |
@@ -51,6 +44,30 @@ jobs:
           python gen_dashboard.py
           python gen_betting.py
           cp dashboard_data.js betting_data.js ../site/
+
+      - name: Post-partita su X (recency + 6 regole, posta solo se c'e' un edge)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          cd model
+          python wc_x_engine.py --n 1 --post
+
+      - name: Pre-partita su X (solo se un match inizia tra ~20 e ~80 min)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          cd model
+          python wc_x_engine.py --prematch --n 1 --post
 
       - name: Commit e push sicuro (anti-race, vince chi ha piu risultati)
         run: |

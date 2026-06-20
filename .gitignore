@@ -11,3 +11,4 @@ WorldCup DB/
 # Segreti (chiavi API X/Gemini): vivono in locale, MAI su Git (repo pubblico).
 .env
 **/.env
+model/team_probs_before.csv
