@@ -36,9 +36,6 @@ jobs:
       - name: Installa dipendenze
         run: pip install -r requirements.txt
 
-      - name: Snapshot probabilità (per i delta dei post X)
-        run: cp model/team_probs.csv model/team_probs_before.csv || true
-
       - name: Rigenera il modello
         run: |
           cd model
@@ -49,18 +46,6 @@ jobs:
           python gen_dashboard.py
           python gen_betting.py
           cp dashboard_data.js betting_data.js ../site/
-
-      - name: Genera e pubblica post su X
-        continue-on-error: true
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
-        run: |
-          cd model
-          python wc_x_engine.py --n 2 --post
 
       - name: Commit e push sicuro (anti-race, vince chi ha piu risultati)
         run: |
