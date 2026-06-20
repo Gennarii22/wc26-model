@@ -224,5 +224,12 @@
     "team": "_model",
     "text": "One result changes everything. \n\nThat’s why my model re-runs the entire World Cup 20,000 times after every final whistle. No static predictions, just pure, real-time math adapting to reality. \n\nThat is how you find the real champion.\n\n#WorldCup2026 #DataScience #football",
     "posted": true
+  },
+  {
+    "date": "2026-06-19",
+    "type": "value_upset",
+    "team": "Paraguay",
+    "text": "Does squad value actually win games, or is it just PR? \n\nTurkey is worth €474M. Paraguay is worth €154M. \n\nYet Paraguay just walked away with a 1-0 win in my model's simulation. Monopolies don't work on grass. \n\n#WorldCup2026 #Paraguay #Turkey",
+    "posted": false
   }
 ]
