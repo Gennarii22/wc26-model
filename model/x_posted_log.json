@@ -238,5 +238,19 @@
     "team": "Netherlands_vs_Sweden",
     "text": "Netherlands has a 58% chance to beat Sweden in 30 minutes, with 1-0 as the most likely score. Our World Cup model projects a tight, tactical battle. Let the re-simulation begin.\n\nmondiale.gpancia.com\n#WorldCup2026 #Netherlands #Sweden",
     "posted": true
+  },
+  {
+    "ts": "2026-06-20 19:23",
+    "type": "collapse",
+    "team": "Sweden",
+    "text": "Sweden's chance of winning their group fell from 26% to 5% today. One result has reshaped the entire tournament path. Our World Cup model has re-simulated the remaining matches.\n\nmondiale.gpancia.com\n#WorldCup2026 #Sweden",
+    "posted": true
+  },
+  {
+    "ts": "2026-06-20 19:23",
+    "type": "prematch",
+    "team": "Germany_vs_Ivory Coast",
+    "text": "Germany has a 46% chance to beat Ivory Coast in 30 minutes, but a 1-1 draw is the single most likely outcome. Our World Cup simulator expects a tight tactical battle. Watch this space.\n\nmondiale.gpancia.com\n#WorldCup2026 #Germany #IvoryCoast",
+    "posted": true
   }
 ]
