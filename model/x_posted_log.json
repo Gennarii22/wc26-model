@@ -231,5 +231,12 @@
     "team": "Paraguay",
     "text": "Does squad value actually win games, or is it just PR? \n\nTurkey is worth €474M. Paraguay is worth €154M. \n\nYet Paraguay just walked away with a 1-0 win in my model's simulation. Monopolies don't work on grass. \n\n#WorldCup2026 #Paraguay #Turkey",
     "posted": false
+  },
+  {
+    "ts": "2026-06-20 16:27",
+    "type": "prematch",
+    "team": "Netherlands_vs_Sweden",
+    "text": "Netherlands has a 58% chance to beat Sweden in 30 minutes, with 1-0 as the most likely score. Our World Cup model projects a tight, tactical battle. Let the re-simulation begin.\n\nmondiale.gpancia.com\n#WorldCup2026 #Netherlands #Sweden",
+    "posted": true
   }
 ]
