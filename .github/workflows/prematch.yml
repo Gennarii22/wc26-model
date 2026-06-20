@@ -1,0 +1,42 @@
+name: Post pre-partita X
+
+# Gira ogni 30 minuti. Il motore pubblica un post solo se una partita inizia
+# tra ~20 e ~80 minuti (e non e' gia' stata postata). La maggior parte dei run
+# non fa nulla = nessun costo crediti. Repo pubblica = minuti Actions illimitati.
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prematch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dipendenze (leggere)
+        run: pip install pandas tweepy
+      - name: Genera e pubblica pre-partita
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          cd model
+          python wc_x_engine.py --prematch --post
+      - name: Commit log (anti-ripetizione)
+        run: |
+          git config user.name "wc26-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add model/x_posted_log.json || true
+          git diff --cached --quiet || git commit -m "prematch log $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git pull --rebase --autostash || true
+          git push || true
