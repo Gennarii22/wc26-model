@@ -7,11 +7,16 @@ name: Aggiorna modello Mondiale
 # distribuiti, a minuti DISPARI fuori dall'ora. Se GitHub ne salta qualcuno,
 # gli altri girano e i dati non restano mai fermi a lungo (idempotente: se non
 # ci sono partite nuove, il commit è vuoto e non cambia nulla).
-# Orari UTC (estate IT = UTC+2): 09:23→11:23 IT, 12:23→14:23, 15:23→17:23,
-# 18:23→20:23, 21:23→23:23, 23:43→01:43 (dopo le gare serali USA).
+# Copertura 24/7: il Mondiale e' negli USA, quindi i match 00:00-06:00 UTC sono
+# la SERA/prime-time americana (il pubblico principale). Niente buco notturno: il
+# dashboard deve aggiornarsi anche dopo le gare in orario USA. ~ogni 3h.
+# Orari UTC (estate IT = UTC+2): 02:23→04:23 IT, 05:23→07:23, 09:23→11:23,
+# 12:23→14:23, 15:23→17:23, 18:23→20:23, 21:23→23:23, 23:43→01:43.
 # Scarica i risultati (ESPN), ri-simula, rigenera le dashboard, committa → Netlify ripubblica.
 on:
   schedule:
+    - cron: '23 2 * * *'
+    - cron: '23 5 * * *'
     - cron: '23 9 * * *'
     - cron: '23 12 * * *'
     - cron: '23 15 * * *'
