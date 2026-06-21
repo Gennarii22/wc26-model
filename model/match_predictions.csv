@@ -7,8 +7,8 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-13,C,Brazil,Morocco,United States,East Rutherford,30.5,27.6,41.9,1.07,1.31,1-1
 2026-06-13,C,Haiti,Scotland,United States,Foxborough,21.5,25.4,53.0,0.9,1.56,0-1
 2026-06-13,D,Australia,Turkey,Canada,Vancouver,36.3,27.9,35.8,1.19,1.18,1-1
-2026-06-14,F,Sweden,Tunisia,United States,Guadalupe,51.6,25.8,22.6,1.53,0.92,1-0
-2026-06-14,F,Netherlands,Japan,United States,Arlington,45.7,27.0,27.2,1.39,1.01,1-1
+2026-06-14,F,Sweden,Tunisia,United States,Guadalupe,53.5,25.3,21.2,1.58,0.89,1-0
+2026-06-14,F,Netherlands,Japan,United States,Arlington,43.9,27.3,28.8,1.35,1.04,1-1
 2026-06-14,E,Germany,Curaçao,United States,Houston,85.8,10.3,3.9,2.88,0.49,2-0
 2026-06-14,E,Ivory Coast,Ecuador,United States,Philadelphia,25.2,26.6,48.3,0.97,1.45,0-1
 2026-06-15,G,Belgium,Egypt,United States,Seattle,65.5,21.0,13.4,1.92,0.73,1-0
@@ -32,7 +32,7 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-19,C,Brazil,Haiti,United States,Philadelphia,80.0,13.8,6.2,2.51,0.56,2-0
 2026-06-19,D,United States,Australia,United States,Seattle,49.9,25.0,25.1,1.6,1.06,1-1
 2026-06-20,F,Netherlands,Sweden,United States,Houston,64.1,21.6,14.3,1.87,0.75,1-0
-2026-06-20,F,Tunisia,Japan,United States,Guadalupe,11.2,19.2,69.6,0.68,2.06,0-2
+2026-06-20,F,Tunisia,Japan,United States,Guadalupe,9.4,17.6,73.0,0.64,2.19,0-2
 2026-06-20,E,Germany,Ivory Coast,Canada,Toronto,49.8,26.2,24.0,1.49,0.94,1-0
 2026-06-20,E,Ecuador,Curaçao,United States,Kansas City,84.9,10.9,4.3,2.81,0.5,2-0
 2026-06-21,G,Belgium,Iran,United States,Inglewood,69.0,19.5,11.5,2.04,0.69,2-0
@@ -57,8 +57,8 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-25,D,Paraguay,Australia,United States,Santa Clara,28.7,27.3,44.0,1.04,1.35,1-1
 2026-06-25,E,Curaçao,Ivory Coast,United States,Philadelphia,8.2,16.3,75.5,0.61,2.3,0-2
 2026-06-25,E,Ecuador,Germany,United States,East Rutherford,34.7,27.9,37.5,1.16,1.21,1-1
-2026-06-25,F,Japan,Sweden,United States,Arlington,54.2,25.1,20.7,1.59,0.88,1-0
-2026-06-25,F,Tunisia,Netherlands,United States,Kansas City,7.0,14.8,78.2,0.58,2.42,0-2
+2026-06-25,F,Japan,Sweden,United States,Arlington,56.1,24.5,19.4,1.64,0.85,1-0
+2026-06-25,F,Tunisia,Netherlands,United States,Kansas City,6.4,14.0,79.6,0.56,2.49,0-2
 2026-06-26,I,Senegal,Iraq,Canada,Toronto,64.0,21.7,14.3,1.87,0.75,1-0
 2026-06-26,I,Norway,France,United States,Foxborough,22.0,25.6,52.4,0.9,1.55,0-1
 2026-06-26,H,Uruguay,Spain,Mexico,Zapopan,9.1,17.2,73.7,0.63,2.22,0-2
