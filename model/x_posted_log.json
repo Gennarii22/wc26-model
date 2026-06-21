@@ -259,5 +259,12 @@
     "team": "Germany",
     "text": "Germany's chance of winning Group A rose from 51% to 88% today. While most focus on the top contenders, this shift suggests a squad quietly securing the tournament's most efficient path forward.\n\nmondiale.gpancia.com\n#WorldCup2026 #Germany",
     "posted": true
+  },
+  {
+    "ts": "2026-06-21 18:04",
+    "type": "prematch",
+    "team": "Belgium_vs_Iran",
+    "text": "Belgium has a 69% chance to beat Iran, with 2-0 the most likely score. The model simulated this match 10,000 times before kickoff. Iran has a 12% shot at the upset.\n\nmondiale.gpancia.com\n#WorldCup2026 #Belgium #Iran",
+    "posted": true
   }
 ]
