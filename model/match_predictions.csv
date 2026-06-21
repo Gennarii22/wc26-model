@@ -11,8 +11,8 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-14,F,Netherlands,Japan,United States,Arlington,43.9,27.3,28.8,1.35,1.04,1-1
 2026-06-14,E,Germany,Curaçao,United States,Houston,85.8,10.3,3.9,2.88,0.49,2-0
 2026-06-14,E,Ivory Coast,Ecuador,United States,Philadelphia,25.2,26.6,48.3,0.97,1.45,0-1
-2026-06-15,G,Belgium,Egypt,United States,Seattle,65.5,21.0,13.4,1.92,0.73,1-0
-2026-06-15,G,Iran,New Zealand,United States,Inglewood,36.7,27.9,35.4,1.2,1.17,1-1
+2026-06-15,G,Belgium,Egypt,United States,Seattle,64.9,21.3,13.8,1.9,0.74,1-0
+2026-06-15,G,Iran,New Zealand,United States,Inglewood,37.3,27.9,34.9,1.21,1.16,1-1
 2026-06-15,H,Spain,Cape Verde,United States,Atlanta,96.4,2.4,0.5,4.5,0.31,4-0
 2026-06-15,H,Saudi Arabia,Uruguay,United States,Miami Gardens,10.6,18.7,70.7,0.67,2.1,0-2
 2026-06-16,J,Austria,Jordan,United States,Santa Clara,65.9,20.9,13.2,1.93,0.73,1-0
@@ -35,7 +35,7 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-20,F,Tunisia,Japan,United States,Guadalupe,9.4,17.6,73.0,0.64,2.19,0-2
 2026-06-20,E,Germany,Ivory Coast,Canada,Toronto,49.8,26.2,24.0,1.49,0.94,1-0
 2026-06-20,E,Ecuador,Curaçao,United States,Kansas City,84.9,10.9,4.3,2.81,0.5,2-0
-2026-06-21,G,Belgium,Iran,United States,Inglewood,69.0,19.5,11.5,2.04,0.69,2-0
+2026-06-21,G,Belgium,Iran,United States,Inglewood,67.9,20.0,12.1,2.0,0.7,1-0
 2026-06-21,G,New Zealand,Egypt,Canada,Vancouver,32.0,27.7,40.3,1.1,1.27,1-1
 2026-06-21,H,Spain,Saudi Arabia,United States,Atlanta,94.8,3.9,1.0,3.98,0.35,3-0
 2026-06-21,H,Uruguay,Cape Verde,United States,Miami Gardens,77.2,15.4,7.5,2.37,0.59,2-0
@@ -62,8 +62,8 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-26,I,Senegal,Iraq,Canada,Toronto,64.0,21.7,14.3,1.87,0.75,1-0
 2026-06-26,I,Norway,France,United States,Foxborough,22.0,25.6,52.4,0.9,1.55,0-1
 2026-06-26,H,Uruguay,Spain,Mexico,Zapopan,8.8,16.9,74.3,0.62,2.24,0-2
-2026-06-26,G,New Zealand,Belgium,Canada,Vancouver,11.1,19.2,69.7,0.68,2.06,0-2
-2026-06-26,G,Egypt,Iran,United States,Seattle,39.6,27.8,32.6,1.26,1.11,1-1
+2026-06-26,G,New Zealand,Belgium,Canada,Vancouver,11.4,19.4,69.1,0.69,2.04,0-2
+2026-06-26,G,Egypt,Iran,United States,Seattle,39.1,27.8,33.2,1.25,1.12,1-1
 2026-06-26,H,Cape Verde,Saudi Arabia,United States,Houston,29.3,27.4,43.3,1.05,1.34,1-1
 2026-06-27,L,Panama,England,United States,East Rutherford,2.5,7.5,90.0,0.43,3.25,0-3
 2026-06-27,J,Algeria,Austria,United States,Kansas City,35.3,27.9,36.8,1.17,1.2,1-1
