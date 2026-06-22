@@ -18,8 +18,8 @@ Luis Díaz,Colombia,0.3964748413904591,False,2.9791,0.45999999999999996
 Viktor Gyökeres,Sweden,0.4322219683121531,True,2.80525,0.43499999999999994
 Matheus Cunha,Brazil,0.2414434427965089,False,3.1707,0.42
 Alexander Isak,Sweden,0.4139037294777349,False,2.7194,0.35000000000000003
-Lamine Yamal,Spain,0.2544509094204862,False,2.694,0.345
 Kai Havertz,Germany,0.3190090250883361,True,2.67595,0.345
+Lamine Yamal,Spain,0.2544509094204862,False,2.694,0.345
 Memphis Depay,Netherlands,0.3898080021414503,True,2.0268,0.345
 Jude Bellingham,England,0.3199551292872729,False,2.9662,0.325
 Ollie Watkins,England,0.3734389617042197,False,2.2977,0.26
@@ -35,400 +35,291 @@ Julián Quiñones,Mexico,0.2333333333333333,False,2.1912,0.125
 Romelu Lukaku,Belgium,0.3357953427017098,False,1.6021,0.12
 Darwin Núñez,Uruguay,0.4546118586707596,False,1.6057,0.11
 Crysencio Summerville,Netherlands,0.1694570029469406,False,2.8677,0.1
-Keito Nakamura,Japan,0.2442046983969994,False,2.1691,0.09
 Brian Brobbey,Netherlands,0.1693996516492648,False,2.86915,0.09
+Keito Nakamura,Japan,0.2442046983969994,False,2.1691,0.09
 Santiago Giménez,Mexico,0.2881327103867377,False,1.48575,0.075
 Yéremy Pino,Spain,0.2333333333333333,False,1.5527,0.065
 Borja Iglesias,Spain,0.2390344222436858,False,1.59375,0.06
 Nicolas Jackson,Senegal,0.3985341043833358,False,1.62545,0.06
-Johan Manzambi,Switzerland,0.1410504261948464,False,2.70865,0.055
-Oh Hyeon-gyu,South Korea,0.2333333333333333,False,2.0496,0.055
 Igor Thiago,Brazil,0.2868265154468519,False,1.3964,0.055
 Bradley Barcola,France,0.1920440671311798,False,2.20725,0.055
+Oh Hyeon-gyu,South Korea,0.2333333333333333,False,2.0496,0.055
 Patrik Schick,Czech Republic,0.369853008384862,False,1.19775,0.055
+Johan Manzambi,Switzerland,0.1410504261948464,False,2.70865,0.055
 Jovo Lukić,Bosnia and Herzegovina,0.2333333333333333,False,1.8855,0.05
 Jaminton Campaz,Colombia,0.2333333333333333,False,2.17595,0.05
 Marcus Thuram,France,0.2299595514111999,False,1.4463,0.05
 Amad Diallo,Ivory Coast,0.2333333333333333,False,2.03085,0.045
 Nestory Irankunda,Australia,0.2333333333333333,False,2.07165,0.045
-Trézéguet,Egypt,0.2333333333333333,False,2.03555,0.04
 Rayan,Brazil,0.258478469947248,False,1.2592,0.04
-Guillermo Martínez,Mexico,0.2333333333333333,False,1.1953,0.04
+Trézéguet,Egypt,0.2333333333333333,False,2.03555,0.04
 Christian Pulisic,United States,0.2567686578703601,False,1.4384,0.04
+Guillermo Martínez,Mexico,0.2333333333333333,False,1.1953,0.04
 Marko Arnautović,Austria,0.3523819056986557,True,1.55705,0.034999999999999996
-Bukayo Saka,England,0.2963521836666855,False,1.824,0.034999999999999996
-César Huerta,Mexico,0.2333333333333333,False,1.19825,0.034999999999999996
-Edin Džeko (captain),Bosnia and Herzegovina,0.3494883341454198,False,1.3258,0.034999999999999996
-Víctor Muñoz,Spain,0.2102805126352774,False,1.3932,0.034999999999999996
-Gonçalo Ramos,Portugal,0.294539174162094,False,1.5009,0.034999999999999996
 Breel Embolo,Switzerland,0.2712661894666189,False,1.3304,0.034999999999999996
-Junya Itō,Japan,0.1776913602473692,False,1.8528,0.03
-Chris Wood (captain),New Zealand,0.3822343803950848,True,1.19155,0.03
-Cho Gue-sung,South Korea,0.2333333333333333,False,1.06025,0.03
-Maximilian Beier,Germany,0.2470552984970408,False,1.303,0.03
-Julián Alvarez,Argentina,0.2654742313873696,False,1.66645,0.03
-Roberto Alvarado,Mexico,0.2333333333333333,False,1.17315,0.03
-Cedric Itten,Switzerland,0.2327781221613337,True,1.16155,0.03
+Edin Džeko (captain),Bosnia and Herzegovina,0.3494883341454198,False,1.3258,0.034999999999999996
+César Huerta,Mexico,0.2333333333333333,False,1.19825,0.034999999999999996
+Gonçalo Ramos,Portugal,0.294539174162094,False,1.5009,0.034999999999999996
+Víctor Muñoz,Spain,0.2102805126352774,False,1.3932,0.034999999999999996
+Bukayo Saka,England,0.2963521836666855,False,1.824,0.034999999999999996
 Omar Marmoush,Egypt,0.3105505908852195,False,1.3755,0.03
+Roberto Alvarado,Mexico,0.2333333333333333,False,1.17315,0.03
+Julián Alvarez,Argentina,0.2654742313873696,False,1.66645,0.03
+Cho Gue-sung,South Korea,0.2333333333333333,False,1.06025,0.03
+Cedric Itten,Switzerland,0.2327781221613337,True,1.16155,0.03
 Jørgen Strand Larsen,Norway,0.277278440074569,False,1.5023,0.03
-Ali Ahmed,Canada,0.2333333333333333,False,1.16225,0.025
+Chris Wood (captain),New Zealand,0.3822343803950848,True,1.19155,0.03
+Maximilian Beier,Germany,0.2470552984970408,False,1.303,0.03
+Junya Itō,Japan,0.1776913602473692,False,1.8528,0.03
 Kendry Páez,Ecuador,0.3200096050767301,True,1.20485,0.025
-Haji Wright,United States,0.2333333333333333,False,1.30415,0.025
+Ali Ahmed,Canada,0.2333333333333333,False,1.16225,0.025
+Promise David,Canada,0.2645947502992218,False,1.34755,0.025
+Scott McTominay,Scotland,0.2651554065619603,False,1.0828,0.025
 Soufiane Rahimi,Morocco,0.2333333333333333,False,1.1916,0.025
-Ayoube Amaimouni,Morocco,0.2333333333333333,False,1.1963,0.025
 Ivan Toney,England,0.2891286919194203,False,1.768,0.025
 Francisco Trincão,Portugal,0.2333333333333333,False,1.18915,0.025
-Scott McTominay,Scotland,0.2651554065619603,False,1.0828,0.025
-Promise David,Canada,0.2645947502992218,False,1.34755,0.025
-Marcus Rashford,England,0.2014217423823161,False,2.2196,0.02
-Michael Olise,France,0.2329055239388639,False,1.45845,0.02
+Ayoube Amaimouni,Morocco,0.2333333333333333,False,1.1963,0.025
+Haji Wright,United States,0.2333333333333333,False,1.30415,0.025
 Gabriel Martinelli,Brazil,0.2288143603168361,False,1.13065,0.02
-Abde Ezzalzouli,Morocco,0.2333333333333333,False,1.1929,0.02
-Mathew Leckie,Australia,0.2333333333333333,False,1.07935,0.02
-Armando González,Mexico,0.2333333333333333,False,1.1957,0.02
-José Manuel López,Argentina,0.2333333333333333,False,1.48,0.02
 Jhon Córdoba,Colombia,0.2407599519845338,False,1.2065,0.02
 Son Heung-min (captain),South Korea,0.2333333333333333,False,1.0552,0.02
+Marcus Rashford,England,0.2014217423823161,False,2.2196,0.02
+Abde Ezzalzouli,Morocco,0.2333333333333333,False,1.1929,0.02
+Armando González,Mexico,0.2333333333333333,False,1.1957,0.02
+José Manuel López,Argentina,0.2333333333333333,False,1.48,0.02
+Michael Olise,France,0.2329055239388639,False,1.45845,0.02
+Mathew Leckie,Australia,0.2333333333333333,False,1.07935,0.02
 Kōki Ogawa,Japan,0.2333333333333333,False,1.1165,0.015
-Neymar,Brazil,0.2333333333333333,False,1.1423,0.015
 Ajdin Hrustic,Australia,0.2333333333333333,False,1.0777,0.015
-Yoane Wissa,DR Congo,0.3399862539281855,False,2.18575,0.015
-Dan Ndoye,Switzerland,0.1985815275245998,False,0.9975,0.015
+Evidence Makgopa,South Africa,0.2333333333333333,False,0.75525,0.015
 Gonzalo Plata,Ecuador,0.2333333333333333,False,0.8906,0.015
-Cherif Ndiaye,Senegal,0.2874371107301555,False,1.17715,0.015
+Yoane Wissa,DR Congo,0.3399862539281855,False,2.18575,0.015
+Petar Musa,Croatia,0.2333333333333333,False,2.03075,0.015
+Alexis Vega,Mexico,0.2333333333333333,False,1.18755,0.015
+Dani Olmo,Spain,0.1500853037578118,False,0.9872,0.015
 Isidro Pitta,Paraguay,0.2333333333333333,False,0.97725,0.015
 Elye Wahi,Ivory Coast,0.2580473666140855,False,1.1469,0.015
-Dani Olmo,Spain,0.1500853037578118,False,0.9872,0.015
+Cherif Ndiaye,Senegal,0.2874371107301555,False,1.17715,0.015
 Alejandro Zendejas,United States,0.2333333333333333,False,1.2981,0.015
-Alexis Vega,Mexico,0.2333333333333333,False,1.18755,0.015
-Petar Musa,Croatia,0.2333333333333333,False,2.03075,0.015
-Evidence Makgopa,South Africa,0.2333333333333333,False,0.75525,0.015
-Rubén Vargas,Switzerland,0.157924723774238,False,1.7814,0.01
-Rafael Leão,Portugal,0.2350662438879244,False,1.1912,0.01
-Kamogelo Sebelebele,South Africa,0.2333333333333333,False,0.74845,0.01
-Federico Viñas,Uruguay,0.2877804174923615,True,1.0125,0.01
-Lautaro Martínez,Argentina,0.2185338590581814,False,1.3782,0.01
-Thapelo Maseko,South Africa,0.2333333333333333,False,0.7441,0.01
-Saleh Al-Shehri,Saudi Arabia,0.2333333333333333,False,0.80135,0.01
+Neymar,Brazil,0.2333333333333333,False,1.1423,0.015
+Dan Ndoye,Switzerland,0.1985815275245998,False,0.9975,0.015
 Ricardo Pepi,United States,0.1794364747416218,False,0.99465,0.01
-Nick Woltemade,Germany,0.2008709626219537,False,1.0602,0.01
+Rafael Leão,Portugal,0.2350662438879244,False,1.1912,0.01
+Rubén Vargas,Switzerland,0.157924723774238,False,1.7814,0.01
 Amine Gouiri,Algeria,0.2899562125567927,False,1.1654,0.01
-Tomáš Chorý,Czech Republic,0.3124168909539577,True,1.01735,0.01
-Denzel Dumfries,Netherlands,0.1881214307357656,False,0.96805,0.01
 Bamba Dieng,Senegal,0.2923373618709343,True,1.1956,0.01
-Anthony Gordon,England,0.2535615648695506,False,1.559,0.01
-Haris Tabaković,Bosnia and Herzegovina,0.2396103684390201,False,0.8937,0.01
-Daizen Maeda,Japan,0.2374916601553353,False,1.13855,0.01
-Álex Arce,Paraguay,0.2333333333333333,False,0.97615,0.01
-Yusuf Abdurisag,Qatar,0.2333333333333333,False,0.74205,0.01
 Facundo Pellistri,Uruguay,0.2190776286102932,False,0.7598,0.01
-Evann Guessand,Ivory Coast,0.2027503485406802,False,0.9109,0.01
+Federico Viñas,Uruguay,0.2877804174923615,True,1.0125,0.01
+Thapelo Maseko,South Africa,0.2333333333333333,False,0.7441,0.01
+Kamogelo Sebelebele,South Africa,0.2333333333333333,False,0.74845,0.01
+Ferran Torres,Spain,0.1475767017320319,False,0.97885,0.01
+Anthony Gordon,England,0.2535615648695506,False,1.559,0.01
+Denzel Dumfries,Netherlands,0.1881214307357656,False,0.96805,0.01
+Tomáš Chorý,Czech Republic,0.3124168909539577,True,1.01735,0.01
 Cucho Hernández,Colombia,0.2333333333333333,False,1.1577,0.01
 Justin Kluivert,Netherlands,0.1625075160656574,False,0.8285,0.01
 Nico Williams,Spain,0.2007130554618873,False,1.3381,0.01
-Ali Olwan,Jordan,0.2333333333333333,False,1.7327,0.01
-Ferran Torres,Spain,0.1475767017320319,False,0.97885,0.01
-Matias Fernandez-Pardo,Belgium,0.179376022408267,False,0.8588,0.01
+Haris Tabaković,Bosnia and Herzegovina,0.2396103684390201,False,0.8937,0.01
+Daizen Maeda,Japan,0.2374916601553353,False,1.13855,0.01
 Aymen Hussein,Iraq,0.2333333333333333,False,1.7272,0.01
-Florian Wirtz,Germany,0.1843701142208483,False,0.97585,0.005
+Evann Guessand,Ivory Coast,0.2027503485406802,False,0.9109,0.01
+Ali Olwan,Jordan,0.2333333333333333,False,1.7327,0.01
+Álex Arce,Paraguay,0.2333333333333333,False,0.97615,0.01
+Saleh Al-Shehri,Saudi Arabia,0.2333333333333333,False,0.80135,0.01
+Nick Woltemade,Germany,0.2008709626219537,False,1.0602,0.01
+Yusuf Abdurisag,Qatar,0.2333333333333333,False,0.74205,0.01
+Lautaro Martínez,Argentina,0.2185338590581814,False,1.3782,0.01
+Matias Fernandez-Pardo,Belgium,0.179376022408267,False,0.8588,0.01
+Weston McKennie,United States,0.1227302341957164,False,0.68315,0.005
 Tete Yengi,Australia,0.2333333333333333,False,1.0852,0.005
-Jearl Margaritha,Curaçao,0.2333333333333333,False,0.7234,0.005
-Leon Goretzka,Germany,0.153620540272826,False,0.80685,0.005
+Nico Paz,Argentina,0.1794092410759346,False,1.12985,0.005
 Musa Al-Taamari,Jordan,0.2933292203551709,False,0.92285,0.005
 Odeh Al-Fakhouri,Jordan,0.2333333333333333,False,0.7331,0.005
-Riyad Mahrez (captain),Algeria,0.2333333333333333,False,0.93835,0.005
-Sadio Mané,Senegal,0.2333333333333333,False,0.9554,0.005
 Awer Mabil,Australia,0.2333333333333333,False,1.06895,0.005
-Farès Ghedjemis,Algeria,0.2333333333333333,False,0.94865,0.005
+Jovane Cabral,Cape Verde,0.0594711237366607,False,0.21495,0.005
+Dailon Livramento,Cape Verde,0.2333333333333333,False,0.84675,0.005
+Dennis Eckert,Iran,0.2333333333333333,False,0.8773,0.005
+Shahriyar Moghanlou,Iran,0.2333333333333333,False,0.89,0.005
+Ayman Yahya,Saudi Arabia,0.2333333333333333,False,0.804,0.005
+Ali Alipour,Iran,0.2333333333333333,False,0.878,0.005
+Zizo,Egypt,0.2333333333333333,False,1.028,0.005
+Álex Grimaldo,Spain,0.0748267324013247,False,0.49935,0.005
+Hamza Abdelkarim,Egypt,0.2333333333333333,False,1.031,0.005
+Dodi Lukébakio,Belgium,0.1419462694077511,False,0.67395,0.005
+Leandro Trossard,Belgium,0.2201586788028064,False,1.0739,0.005
+Brian Rodríguez,Uruguay,0.2333333333333333,False,0.8237,0.005
+Taha Ali,Sweden,0.2333333333333333,False,0.96165,0.005
+Gustaf Nilsson,Sweden,0.1833890701768081,False,0.76405,0.005
+Yasin Ayari,Sweden,0.0851008230008377,False,2.348,0.005
+Zakaria El Ouahdi,Morocco,0.1134027364098985,False,0.57735,0.005
+Virgil van Dijk (captain),Netherlands,0.0858384847358226,False,1.4348,0.005
+Keisuke Gotō,Japan,0.2333333333333333,False,1.09795,0.005
+Marko Farji,Iraq,0.2333333333333333,False,0.72325,0.005
+Oumar Diakité,Ivory Coast,0.2148077194457038,False,0.9519,0.005
+Yan Diomande,Ivory Coast,0.1882591147475633,False,0.8345,0.005
+Ange-Yoan Bonny,Ivory Coast,0.1910832804495,True,0.8561,0.005
 Andreas Schjelderup,Norway,0.1803535787618003,False,0.9701,0.005
 Leroy Sané,Germany,0.1994519505493224,False,1.04295,0.005
-Keisuke Gotō,Japan,0.2333333333333333,False,1.09795,0.005
-Nico Paz,Argentina,0.1794092410759346,False,1.12985,0.005
-Brahim Díaz,Morocco,0.164781291966563,False,0.8483,0.005
-Virgil van Dijk (captain),Netherlands,0.0858384847358226,False,1.4348,0.005
-Zakaria El Ouahdi,Morocco,0.1134027364098985,False,0.57735,0.005
-Ange-Yoan Bonny,Ivory Coast,0.1910832804495,True,0.8561,0.005
-Yan Diomande,Ivory Coast,0.1882591147475633,False,0.8345,0.005
-Marko Farji,Iraq,0.2333333333333333,False,0.72325,0.005
-Hakan Çalhanoğlu (captain),Turkey,0.3103462142885383,True,0.9387,0.005
-Oumar Diakité,Ivory Coast,0.2148077194457038,False,0.9519,0.005
-Weston McKennie,United States,0.1227302341957164,False,0.68315,0.005
-Dailon Livramento,Cape Verde,0.2333333333333333,False,0.84675,0.005
-Almoez Ali,Qatar,0.2333333333333333,False,0.7369,0.005
-Prince Kwabena Adu,Ghana,0.2333333333333333,False,0.9035,0.005
-Akram Afif,Qatar,0.2333333333333333,False,0.731,0.005
-Dennis Eckert,Iran,0.2333333333333333,False,0.8773,0.005
-Leandro Trossard,Belgium,0.2201586788028064,False,1.0739,0.005
-Shahriyar Moghanlou,Iran,0.2333333333333333,False,0.89,0.005
-Dodi Lukébakio,Belgium,0.1419462694077511,False,0.67395,0.005
-Ante Budimir,Croatia,0.2236976344364404,True,1.0035,0.005
-Ayman Yahya,Saudi Arabia,0.2333333333333333,False,0.804,0.005
-Francisco Conceição,Portugal,0.1386042556027753,False,0.71235,0.005
-Ali Alipour,Iran,0.2333333333333333,False,0.878,0.005
-Tshepang Moremi,South Africa,0.2333333333333333,False,0.7479,0.005
-Marco Pašalić,Croatia,0.2333333333333333,False,1.03325,0.005
-Hamza Abdelkarim,Egypt,0.2333333333333333,False,1.031,0.005
+Florian Wirtz,Germany,0.1843701142208483,False,0.97585,0.005
+Leon Goretzka,Germany,0.153620540272826,False,0.80685,0.005
+Sadio Mané,Senegal,0.2333333333333333,False,0.9554,0.005
 Ismaïla Sarr,Senegal,0.209243085026817,False,0.85375,0.005
-Zizo,Egypt,0.2333333333333333,False,1.028,0.005
-Eberechi Eze,England,0.2035377683450658,False,1.24375,0.005
-Álex Grimaldo,Spain,0.0748267324013247,False,0.49935,0.005
-Hwang In-beom,South Korea,0.0826666666666666,False,1.37625,0.005
-Noni Madueke,England,0.217093747781753,False,1.3323,0.005
-Kerim Alajbegović,Bosnia and Herzegovina,0.2437873979163734,False,0.91445,0.005
+Riyad Mahrez (captain),Algeria,0.2333333333333333,False,0.93835,0.005
+Jearl Margaritha,Curaçao,0.2333333333333333,False,0.7234,0.005
+Farès Ghedjemis,Algeria,0.2333333333333333,False,0.94865,0.005
+Benjamin Nygren,Sweden,0.269680885464973,False,1.1124,0.005
+Ante Budimir,Croatia,0.2236976344364404,True,1.0035,0.005
+Akram Afif,Qatar,0.2333333333333333,False,0.731,0.005
 Igor Sergeev,Uzbekistan,0.2333333333333333,False,0.8082,0.005
-Gustaf Nilsson,Sweden,0.1833890701768081,False,0.76405,0.005
-Taha Ali,Sweden,0.2333333333333333,False,0.96165,0.005
+Almoez Ali,Qatar,0.2333333333333333,False,0.7369,0.005
+Kerim Alajbegović,Bosnia and Herzegovina,0.2437873979163734,False,0.91445,0.005
+Marco Pašalić,Croatia,0.2333333333333333,False,1.03325,0.005
+Francisco Conceição,Portugal,0.1386042556027753,False,0.71235,0.005
+Noni Madueke,England,0.217093747781753,False,1.3323,0.005
+Eberechi Eze,England,0.2035377683450658,False,1.24375,0.005
+Hwang In-beom,South Korea,0.0826666666666666,False,1.37625,0.005
+Tshepang Moremi,South Africa,0.2333333333333333,False,0.7479,0.005
+Prince Kwabena Adu,Ghana,0.2333333333333333,False,0.9035,0.005
+Louicius Deedson,Haiti,0.2333333333333333,False,0.7054,0.005
 Pavel Šulc,Czech Republic,0.1969656667634494,False,0.6404,0.005
 Mojmír Chytil,Czech Republic,0.191717762967086,False,0.62205,0.005
-Jovane Cabral,Cape Verde,0.0594711237366607,False,0.21495,0.005
-Brian Rodríguez,Uruguay,0.2333333333333333,False,0.8237,0.005
 Jan Kuchta,Czech Republic,0.2426577794418587,False,0.79915,0.005
-Benjamin Nygren,Sweden,0.269680885464973,False,1.1124,0.005
-Louicius Deedson,Haiti,0.2333333333333333,False,0.7054,0.005
-Yasin Ayari,Sweden,0.0851008230008377,False,2.348,0.005
-Iliman Ndiaye,Senegal,0.1741897733376935,False,0.7136,0.0
-Firas Al-Buraikan,Saudi Arabia,0.2333333333333333,False,0.80285,0.0
-Salem Al-Dawsari (captain),Saudi Arabia,0.2333333333333333,False,0.8058,0.0
-Lamine Camara,Senegal,0.0736765575295972,False,0.3063,0.0
-Lachlan Bayliss,New Zealand,0.0826666666666666,False,0.2634,0.0
-Patrick Berg,Norway,0.0893322321081189,False,0.4834,0.0
-Gilson Benchimol,Cape Verde,0.2333333333333333,False,0.86695,0.0
-Saud Abdulhamid,Saudi Arabia,0.0451372793083979,False,0.1531,0.0
-Martin Ødegaard (captain),Norway,0.1272488536881038,False,0.6794,0.0
-Fredrik Aursnes,Norway,0.0791726379025182,False,0.42725,0.0
-Sander Berge,Norway,0.0468301135479828,False,0.25495,0.0
-Ziyad Al-Johani,Saudi Arabia,0.0826666666666666,False,0.27895,0.0
-Alaa Al-Hejji,Saudi Arabia,0.0826666666666666,False,0.28045,0.0
-Khalid Al-Ghannam,Saudi Arabia,0.2333333333333333,False,0.80695,0.0
-Abdullah Al-Khaibari,Saudi Arabia,0.0826666666666666,False,0.28355,0.0
-Yannick Semedo,Cape Verde,0.0826666666666666,False,0.3018,0.0
-Laros Duarte,Cape Verde,0.0826666666666666,False,0.30545,0.0
-Julian Ryerson,Norway,0.0405386459836505,False,0.22045,0.0
-Willy Semedo,Cape Verde,0.1997178673719213,False,0.73935,0.0
-Telmo Arcanjo,Cape Verde,0.0826666666666666,False,0.30125,0.0
-Jens Petter Hauge,Norway,0.1102117466701345,False,0.5888,0.0
-Deroy Duarte,Cape Verde,0.0609928229128308,False,0.2301,0.0
-Oscar Bobb,Norway,0.0650928212420542,False,0.35745,0.0
-Ryan Mendes (captain),Cape Verde,0.2333333333333333,False,0.84585,0.0
-Nuno da Costa,Cape Verde,0.0826666666666666,False,0.29965,0.0
-Musab Al-Juwayr,Saudi Arabia,0.0826666666666666,False,0.2771,0.0
-Idrissa Gueye,Senegal,0.0838092344231065,False,0.3414,0.0
-Abdullah Al-Hamdan,Saudi Arabia,0.2333333333333333,False,0.80765,0.0
-Hélio Varela,Cape Verde,0.1096985501936131,False,1.40655,0.0
-Pathé Ciss,Senegal,0.0768568422530423,False,0.3181,0.0
-Antonio Nusa,Norway,0.1036079888378882,False,0.5548,0.0
-Garry Rodrigues,Cape Verde,0.0826666666666666,False,0.30395,0.0
-Nasser Al-Dawsari,Saudi Arabia,0.0826666666666666,False,0.28405,0.0
-Thelo Aasgaard,Norway,0.0704417723987826,False,0.38445,0.0
-Kristian Thorstvedt,Norway,0.1510738807258282,False,0.82645,0.0
-Assane Diao,Senegal,0.1955919033897011,False,0.79685,0.0
-Jamiro Monteiro,Cape Verde,0.0826666666666666,False,0.30175,0.0
-Abdoulaye Seck,Senegal,0.0738762410761546,False,0.30705,0.0
-Marc Cucurella,Spain,0.0666195646925314,False,0.43565,0.0
-Maghnes Akliouche,France,0.1993770738378955,False,1.24775,0.0
+Brahim Díaz,Morocco,0.164781291966563,False,0.8483,0.005
+Hakan Çalhanoğlu (captain),Turkey,0.3103462142885383,True,0.9387,0.005
 Rayan Cherki,France,0.1483394019437671,False,0.926,0.0
-Ronald Araújo,Uruguay,0.0761364133454486,False,0.26955,0.0
-Manuel Ugarte,Uruguay,0.0632984478880016,False,0.2196,0.0
-Désiré Doué,France,0.1666126182454733,False,1.05255,0.0
-Nicolás de la Cruz,Uruguay,0.0689976033625924,False,0.23755,0.0
-Federico Valverde,Uruguay,0.1006096141224345,False,0.35295,0.0
-Théo Hernandez,France,0.0773995210559253,False,0.4784,0.0
-Agustín Canobbio,Uruguay,0.0826666666666666,False,1.28945,0.0
-Mathías Olivera,Uruguay,0.0478399999842533,False,0.1714,0.0
-Rodrigo Aguirre,Uruguay,0.2333333333333333,False,0.8111,0.0
-Aimar Sher,Iraq,0.0826666666666666,False,0.256,0.0
-Maximiliano Araújo,Uruguay,0.1422218117601672,False,0.50775,0.0
-Joaquín Piquerez,Uruguay,0.0826666666666666,False,0.28865,0.0
-Juan Manuel Sanabria,Uruguay,0.0826666666666666,False,0.2967,0.0
-Rodrigo Zalazar,Uruguay,0.1024946868446238,False,0.3578,0.0
-Ibrahima Konaté,France,0.0450724459823437,False,0.28895,0.0
-Adrien Rabiot,France,0.1308579624974682,False,0.8222,0.0
-N'Golo Kanté,France,0.0794350632447425,False,0.50085,0.0
-Malo Gusto,France,0.0413320484982827,False,0.25565,0.0
-Dayot Upamecano,France,0.0610284558732159,False,0.37945,0.0
-Jules Koundé,France,0.0499471269773804,False,0.31145,0.0
-Manu Koné,France,0.0826666666666666,False,0.5203,0.0
-Aurélien Tchouaméni,France,0.0716984550704813,False,0.45235,0.0
-William Saliba,France,0.0425129048330682,False,0.268,0.0
-Leo Østigård,Norway,0.0635589866929425,False,1.3419,0.0
-Sultan Mandash,Saudi Arabia,0.2333333333333333,False,0.8123,0.0
-Mohamed Kanno,Saudi Arabia,0.0826666666666666,False,0.2877,0.0
-Eric García,Spain,0.0758749960508936,False,0.5039,0.0
-Morten Thorsby,Norway,0.0853151713625652,False,0.4597,0.0
-Zaid Ismail,Iraq,0.0826666666666666,False,0.25775,0.0
-Marcos Llorente,Spain,0.0690076763591315,False,0.4564,0.0
-Kevin Yakob,Iraq,0.0826666666666666,False,0.25125,0.0
-Mikel Merino,Spain,0.0823348045899598,False,0.5441,0.0
-Ali Jasim,Iraq,0.2333333333333333,False,0.73615,0.0
-Amir Al-Ammari,Iraq,0.0826666666666666,False,0.25705,0.0
-Zidane Iqbal,Iraq,0.0826666666666666,False,0.2623,0.0
-Maxence Lacroix,France,0.0614445645531131,False,0.3931,0.0
-Ahmed Qasem,Iraq,0.1937904647448024,False,0.6059,0.0
-Mohanad Ali,Iraq,0.2333333333333333,False,0.72245,0.0
-Fabián Ruiz,Spain,0.119772720550212,False,0.7989,0.0
-Gavi,Spain,0.0609136778027054,False,0.40075,0.0
-Pedro Porro,Spain,0.0424232599605606,False,0.2794,0.0
-Aymeric Laporte,Spain,0.0510193123660408,False,0.34225,0.0
-Álex Baena,Spain,0.0687933347587412,False,0.4606,0.0
-Rodri (captain),Spain,0.0998339631446634,False,0.67425,0.0
-Ali Al-Hamadi,Iraq,0.2333333333333333,False,0.72525,0.0
-Martín Zubimendi,Spain,0.0569371133132814,False,0.3689,0.0
-Ibrahim Bayesh,Iraq,0.0826666666666666,False,0.25395,0.0
-Pedri,Spain,0.0675999739934863,False,0.44685,0.0
-Youssef Amyn,Iraq,0.0826666666666666,False,0.2523,0.0
-Ali Yousif,Iraq,0.2333333333333333,False,0.72285,0.0
-Oston Urunov,Uzbekistan,0.0826666666666666,False,0.2927,0.0
-Eldor Shomurodov (captain),Uzbekistan,0.1916199941464973,False,0.6659,0.0
-Dostonbek Khamdamov,Uzbekistan,0.0826666666666666,False,0.28345,0.0
-Azizjon Ganiev,Uzbekistan,0.0826666666666666,False,0.28315,0.0
-Azizbek Amonov,Uzbekistan,0.2333333333333333,False,0.79845,0.0
-Abbosbek Fayzullaev,Uzbekistan,0.0826666666666666,False,1.2869,0.0
-Sherzod Esanov,Uzbekistan,0.0826666666666666,False,0.28125,0.0
-Josip Stanišić,Croatia,0.0697648462401244,False,0.30875,0.0
-Joško Gvardiol,Croatia,0.0992831700130845,False,0.4494,0.0
-Kevin Pina,Cape Verde,0.0826666666666666,False,1.3011,0.0
-Nikola Moro,Croatia,0.0455158195086542,False,0.20525,0.0
-Mateo Kovačić,Croatia,0.0858722161179024,False,0.3788,0.0
-Andrej Kramarić,Croatia,0.2109097428124557,False,0.9333,0.0
-Luka Modrić (captain),Croatia,0.0696651871943707,False,0.31315,0.0
-Nikola Vlašić,Croatia,0.0844980726063929,False,0.3874,0.0
-Ivan Perišić,Croatia,0.0586453624472466,False,0.256,0.0
-Mario Pašalić,Croatia,0.0901194421521196,False,0.4017,0.0
-Martin Baturina,Croatia,0.0823050675424688,False,1.3628,0.0
-Petar Sučić,Croatia,0.0685502823826765,False,0.29125,0.0
-Toni Fruk,Croatia,0.0826666666666666,False,0.3678,0.0
-Duje Ćaleta-Car,Croatia,0.0504536240997414,False,0.2209,0.0
-Chancel Mbemba (captain),DR Congo,0.0650273800858622,False,0.22485,0.0
-Simon Banza,DR Congo,0.2370691516348529,False,0.82625,0.0
-Edo Kayembe,DR Congo,0.0826666666666666,False,0.28995,0.0
-Arthur Masuaku,DR Congo,0.0413305703606714,False,0.1432,0.0
-Rúben Dias,Portugal,0.0404575875728906,False,0.20965,0.0
-Diogo Dalot,Portugal,0.0436036542782095,False,0.22615,0.0
-Matheus Nunes,Portugal,0.0421724476981357,False,0.2135,0.0
-Bruno Fernandes,Portugal,0.1970894626393306,False,1.00395,0.0
-Bernardo Silva,Portugal,0.0972704037925781,False,0.49275,0.0
-João Félix,Portugal,0.1470947195591301,False,0.7531,0.0
-Jaloliddin Masharipov,Uzbekistan,0.0826666666666666,False,0.28595,0.0
-João Neves,Portugal,0.078818804171727,False,1.4001,0.0
-Pedro Neto,Portugal,0.128167555216291,False,0.6531,0.0
-Gonçalo Guedes,Portugal,0.1545712230450286,False,0.77545,0.0
-João Cancelo,Portugal,0.0588064482565408,False,0.3047,0.0
-Vitinha,Portugal,0.1146367522980843,False,0.5954,0.0
-Nuno Mendes,Portugal,0.1138296405079603,False,0.5753,0.0
-Akmal Mozgovoy,Uzbekistan,0.0826666666666666,False,0.28845,0.0
-Otabek Shukurov,Uzbekistan,0.0826666666666666,False,0.2766,0.0
-Jamshid Iskanderov,Uzbekistan,0.0826666666666666,False,0.28385,0.0
-Odiljon Hamrobekov,Uzbekistan,0.0826666666666666,False,0.28445,0.0
-Gonçalo Inácio,Portugal,0.0523040539733486,False,0.26945,0.0
-Iñaki Williams,Ghana,0.2351767826134797,False,0.908,0.0
-Augustine Boakye,Ghana,0.1708955587121101,False,0.66915,0.0
-Kojo Peprah Oppong,Ghana,0.0466295041165958,False,0.1816,0.0
-Kamaldeen Sulemana,Ghana,0.0752105028668561,False,0.2896,0.0
-Derrick Luckassen,Ghana,0.0560925323424745,False,0.21675,0.0
-Ernest Nuamah,Ghana,0.1832104607566956,False,0.71675,0.0
-César Blackman,Panama,0.0595521460364127,False,0.1862,0.0
-Edgardo Fariña,Panama,0.0409309813170622,False,0.12555,0.0
-Cristian Martínez,Panama,0.0826666666666666,False,0.25365,0.0
-Luka Sučić,Croatia,0.0630333355979587,False,0.2814,0.0
-Adalberto Carrasquilla,Panama,0.0826666666666666,False,0.25655,0.0
-Tomás Rodríguez,Panama,0.2333333333333333,False,0.72195,0.0
-Ismael Díaz,Panama,0.0826666666666666,False,0.2543,0.0
-Yoel Bárcenas,Panama,0.1024435263050984,False,0.3279,0.0
-Eric Davis,Panama,0.0402430326299237,False,0.1221,0.0
-José Fajardo,Panama,0.2383770153289204,False,0.73895,0.0
-Cecilio Waterman,Panama,0.2333333333333333,False,0.72575,0.0
-Alberto Quintero,Panama,0.0826666666666666,False,0.26125,0.0
-Aníbal Godoy (captain),Panama,0.0826666666666666,False,0.2579,0.0
-César Yanis,Panama,0.0826666666666666,False,0.24955,0.0
-José Luis Rodríguez,Panama,0.0826666666666666,False,0.26225,0.0
-Luka Vušković,Croatia,0.0974279760420345,False,0.432,0.0
-Martin Erlić,Croatia,0.0726587711944426,False,0.3274,0.0
 Ezri Konsa,England,0.0488503604390973,False,0.2954,0.0
 Nico O'Reilly,England,0.1270072642646773,False,0.7825,0.0
+Désiré Doué,France,0.1666126182454733,False,1.05255,0.0
+Théo Hernandez,France,0.0773995210559253,False,0.4784,0.0
 Declan Rice,England,0.1062199334171317,False,0.6535,0.0
 John Stones,England,0.060915329600612,False,0.3652,0.0
+William Saliba,France,0.0425129048330682,False,0.268,0.0
+Ibrahima Konaté,France,0.0450724459823437,False,0.28895,0.0
+Adrien Rabiot,France,0.1308579624974682,False,0.8222,0.0
+Laros Duarte,Cape Verde,0.0826666666666666,False,0.30545,0.0
+N'Golo Kanté,France,0.0794350632447425,False,0.50085,0.0
 Marc Guéhi,England,0.0674053381375276,False,0.4082,0.0
 Elliot Anderson,England,0.0645488304664588,False,0.399,0.0
 Jordan Henderson,England,0.0476866701421009,False,0.2931,0.0
 Kobbie Mainoo,England,0.0460557836022383,False,0.27765,0.0
-Abdul Rahman Baba,Ghana,0.0721989657797727,False,0.2856,0.0
-Štěpán Chaloupek,Czech Republic,0.0494269500819323,False,0.15355,0.0
+Morgan Rogers,England,0.1705972566659961,False,1.0354,0.0
+Yannick Semedo,Cape Verde,0.0826666666666666,False,0.3018,0.0
+Willy Semedo,Cape Verde,0.1997178673719213,False,0.73935,0.0
+Aurélien Tchouaméni,France,0.0716984550704813,False,0.45235,0.0
+Telmo Arcanjo,Cape Verde,0.0826666666666666,False,0.30125,0.0
+Reece James,England,0.0402399070082436,False,0.2428,0.0
 Jarell Quansah,England,0.061343369253035,False,0.3807,0.0
+Manu Koné,France,0.0826666666666666,False,0.5203,0.0
+Jules Koundé,France,0.0499471269773804,False,0.31145,0.0
 Caleb Yirenkyi,Ghana,0.0826666666666666,False,1.31435,0.0
 Thomas Partey,Ghana,0.0572423788194417,False,0.2232,0.0
+Dayot Upamecano,France,0.0610284558732159,False,0.37945,0.0
+Malo Gusto,France,0.0413320484982827,False,0.25565,0.0
+Martin Erlić,Croatia,0.0726587711944426,False,0.3274,0.0
+Luka Modrić (captain),Croatia,0.0696651871943707,False,0.31315,0.0
+Patrick Berg,Norway,0.0893322321081189,False,0.4834,0.0
+Nikola Vlašić,Croatia,0.0844980726063929,False,0.3874,0.0
+Ivan Perišić,Croatia,0.0586453624472466,False,0.256,0.0
+Leo Østigård,Norway,0.0635589866929425,False,1.3419,0.0
+Morten Thorsby,Norway,0.0853151713625652,False,0.4597,0.0
+Zaid Ismail,Iraq,0.0826666666666666,False,0.25775,0.0
+Mario Pašalić,Croatia,0.0901194421521196,False,0.4017,0.0
+Aimar Sher,Iraq,0.0826666666666666,False,0.256,0.0
+Martin Baturina,Croatia,0.0823050675424688,False,1.3628,0.0
+Kevin Yakob,Iraq,0.0826666666666666,False,0.25125,0.0
+Petar Sučić,Croatia,0.0685502823826765,False,0.29125,0.0
+Ali Jasim,Iraq,0.2333333333333333,False,0.73615,0.0
+Amir Al-Ammari,Iraq,0.0826666666666666,False,0.25705,0.0
+Maghnes Akliouche,France,0.1993770738378955,False,1.24775,0.0
+Ali Yousif,Iraq,0.2333333333333333,False,0.72285,0.0
+Gilson Benchimol,Cape Verde,0.2333333333333333,False,0.86695,0.0
+Toni Fruk,Croatia,0.0826666666666666,False,0.3678,0.0
+Ahmed Qasem,Iraq,0.1937904647448024,False,0.6059,0.0
+Jamiro Monteiro,Cape Verde,0.0826666666666666,False,0.30175,0.0
+Igor Matanović,Croatia,0.2565684350310869,False,1.12825,0.0
+Luka Sučić,Croatia,0.0630333355979587,False,0.2814,0.0
+Garry Rodrigues,Cape Verde,0.0826666666666666,False,0.30395,0.0
+Mohanad Ali,Iraq,0.2333333333333333,False,0.72245,0.0
+Ali Al-Hamadi,Iraq,0.2333333333333333,False,0.72525,0.0
+Ibrahim Bayesh,Iraq,0.0826666666666666,False,0.25395,0.0
+Luka Vušković,Croatia,0.0974279760420345,False,0.432,0.0
+Deroy Duarte,Cape Verde,0.0609928229128308,False,0.2301,0.0
+Youssef Amyn,Iraq,0.0826666666666666,False,0.2523,0.0
+Maxence Lacroix,France,0.0614445645531131,False,0.3931,0.0
+Zidane Iqbal,Iraq,0.0826666666666666,False,0.2623,0.0
+César Blackman,Panama,0.0595521460364127,False,0.1862,0.0
+Gavi,Spain,0.0609136778027054,False,0.40075,0.0
+Edgardo Fariña,Panama,0.0409309813170622,False,0.12555,0.0
+Cristian Martínez,Panama,0.0826666666666666,False,0.25365,0.0
+Fabián Ruiz,Spain,0.119772720550212,False,0.7989,0.0
+José Luis Rodríguez,Panama,0.0826666666666666,False,0.26225,0.0
+Adalberto Carrasquilla,Panama,0.0826666666666666,False,0.25655,0.0
+Tomás Rodríguez,Panama,0.2333333333333333,False,0.72195,0.0
+Mikel Merino,Spain,0.0823348045899598,False,0.5441,0.0
+Marcos Llorente,Spain,0.0690076763591315,False,0.4564,0.0
+Eric García,Spain,0.0758749960508936,False,0.5039,0.0
+Ismael Díaz,Panama,0.0826666666666666,False,0.2543,0.0
+Ryan Mendes (captain),Cape Verde,0.2333333333333333,False,0.84585,0.0
+Mohamed Kanno,Saudi Arabia,0.0826666666666666,False,0.2877,0.0
+Sultan Mandash,Saudi Arabia,0.2333333333333333,False,0.8123,0.0
+Rodrigo Zalazar,Uruguay,0.1024946868446238,False,0.3578,0.0
+Yoel Bárcenas,Panama,0.1024435263050984,False,0.3279,0.0
+Nuno da Costa,Cape Verde,0.0826666666666666,False,0.29965,0.0
+Alaa Al-Hejji,Saudi Arabia,0.0826666666666666,False,0.28045,0.0
+Khalid Al-Ghannam,Saudi Arabia,0.2333333333333333,False,0.80695,0.0
+Ziyad Al-Johani,Saudi Arabia,0.0826666666666666,False,0.27895,0.0
+Abdullah Al-Khaibari,Saudi Arabia,0.0826666666666666,False,0.28355,0.0
+Saud Abdulhamid,Saudi Arabia,0.0451372793083979,False,0.1531,0.0
+Hélio Varela,Cape Verde,0.1096985501936131,False,1.40655,0.0
+Eric Davis,Panama,0.0402430326299237,False,0.1221,0.0
+Salem Al-Dawsari (captain),Saudi Arabia,0.2333333333333333,False,0.8058,0.0
+Firas Al-Buraikan,Saudi Arabia,0.2333333333333333,False,0.80285,0.0
+Nasser Al-Dawsari,Saudi Arabia,0.0826666666666666,False,0.28405,0.0
+José Fajardo,Panama,0.2383770153289204,False,0.73895,0.0
+Musab Al-Juwayr,Saudi Arabia,0.0826666666666666,False,0.2771,0.0
+Cecilio Waterman,Panama,0.2333333333333333,False,0.72575,0.0
+Abdullah Al-Hamdan,Saudi Arabia,0.2333333333333333,False,0.80765,0.0
 Abdul Fatawu,Ghana,0.137802688158229,False,0.5467,0.0
 Kwasi Sibo,Ghana,0.0546972752675825,False,0.2132,0.0
+Juan Manuel Sanabria,Uruguay,0.0826666666666666,False,0.2967,0.0
+Joaquín Piquerez,Uruguay,0.0826666666666666,False,0.28865,0.0
+Aníbal Godoy (captain),Panama,0.0826666666666666,False,0.2579,0.0
+Maximiliano Araújo,Uruguay,0.1422218117601672,False,0.50775,0.0
+Rodrigo Aguirre,Uruguay,0.2333333333333333,False,0.8111,0.0
 Jordan Ayew (captain),Ghana,0.1515987422194176,False,0.5986,0.0
+Mathías Olivera,Uruguay,0.0478399999842533,False,0.1714,0.0
+Agustín Canobbio,Uruguay,0.0826666666666666,False,1.28945,0.0
 Brandon Thomas-Asante,Ghana,0.2333333333333333,False,0.91255,0.0
-Robin Hranáč,Czech Republic,0.0530580257949389,False,0.17645,0.0
+Antoine Semenyo,Ghana,0.2463305928262554,False,0.9569,0.0
+Federico Valverde,Uruguay,0.1006096141224345,False,0.35295,0.0
+Nicolás de la Cruz,Uruguay,0.0689976033625924,False,0.23755,0.0
+Manuel Ugarte,Uruguay,0.0632984478880016,False,0.2196,0.0
+Alberto Quintero,Panama,0.0826666666666666,False,0.26125,0.0
 Christopher Bonsu Baah,Ghana,0.1876027217918104,False,0.7207,0.0
-Morgan Rogers,England,0.1705972566659961,False,1.0354,0.0
-Lisandro Martínez,Argentina,0.0485186841213106,False,0.3047,0.0
-Rodrigo De Paul,Argentina,0.0854428650507364,False,0.5537,0.0
-Valentín Barco,Argentina,0.0797196798534883,False,0.5058,0.0
-Giovani Lo Celso,Argentina,0.0547016005126423,False,0.343,0.0
-Cristian Romero,Argentina,0.0843195706691638,False,0.53315,0.0
-Exequiel Palacios,Argentina,0.064601952868181,False,0.41085,0.0
-Nicolás González,Argentina,0.1103212792000273,False,0.70205,0.0
-Thiago Almada,Argentina,0.1092097042282868,False,0.6964,0.0
-Giuliano Simeone,Argentina,0.1211428879482296,False,0.76985,0.0
-Fiston Mayele,DR Congo,0.2333333333333333,False,0.8094,0.0
-Enzo Fernández,Argentina,0.1384296781000389,False,0.88075,0.0
-Facundo Medina,Argentina,0.0436643741541491,False,0.27995,0.0
-Xaver Schlager,Austria,0.0663049436294045,False,0.2976,0.0
-Stefan Posch,Austria,0.0481520394296693,False,0.21405,0.0
-Nicolas Seiwald,Austria,0.0460405124938248,False,0.2056,0.0
-Marcel Sabitzer,Austria,0.105287724025667,False,0.4596,0.0
+Abdul Rahman Baba,Ghana,0.0721989657797727,False,0.2856,0.0
+Marc Cucurella,Spain,0.0666195646925314,False,0.43565,0.0
+Iñaki Williams,Ghana,0.2351767826134797,False,0.908,0.0
+Pedri,Spain,0.0675999739934863,False,0.44685,0.0
+Augustine Boakye,Ghana,0.1708955587121101,False,0.66915,0.0
+Kojo Peprah Oppong,Ghana,0.0466295041165958,False,0.1816,0.0
+Kamaldeen Sulemana,Ghana,0.0752105028668561,False,0.2896,0.0
+Derrick Luckassen,Ghana,0.0560925323424745,False,0.21675,0.0
+Martín Zubimendi,Spain,0.0569371133132814,False,0.3689,0.0
+Ernest Nuamah,Ghana,0.1832104607566956,False,0.71675,0.0
+Rodri (captain),Spain,0.0998339631446634,False,0.67425,0.0
+Álex Baena,Spain,0.0687933347587412,False,0.4606,0.0
+Aymeric Laporte,Spain,0.0510193123660408,False,0.34225,0.0
+Pedro Porro,Spain,0.0424232599605606,False,0.2794,0.0
+Ronald Araújo,Uruguay,0.0761364133454486,False,0.26955,0.0
 Florian Grillitsch,Austria,0.0494634524528289,False,0.21515,0.0
 Michael Gregoritsch,Austria,0.1535625845912148,False,0.68985,0.0
+Edo Kayembe,DR Congo,0.0826666666666666,False,0.28995,0.0
 Saša Kalajdžić,Austria,0.1720734706266488,False,0.76615,0.0
 Philipp Lienhart,Austria,0.0528859018622359,False,0.2317,0.0
-Alexis Mac Allister,Argentina,0.1335724325929384,False,0.85425,0.0
-Pape Matar Sarr,Senegal,0.0826666666666666,False,0.33505,0.0
-Ibrahim Mbaye,Senegal,0.157938366005035,False,1.6505,0.0
-Habib Diarra,Senegal,0.0878306966434467,False,0.3635,0.0
-Bara Sapoko Ndiaye,Senegal,0.0826666666666666,False,0.3421,0.0
-Antoine Mendy,Senegal,0.0448601707766959,False,0.18075,0.0
-Pape Gueye,Senegal,0.1026445951320003,False,0.41435,0.0
-Ramiz Zerrouki,Algeria,0.0689457994950328,False,0.27685,0.0
-Houssem Aouar,Algeria,0.1143132341245239,False,0.4539,0.0
-Farès Chaïbi,Algeria,0.0939273343756776,False,0.37715,0.0
-Anis Hadj Moussa,Algeria,0.2030025494907966,False,0.8129,0.0
-Leandro Paredes,Argentina,0.0459478513055779,False,0.296,0.0
-Hicham Boudaoui,Algeria,0.0892614173442017,False,0.3585,0.0
-Rafik Belghali,Algeria,0.0649059940358195,False,0.26145,0.0
-Mohamed Amoura,Algeria,0.2767961607557591,False,1.1232,0.0
-Nabil Bentaleb,Algeria,0.0452038987139957,False,0.18025,0.0
-Adil Boulbina,Algeria,0.2333333333333333,False,0.94735,0.0
-Ramy Bensebaini,Algeria,0.0939549613412656,True,0.37095,0.0
-Ibrahim Maza,Algeria,0.1262954670502491,False,0.50215,0.0
-Yacine Titraoui,Algeria,0.0826666666666666,False,0.33355,0.0
-Samir Chergui,Algeria,0.0679648293041796,False,0.27185,0.0
-Nicolás Tagliafico,Argentina,0.0752135288418887,False,0.4742,0.0
-Nadhir Benbouali,Algeria,0.2333333333333333,False,0.94385,0.0
-Yerry Mina,Colombia,0.0568300496571321,False,0.28765,0.0
-Juan Portilla,Colombia,0.0826666666666666,False,0.41425,0.0
-Jefferson Lerma,Colombia,0.0781346692943302,False,0.38705,0.0
-Juan Fernando Quintero,Colombia,0.0826666666666666,False,0.4149,0.0
-Deiver Machado,Colombia,0.0666711069188694,False,0.3365,0.0
-Davinson Sánchez,Colombia,0.0936966645350147,False,0.46135,0.0
-Luis Suárez,Colombia,0.0796007508124803,False,0.3999,0.0
-Andrés Gómez,Colombia,0.1154114568998533,False,0.58085,0.0
-Steve Kapuadi,DR Congo,0.066469253408355,False,0.2307,0.0
 Phillipp Mwene,Austria,0.0537532848170377,False,0.23935,0.0
-Nathanaël Mbuku,DR Congo,0.0826666666666666,False,0.28965,0.0
-Samuel Moutoussamy,DR Congo,0.0658403836319182,False,0.22415,0.0
-Brian Cipenga,DR Congo,0.2333333333333333,False,0.8089,0.0
-Théo Bongonda,DR Congo,0.0826666666666666,False,0.29655,0.0
-Gaël Kakuta,DR Congo,0.2333333333333333,False,0.8156,0.0
-Meschak Elia,DR Congo,0.2333333333333333,False,0.819,0.0
-Noah Sadiki,DR Congo,0.0534742182983781,False,0.1847,0.0
-Aaron Tshibola,DR Congo,0.0826666666666666,False,0.2902,0.0
-Cédric Bakambu,DR Congo,0.2269869622310743,False,0.7977,0.0
-Charles Pickel,DR Congo,0.0420593613110045,False,0.14655,0.0
-Ngal'ayel Mukau,DR Congo,0.0826666666666666,False,0.2914,0.0
 Carney Chukwuemeka,Austria,0.0657732247410084,False,0.28875,0.0
-Romano Schmid,Austria,0.0690250952515516,False,1.29635,0.0
+César Yanis,Panama,0.0826666666666666,False,0.24955,0.0
+Simon Banza,DR Congo,0.2370691516348529,False,0.82625,0.0
 Dejan Ljubičić,Austria,0.0886419576927772,False,0.39345,0.0
 Konrad Laimer,Austria,0.0506780428732559,False,0.2248,0.0
 Patrick Wimmer,Austria,0.1277410187610823,False,0.56475,0.0
@@ -436,20 +327,128 @@ Paul Wanner,Austria,0.0949613912826223,False,0.41765,0.0
 Alessandro Schöpf,Austria,0.0826666666666666,False,0.36505,0.0
 Amer Jamous,Jordan,0.0826666666666666,False,0.25595,0.0
 Mohammad Abu Zrayq,Jordan,0.2333333333333333,False,0.7239,0.0
-Noor Al-Rawabdeh,Jordan,0.0826666666666666,False,0.255,0.0
+Romano Schmid,Austria,0.0690250952515516,False,1.29635,0.0
+Bruno Fernandes,Portugal,0.1970894626393306,False,1.00395,0.0
+Exequiel Palacios,Argentina,0.064601952868181,False,0.41085,0.0
+Nicolás González,Argentina,0.1103212792000273,False,0.70205,0.0
+Thiago Almada,Argentina,0.1092097042282868,False,0.6964,0.0
+Giuliano Simeone,Argentina,0.1211428879482296,False,0.76985,0.0
+Matheus Nunes,Portugal,0.0421724476981357,False,0.2135,0.0
+Alexis Mac Allister,Argentina,0.1335724325929384,False,0.85425,0.0
+Marcel Sabitzer,Austria,0.105287724025667,False,0.4596,0.0
+Rúben Dias,Portugal,0.0404575875728906,False,0.20965,0.0
+Enzo Fernández,Argentina,0.1384296781000389,False,0.88075,0.0
+Facundo Medina,Argentina,0.0436643741541491,False,0.27995,0.0
+Xaver Schlager,Austria,0.0663049436294045,False,0.2976,0.0
+Stefan Posch,Austria,0.0481520394296693,False,0.21405,0.0
+Nicolas Seiwald,Austria,0.0460405124938248,False,0.2056,0.0
+Kevin Pina,Cape Verde,0.0826666666666666,False,1.3011,0.0
+Arthur Masuaku,DR Congo,0.0413305703606714,False,0.1432,0.0
+Diogo Dalot,Portugal,0.0436036542782095,False,0.22615,0.0
+Théo Bongonda,DR Congo,0.0826666666666666,False,0.29655,0.0
+James Rodríguez (captain),Colombia,0.1993001358320923,True,1.0034,0.0
 Jhon Arias,Colombia,0.2082705580990436,False,1.0402,0.0
+Yerry Mina,Colombia,0.0568300496571321,False,0.28765,0.0
+Juan Portilla,Colombia,0.0826666666666666,False,0.41425,0.0
+Jefferson Lerma,Colombia,0.0781346692943302,False,0.38705,0.0
+Brian Cipenga,DR Congo,0.2333333333333333,False,0.8089,0.0
+Noor Al-Rawabdeh,Jordan,0.0826666666666666,False,0.255,0.0
+Samuel Moutoussamy,DR Congo,0.0658403836319182,False,0.22415,0.0
+Nathanaël Mbuku,DR Congo,0.0826666666666666,False,0.28965,0.0
+Deiver Machado,Colombia,0.0666711069188694,False,0.3365,0.0
+Ngal'ayel Mukau,DR Congo,0.0826666666666666,False,0.2914,0.0
+Steve Kapuadi,DR Congo,0.066469253408355,False,0.2307,0.0
+Andrés Gómez,Colombia,0.1154114568998533,False,0.58085,0.0
+Davinson Sánchez,Colombia,0.0936966645350147,False,0.46135,0.0
+Luis Suárez,Colombia,0.0796007508124803,False,0.3999,0.0
+Juan Fernando Quintero,Colombia,0.0826666666666666,False,0.4149,0.0
+Chancel Mbemba (captain),DR Congo,0.0650273800858622,False,0.22485,0.0
+Fiston Mayele,DR Congo,0.2333333333333333,False,0.8094,0.0
+Charles Pickel,DR Congo,0.0420593613110045,False,0.14655,0.0
+Mahmoud Al-Mardi,Jordan,0.2333333333333333,False,0.72775,0.0
 Rajaei Ayed,Jordan,0.0826666666666666,False,0.2577,0.0
 Ibrahim Sadeh,Jordan,0.0826666666666666,False,0.25585,0.0
+Cédric Bakambu,DR Congo,0.2269869622310743,False,0.7977,0.0
 Mohannad Abu Taha,Jordan,0.0826666666666666,False,0.25795,0.0
-Nizar Al-Rashdan,Jordan,0.0826666666666666,False,0.25495,0.0
+Jorge Carrascal,Colombia,0.0826666666666666,False,0.4161,0.0
+Aaron Tshibola,DR Congo,0.0826666666666666,False,0.2902,0.0
+Noah Sadiki,DR Congo,0.0534742182983781,False,0.1847,0.0
 Ali Azaizeh,Jordan,0.2333333333333333,False,0.7231,0.0
+Meschak Elia,DR Congo,0.2333333333333333,False,0.819,0.0
 Mohammad Al-Dawoud,Jordan,0.0826666666666666,False,0.25125,0.0
 Daniel Muñoz,Colombia,0.1023289269115099,False,1.5205,0.0
 Richard Ríos,Colombia,0.1108741939226444,False,0.55435,0.0
-Jorge Carrascal,Colombia,0.0826666666666666,False,0.4161,0.0
-James Rodríguez (captain),Colombia,0.1993001358320923,True,1.0034,0.0
-Mahmoud Al-Mardi,Jordan,0.2333333333333333,False,0.72775,0.0
-Jean-Ricner Bellegarde,Haiti,0.0726037883771658,False,0.2222,0.0
+Gaël Kakuta,DR Congo,0.2333333333333333,False,0.8156,0.0
+Nizar Al-Rashdan,Jordan,0.0826666666666666,False,0.25495,0.0
+Azizbek Amonov,Uzbekistan,0.2333333333333333,False,0.79845,0.0
+Abdoulaye Seck,Senegal,0.0738762410761546,False,0.30705,0.0
+Azizjon Ganiev,Uzbekistan,0.0826666666666666,False,0.28315,0.0
+Idrissa Gueye,Senegal,0.0838092344231065,False,0.3414,0.0
+Pathé Ciss,Senegal,0.0768568422530423,False,0.3181,0.0
+Assane Diao,Senegal,0.1955919033897011,False,0.79685,0.0
+Lamine Camara,Senegal,0.0736765575295972,False,0.3063,0.0
+Bernardo Silva,Portugal,0.0972704037925781,False,0.49275,0.0
+Eldor Shomurodov (captain),Uzbekistan,0.1916199941464973,False,0.6659,0.0
+Oston Urunov,Uzbekistan,0.0826666666666666,False,0.2927,0.0
+Jaloliddin Masharipov,Uzbekistan,0.0826666666666666,False,0.28595,0.0
+Iliman Ndiaye,Senegal,0.1741897733376935,False,0.7136,0.0
+Odiljon Hamrobekov,Uzbekistan,0.0826666666666666,False,0.28445,0.0
+Pape Matar Sarr,Senegal,0.0826666666666666,False,0.33505,0.0
+Jamshid Iskanderov,Uzbekistan,0.0826666666666666,False,0.28385,0.0
+Ibrahim Mbaye,Senegal,0.157938366005035,False,1.6505,0.0
+Dostonbek Khamdamov,Uzbekistan,0.0826666666666666,False,0.28345,0.0
+Andrej Kramarić,Croatia,0.2109097428124557,False,0.9333,0.0
+Mateo Kovačić,Croatia,0.0858722161179024,False,0.3788,0.0
+Sander Berge,Norway,0.0468301135479828,False,0.25495,0.0
+Nikola Moro,Croatia,0.0455158195086542,False,0.20525,0.0
+Martin Ødegaard (captain),Norway,0.1272488536881038,False,0.6794,0.0
+Duje Ćaleta-Car,Croatia,0.0504536240997414,False,0.2209,0.0
+Fredrik Aursnes,Norway,0.0791726379025182,False,0.42725,0.0
+Julian Ryerson,Norway,0.0405386459836505,False,0.22045,0.0
+Kristian Thorstvedt,Norway,0.1510738807258282,False,0.82645,0.0
+Thelo Aasgaard,Norway,0.0704417723987826,False,0.38445,0.0
+Antonio Nusa,Norway,0.1036079888378882,False,0.5548,0.0
+Josip Stanišić,Croatia,0.0697648462401244,False,0.30875,0.0
+Sherzod Esanov,Uzbekistan,0.0826666666666666,False,0.28125,0.0
+Oscar Bobb,Norway,0.0650928212420542,False,0.35745,0.0
+Abbosbek Fayzullaev,Uzbekistan,0.0826666666666666,False,1.2869,0.0
+Jens Petter Hauge,Norway,0.1102117466701345,False,0.5888,0.0
+Joško Gvardiol,Croatia,0.0992831700130845,False,0.4494,0.0
+Yacine Titraoui,Algeria,0.0826666666666666,False,0.33355,0.0
+Vitinha,Portugal,0.1146367522980843,False,0.5954,0.0
+Samir Chergui,Algeria,0.0679648293041796,False,0.27185,0.0
+Nicolás Tagliafico,Argentina,0.0752135288418887,False,0.4742,0.0
+Leandro Paredes,Argentina,0.0459478513055779,False,0.296,0.0
+Lisandro Martínez,Argentina,0.0485186841213106,False,0.3047,0.0
+João Cancelo,Portugal,0.0588064482565408,False,0.3047,0.0
+Habib Diarra,Senegal,0.0878306966434467,False,0.3635,0.0
+Gonçalo Guedes,Portugal,0.1545712230450286,False,0.77545,0.0
+Pedro Neto,Portugal,0.128167555216291,False,0.6531,0.0
+Valentín Barco,Argentina,0.0797196798534883,False,0.5058,0.0
+João Neves,Portugal,0.078818804171727,False,1.4001,0.0
+Gonçalo Inácio,Portugal,0.0523040539733486,False,0.26945,0.0
+Giovani Lo Celso,Argentina,0.0547016005126423,False,0.343,0.0
+Cristian Romero,Argentina,0.0843195706691638,False,0.53315,0.0
+João Félix,Portugal,0.1470947195591301,False,0.7531,0.0
+Rodrigo De Paul,Argentina,0.0854428650507364,False,0.5537,0.0
+Bara Sapoko Ndiaye,Senegal,0.0826666666666666,False,0.3421,0.0
+Antoine Mendy,Senegal,0.0448601707766959,False,0.18075,0.0
+Otabek Shukurov,Uzbekistan,0.0826666666666666,False,0.2766,0.0
+Pape Gueye,Senegal,0.1026445951320003,False,0.41435,0.0
+Ramiz Zerrouki,Algeria,0.0689457994950328,False,0.27685,0.0
+Akmal Mozgovoy,Uzbekistan,0.0826666666666666,False,0.28845,0.0
+Houssem Aouar,Algeria,0.1143132341245239,False,0.4539,0.0
+Farès Chaïbi,Algeria,0.0939273343756776,False,0.37715,0.0
+Ibrahim Maza,Algeria,0.1262954670502491,False,0.50215,0.0
+Nadhir Benbouali,Algeria,0.2333333333333333,False,0.94385,0.0
+Hicham Boudaoui,Algeria,0.0892614173442017,False,0.3585,0.0
+Rafik Belghali,Algeria,0.0649059940358195,False,0.26145,0.0
+Mohamed Amoura,Algeria,0.2767961607557591,False,1.1232,0.0
+Nuno Mendes,Portugal,0.1138296405079603,False,0.5753,0.0
+Nabil Bentaleb,Algeria,0.0452038987139957,False,0.18025,0.0
+Adil Boulbina,Algeria,0.2333333333333333,False,0.94735,0.0
+Ramy Bensebaini,Algeria,0.0939549613412656,True,0.37095,0.0
+Anis Hadj Moussa,Algeria,0.2030025494907966,False,0.8129,0.0
 Leverton Pierre,Haiti,0.0826666666666666,False,0.2551,0.0
 Ruben Providence,Haiti,0.2333333333333333,False,0.70125,0.0
 Lenny Joseph,Haiti,0.1575297515964225,False,0.48215,0.0
@@ -458,8 +457,8 @@ Wilson Isidor,Haiti,0.1661346716258082,False,0.49905,0.0
 Yassin Fortuné,Haiti,0.2333333333333333,False,0.69545,0.0
 Frantzdy Pierrot,Haiti,0.2285082434746946,False,0.6875,0.0
 Josué Casimir,Haiti,0.0842221904839684,False,0.25135,0.0
+Dominique Simon,Haiti,0.0826666666666666,False,0.2467,0.0
 Kevin De Bruyne,Belgium,0.2523508566657943,True,1.206,0.0
-Woodensky Pierre,Haiti,0.0826666666666666,False,0.249,0.0
 Achraf Hakimi (captain),Morocco,0.1172488638597834,False,0.6034,0.0
 Nayef Aguerd,Morocco,0.0569829044634382,False,0.2992,0.0
 Ayyoub Bouaddi,Morocco,0.0407474967553698,False,0.21285,0.0
@@ -468,8 +467,8 @@ Azzedine Ounahi,Morocco,0.0892505321388527,False,0.45755,0.0
 Samir El Mourabet,Morocco,0.0513527057865056,False,0.26655,0.0
 Gessime Yassine,Morocco,0.1403076356169457,False,0.71435,0.0
 Bilal El Khannouss,Morocco,0.1033480638396359,False,0.5345,0.0
-Dominique Simon,Haiti,0.0826666666666666,False,0.2467,0.0
-Granit Xhaka (captain),Switzerland,0.0537064215360486,False,0.2661,0.0
+Neil El Aynaoui,Morocco,0.0805937957888897,False,0.4088,0.0
+Woodensky Pierre,Haiti,0.0826666666666666,False,0.249,0.0
 Ardon Jashari,Switzerland,0.0518679689921207,False,0.25295,0.0
 Djibril Sow,Switzerland,0.0821995674363712,False,0.41445,0.0
 Christian Fassnacht,Switzerland,0.1480244568284212,False,0.73255,0.0
@@ -478,8 +477,8 @@ Noah Okafor,Switzerland,0.1664909244716406,False,0.83085,0.0
 Michel Aebischer,Switzerland,0.0416352876003926,False,0.20315,0.0
 Fabian Rieder,Switzerland,0.0717652322939047,False,0.3583,0.0
 Zeki Amdouni,Switzerland,0.1523743028877797,False,0.752,0.0
-Duckens Nazon,Haiti,0.2333333333333333,False,0.6974,0.0
-Marquinhos (captain),Brazil,0.0609527729362387,False,0.2987,0.0
+Éderson Silva,Brazil,0.0826666666666666,False,0.41085,0.0
+Jean-Ricner Bellegarde,Haiti,0.0726037883771658,False,0.2222,0.0
 Casemiro,Brazil,0.1408620200564751,False,0.69125,0.0
 Bruno Guimarães,Brazil,0.120502200617029,False,0.58965,0.0
 Fabinho,Brazil,0.0826666666666666,False,0.4028,0.0
@@ -489,8 +488,8 @@ Lucas Paquetá,Brazil,0.1133186898877297,False,0.54215,0.0
 Luiz Henrique,Brazil,0.1300518393287548,False,0.6296,0.0
 Carl Sainté,Haiti,0.0826666666666666,False,0.2492,0.0
 Derrick Etienne Jr.,Haiti,0.2333333333333333,False,0.7148,0.0
-Éderson Silva,Brazil,0.0826666666666666,False,0.41085,0.0
-Omar Alderete,Paraguay,0.043445200519592,False,0.1852,0.0
+Duckens Nazon,Haiti,0.2333333333333333,False,0.6974,0.0
+Marquinhos (captain),Brazil,0.0609527729362387,False,0.2987,0.0
 Ramón Sosa,Paraguay,0.0841886186094285,False,0.3514,0.0
 Diego Gómez,Paraguay,0.1300593683713972,False,0.5407,0.0
 Antonio Sanabria,Paraguay,0.1947800904798206,True,0.81215,0.0
@@ -499,8 +498,8 @@ Maurício,Paraguay,0.0826666666666666,False,1.3363,0.0
 Andrés Cubas,Paraguay,0.0826666666666666,False,0.34345,0.0
 Damián Bobadilla,Paraguay,0.0826666666666666,False,0.34675,0.0
 Kaku,Paraguay,0.2333333333333333,False,0.9767,0.0
-Neil El Aynaoui,Morocco,0.0805937957888897,False,0.4088,0.0
-Braian Ojeda,Paraguay,0.0826666666666666,False,0.34845,0.0
+Julio Enciso,Paraguay,0.1410589782832941,False,0.5857,0.0
+John McGinn,Scotland,0.1077010722222142,False,1.4329,0.0
 Gabriel Ávalos,Paraguay,0.2333333333333333,False,0.97925,0.0
 Matías Galarza,Paraguay,0.0645153391295826,False,1.27135,0.0
 Gustavo Caballero,Paraguay,0.0826666666666666,False,0.3445,0.0
@@ -510,8 +509,8 @@ Arda Güler,Turkey,0.1368516462471085,False,0.4082,0.0
 Deniz Gül,Turkey,0.1165052312156787,False,0.35095,0.0
 Kenan Yıldız,Turkey,0.2333333333333333,False,0.69125,0.0
 Ozan Kabak,Turkey,0.1036089399150722,False,0.3149,0.0
-Julio Enciso,Paraguay,0.1410589782832941,False,0.5857,0.0
-John McGinn,Scotland,0.1077010722222142,False,1.4329,0.0
+İsmail Yüksek,Turkey,0.0640112075983313,False,0.19365,0.0
+Braian Ojeda,Paraguay,0.0826666666666666,False,0.34845,0.0
 Tyler Fletcher,Scotland,0.0826666666666666,False,0.34105,0.0
 Lyndon Dykes,Scotland,0.1522663620631997,False,0.6218,0.0
 Ché Adams,Scotland,0.19500489097395,False,0.7918,0.0
@@ -520,8 +519,8 @@ Ross Stewart,Scotland,0.1364583126833169,False,0.56885,0.0
 John Souttar,Scotland,0.0467088276182308,False,0.19415,0.0
 Ben Gannon-Doak,Scotland,0.2333333333333333,False,0.95215,0.0
 George Hirst,Scotland,0.1177757036703199,False,0.47985,0.0
-Paul Okon-Engstler,Australia,0.0826666666666666,False,0.38205,0.0
-Lawrence Shankland,Scotland,0.0780716433763731,True,0.3236,0.0
+Lewis Ferguson,Scotland,0.0894532810643843,False,0.366,0.0
+Omar Alderete,Paraguay,0.043445200519592,False,0.1852,0.0
 Kenny McLean,Scotland,0.0563634287545144,False,0.2309,0.0
 Findlay Curtis,Scotland,0.2333333333333333,False,0.9439,0.0
 Mohamed Touré,Australia,0.2333333333333333,False,1.0667,0.0
@@ -531,8 +530,8 @@ Cristian Volpato,Australia,0.0600932883559067,False,0.27465,0.0
 Cameron Burgess,Australia,0.0426751369315849,False,0.19835,0.0
 Jackson Irvine,Australia,0.0795274199396557,False,0.3604,0.0
 Nishan Velupillay,Australia,0.2333333333333333,False,1.0808,0.0
-Lewis Ferguson,Scotland,0.0894532810643843,False,0.366,0.0
-Gilberto Mora,Mexico,0.0826666666666666,False,0.4276,0.0
+Paul Okon-Engstler,Australia,0.0826666666666666,False,0.38205,0.0
+Lawrence Shankland,Scotland,0.0780716433763731,True,0.3236,0.0
 Luis Chávez,Mexico,0.0826666666666666,False,0.4125,0.0
 Brian Gutiérrez,Mexico,0.0826666666666666,False,0.4215,0.0
 Teboho Mokoena,South Africa,0.0826666666666666,False,0.2643,0.0
@@ -541,9 +540,9 @@ Oswin Appollis,South Africa,0.2333333333333333,False,0.74865,0.0
 Lyle Foster,South Africa,0.1882257056741754,False,0.6006,0.0
 Relebohile Mofokeng,South Africa,0.2333333333333333,False,0.7468,0.0
 Themba Zwane,South Africa,0.0826666666666666,False,0.26545,0.0
-Remo Freuler,Switzerland,0.0569759269988794,False,0.28155,0.0
-Iqraam Rayners,South Africa,0.2333333333333333,False,0.75,0.0
-Azarias Londoño,Panama,0.2333333333333333,False,0.7259,0.0
+Sphephelo Sithole,South Africa,0.0826666666666666,False,0.2631,0.0
+Granit Xhaka (captain),Switzerland,0.0537064215360486,False,0.2661,0.0
+Jayden Adams,South Africa,0.0826666666666666,False,0.26185,0.0
 Lee Gi-hyuk,South Korea,0.0826666666666666,False,0.3731,0.0
 Paik Seung-ho,South Korea,0.0826666666666666,False,0.3798,0.0
 Lee Jae-sung,South Korea,0.0826666666666666,False,0.37565,0.0
@@ -552,18 +551,19 @@ Bae Jun-ho,South Korea,0.0826666666666666,False,0.37615,0.0
 Lee Kang-in,South Korea,0.0826666666666666,False,0.3693,0.0
 Yang Hyun-jun,South Korea,0.0826666666666666,False,0.3759,0.0
 Jens Castrop,South Korea,0.126079960250428,False,0.566,0.0
-Sphephelo Sithole,South Africa,0.0826666666666666,False,0.2631,0.0
+Kim Jin-gyu,South Korea,0.0826666666666666,False,0.37215,0.0
+Iqraam Rayners,South Africa,0.2333333333333333,False,0.75,0.0
+Robin Hranáč,Czech Republic,0.0530580257949389,False,0.17645,0.0
+Štěpán Chaloupek,Czech Republic,0.0494269500819323,False,0.15355,0.0
+Ladislav Krejčí (captain),Czech Republic,0.061280480423188,False,1.1976,0.0
+Vladimír Darida,Czech Republic,0.0826666666666666,False,0.2678,0.0
 Adam Hložek,Czech Republic,0.2188662598470198,False,0.71015,0.0
 Lukáš Červ,Czech Republic,0.0852194943839737,False,0.278,0.0
 Lukáš Provod,Czech Republic,0.0779193735217724,False,0.2482,0.0
 Michal Sadílek,Czech Republic,0.084021229374276,False,1.2779,0.0
 David Douděra,Czech Republic,0.1034435375857364,False,0.3284,0.0
-Tomáš Souček,Czech Republic,0.1697495130468456,False,0.55385,0.0
+Gilberto Mora,Mexico,0.0826666666666666,False,0.4276,0.0
 Alexandr Sojka,Czech Republic,0.0826666666666666,False,0.26115,0.0
-Igor Matanović,Croatia,0.2565684350310869,False,1.12825,0.0
-Jayden Adams,South Africa,0.0826666666666666,False,0.26185,0.0
-Obed Vargas,Mexico,0.0596781845096525,False,0.30605,0.0
-Reece James,England,0.0402399070082436,False,0.2428,0.0
 Hugo Sochůrek,Czech Republic,0.0826666666666666,False,0.2655,0.0
 Denis Višinský,Czech Republic,0.0831682157549806,False,0.2723,0.0
 Edson Álvarez (captain),Mexico,0.0497421364348656,False,0.25485,0.0
@@ -571,10 +571,9 @@ Johan Vásquez,Mexico,0.0481515209897268,False,0.24175,0.0
 Érik Lira,Mexico,0.0826666666666666,False,0.41275,0.0
 Luis Romo,Mexico,0.0826666666666666,False,1.4215,0.0
 Álvaro Fidalgo,Mexico,0.0950533362613496,False,0.48765,0.0
-Ladislav Krejčí (captain),Czech Republic,0.061280480423188,False,1.1976,0.0
 Orbelín Pineda,Mexico,0.0811653017987662,False,0.4159,0.0
-Antoine Semenyo,Ghana,0.2463305928262554,False,0.9569,0.0
-Tajon Buchanan,Canada,0.0808455198542816,False,0.40895,0.0
+Obed Vargas,Mexico,0.0596781845096525,False,0.30605,0.0
+Tomáš Souček,Czech Republic,0.1697495130468456,False,0.55385,0.0
 Alphonso Davies (captain),Canada,0.052387756628594,False,0.26245,0.0
 Jonathan Osorio,Canada,0.0547148710211787,False,0.28415,0.0
 Nathan Saliba,Canada,0.0826666666666666,False,1.41735,0.0
@@ -583,8 +582,8 @@ Abdulaziz Hatem,Qatar,0.0826666666666666,False,0.2684,0.0
 Ahmed Alaaeldin,Qatar,0.2333333333333333,False,0.7342,0.0
 Edmilson Junior,Qatar,0.2333333333333333,False,0.7279,0.0
 Mohammed Muntari,Qatar,0.2333333333333333,False,0.73515,0.0
-Kim Jin-gyu,South Korea,0.0826666666666666,False,0.37215,0.0
-Karim Boudiaf,Qatar,0.0826666666666666,False,0.26715,0.0
+Hassan Al-Haydos (captain),Qatar,0.2333333333333333,False,0.73015,0.0
+Eom Ji-sung,South Korea,0.0826666666666666,False,0.37315,0.0
 Ahmed Al-Ganehi,Qatar,0.0826666666666666,False,0.26095,0.0
 Ahmed Fathy,Qatar,0.0826666666666666,False,0.2649,0.0
 Assim Madibo,Qatar,0.0826666666666666,False,0.258,0.0
@@ -594,8 +593,8 @@ Silvan Widmer,Switzerland,0.0595900254593669,False,0.2919,0.0
 Nico Elvedi,Switzerland,0.0468703846790299,False,0.2353,0.0
 Manuel Akanji,Switzerland,0.0601361453442429,False,0.29395,0.0
 Denis Zakaria,Switzerland,0.0894748997803441,False,0.4458,0.0
-Hassan Al-Haydos (captain),Qatar,0.2333333333333333,False,0.73015,0.0
-Eom Ji-sung,South Korea,0.0826666666666666,False,0.37315,0.0
+Remo Freuler,Switzerland,0.0569759269988794,False,0.28155,0.0
+Karim Boudiaf,Qatar,0.0826666666666666,False,0.26715,0.0
 Lee Dong-gyeong,South Korea,0.0826666666666666,False,0.3694,0.0
 Tarik Muharemović,Bosnia and Herzegovina,0.0497145716415626,False,0.18545,0.0
 Sead Kolašinac,Bosnia and Herzegovina,0.0422963651349277,False,0.15965,0.0
@@ -604,8 +603,8 @@ Amar Dedić,Bosnia and Herzegovina,0.0405555024144787,False,0.1555,0.0
 Armin Gigović,Bosnia and Herzegovina,0.0891040136333361,False,0.34035,0.0
 Samed Baždar,Bosnia and Herzegovina,0.2333333333333333,False,0.8805,0.0
 Ivan Bašić,Bosnia and Herzegovina,0.0544,False,0.2062,0.0
-Jacob Shaffelburg,Canada,0.1739131495788618,False,0.8787,0.0
-Amar Memić,Bosnia and Herzegovina,0.078399125428136,False,0.28875,0.0
+Ivan Šunjić,Bosnia and Herzegovina,0.0842178868238905,False,0.319,0.0
+Tajon Buchanan,Canada,0.0808455198542816,False,0.40895,0.0
 Amir Hadžiahmetović,Bosnia and Herzegovina,0.0624887294518351,False,0.23675,0.0
 Dženis Burnić,Bosnia and Herzegovina,0.0661435192597019,False,0.24835,0.0
 Esmir Bajraktarević,Bosnia and Herzegovina,0.0916666666666666,False,0.3452,0.0
@@ -615,8 +614,8 @@ Stephen Eustáquio,Canada,0.0975431175158103,False,0.4965,0.0
 Ismaël Koné,Canada,0.1037956381367164,False,0.53445,0.0
 Liam Millar,Canada,0.0493333333333333,False,0.25125,0.0
 Tani Oluwaseyi,Canada,0.1102302668331088,False,0.5496,0.0
-Ivan Šunjić,Bosnia and Herzegovina,0.0842178868238905,False,0.319,0.0
-Elias Achouri,Tunisia,0.0854828809245554,False,0.2597,0.0
+Jacob Shaffelburg,Canada,0.1739131495788618,False,0.8787,0.0
+Amar Memić,Bosnia and Herzegovina,0.078399125428136,False,0.28875,0.0
 Elias Saad,Tunisia,0.1742745823317137,False,0.5143,0.0
 Hazem Mastouri,Tunisia,0.2333333333333333,False,0.7013,0.0
 Hannibal Mejbri,Tunisia,0.0550091095832148,False,0.1644,0.0
@@ -625,18 +624,18 @@ Rani Khedira,Tunisia,0.0626116614569297,False,0.18755,0.0
 Khalil Ayari,Tunisia,0.0826666666666666,False,0.2482,0.0
 Hadj Mahmoud,Tunisia,0.1672446210344775,False,0.5034,0.0
 Ellyes Skhiri (captain),Tunisia,0.061960737295019,False,0.1848,0.0
-İsmail Yüksek,Turkey,0.0640112075983313,False,0.19365,0.0
-Firas Chaouat,Tunisia,0.2333333333333333,False,0.68925,0.0
+Rayan Elloumi,Tunisia,0.2333333333333333,False,0.7162,0.0
+İrfan Can Kahveci,Turkey,0.2333333333333333,False,0.6992,0.0
 Anis Ben Slimane,Tunisia,0.0470102148600722,False,0.14335,0.0
 Sebastian Tounekti,Tunisia,0.172276867375279,False,0.511,0.0
 Arthur Theate,Belgium,0.0488193366086808,False,0.2302,0.0
 Brandon Mechele,Belgium,0.0408864207270183,False,0.1891,0.0
 Maxim De Cuyper,Belgium,0.0592852581567629,False,0.2799,0.0
-Vladimír Darida,Czech Republic,0.0826666666666666,False,0.2678,0.0
+Azarias Londoño,Panama,0.2333333333333333,False,0.7259,0.0
 Youri Tielemans (captain),Belgium,0.0636293712516665,False,0.3049,0.0
 Jérémy Doku,Belgium,0.1658008679602481,False,0.7975,0.0
-Rayan Elloumi,Tunisia,0.2333333333333333,False,0.7162,0.0
-Kento Shiogai,Japan,0.1107410514633112,False,0.523,0.0
+Thomas Meunier,Belgium,0.0479092157979271,False,0.22125,0.0
+Firas Chaouat,Tunisia,0.2333333333333333,False,0.68925,0.0
 Nathan Aké,Netherlands,0.0619351481875669,False,0.3252,0.0
 Jan Paul van Hecke,Netherlands,0.0436113335546904,False,0.22005,0.0
 Ryan Gravenberch,Netherlands,0.0573241746759264,False,0.2986,0.0
@@ -645,8 +644,8 @@ Tijjani Reijnders,Netherlands,0.1724115292363424,False,0.8863,0.0
 Guus Til,Netherlands,0.1123122109364389,False,0.5786,0.0
 Noa Lang,Netherlands,0.1514562330937841,False,0.78865,0.0
 Donyell Malen,Netherlands,0.1892667107755516,False,0.96055,0.0
-Ali Abdi,Tunisia,0.1080088332696322,False,0.3213,0.0
-Frenkie de Jong,Netherlands,0.0494876884911731,False,0.25395,0.0
+Teun Koopmeiners,Netherlands,0.0538110751951394,False,0.27905,0.0
+Elias Achouri,Tunisia,0.0854828809245554,False,0.2597,0.0
 Quinten Timber,Netherlands,0.0494997852874815,False,0.25265,0.0
 Gustaf Lagerbielke,Sweden,0.0639592040142484,False,0.26425,0.0
 Lucas Bergvall,Sweden,0.0548650198884078,False,0.23035,0.0
@@ -656,8 +655,8 @@ Jesper Karlström,Sweden,0.0411317650280869,False,0.17025,0.0
 Mattias Svanberg,Sweden,0.1200087188865606,False,1.50615,0.0
 Alexander Bernhardsson,Sweden,0.1843104795123058,False,0.78185,0.0
 Besfort Zeneli,Sweden,0.0609440889098154,False,0.25565,0.0
-Teun Koopmeiners,Netherlands,0.0538110751951394,False,0.27905,0.0
-Mehdi Ghayedi,Iran,0.2333333333333333,False,0.8926,0.0
+Ali Abdi,Tunisia,0.1080088332696322,False,0.3213,0.0
+Frenkie de Jong,Netherlands,0.0494876884911731,False,0.25395,0.0
 Saman Ghoddos,Iran,0.05222285669957,False,0.1945,0.0
 Rouzbeh Cheshmi,Iran,0.0826666666666666,False,0.3102,0.0
 Mehdi Torabi,Iran,0.0826666666666666,False,0.31055,0.0
@@ -666,8 +665,8 @@ Mohammad Ghorbani,Iran,0.0826666666666666,False,0.3088,0.0
 Amirmohammad Razzaghinia,Iran,0.0826666666666666,False,0.3099,0.0
 Joe Bell,New Zealand,0.0826666666666666,False,0.25585,0.0
 Matthew Garbett,New Zealand,0.0826666666666666,False,0.2618,0.0
-Thomas Meunier,Belgium,0.0479092157979271,False,0.22125,0.0
-Sarpreet Singh,New Zealand,0.0826666666666666,False,0.2573,0.0
+Marko Stamenić,New Zealand,0.1033767282561752,False,0.3187,0.0
+Koni De Winter,Belgium,0.0443462298312994,False,0.2143,0.0
 Elijah Just,New Zealand,0.0826666666666666,False,2.2566,0.0
 Liberato Cacace,New Zealand,0.0424541971974696,False,0.1292,0.0
 Alex Rufer,New Zealand,0.0826666666666666,False,0.2618,0.0
@@ -677,8 +676,8 @@ Ben Old,New Zealand,0.0826666666666666,False,0.26105,0.0
 Callum McCowatt,New Zealand,0.0826666666666666,False,0.26675,0.0
 Jesse Randall,New Zealand,0.2333333333333333,False,0.72675,0.0
 Ryan Thomas,New Zealand,0.0826666666666666,False,0.25525,0.0
-Marko Stamenić,New Zealand,0.1033767282561752,False,0.3187,0.0
-Koni De Winter,Belgium,0.0443462298312994,False,0.2143,0.0
+Lachlan Bayliss,New Zealand,0.0826666666666666,False,0.2634,0.0
+Sarpreet Singh,New Zealand,0.0826666666666666,False,0.2573,0.0
 Charles De Ketelaere,Belgium,0.1025152776181823,False,0.49625,0.0
 Diego Moreira,Belgium,0.0670837366466928,False,0.3219,0.0
 Hans Vanaken,Belgium,0.1282356575982768,False,0.61495,0.0
@@ -687,8 +686,8 @@ Nicolas Raskin,Belgium,0.0904293169224533,False,0.4407,0.0
 Amadou Onana,Belgium,0.0986522885969571,False,0.46885,0.0
 Nathan Ngoy,Belgium,0.0445822072390297,False,0.21505,0.0
 Emam Ashour,Egypt,0.0826666666666666,False,1.3685,0.0
-Mehdi Taremi,Iran,0.1811924200710899,True,0.6825,0.0
-Haissem Hassan,Egypt,0.1057863533665372,False,0.46665,0.0
+Mostafa Ziko,Egypt,0.0826666666666666,False,0.3641,0.0
+Mehdi Ghayedi,Iran,0.2333333333333333,False,0.8926,0.0
 Hamdy Fathy,Egypt,0.0826666666666666,False,0.3651,0.0
 Mohanad Lasheen,Egypt,0.0826666666666666,False,0.3648,0.0
 Nabil Emad,Egypt,0.0826666666666666,False,0.367,0.0
@@ -698,8 +697,8 @@ Mahmoud Saber,Egypt,0.0826666666666666,False,0.36275,0.0
 Saeid Ezatolahi,Iran,0.0826666666666666,False,0.3088,0.0
 Alireza Jahanbakhsh,Iran,0.0826666666666666,False,0.31725,0.0
 Mohammad Mohebi,Iran,0.0826666666666666,False,0.31395,0.0
-Mostafa Ziko,Egypt,0.0826666666666666,False,0.3641,0.0
-Jeremy Antonisse,Curaçao,0.2333333333333333,False,0.7238,0.0
+Mehdi Taremi,Iran,0.1811924200710899,True,0.6825,0.0
+Haissem Hassan,Egypt,0.1057863533665372,False,0.46665,0.0
 Sontje Hansen,Curaçao,0.2333333333333333,False,0.7191,0.0
 Tyrese Noslin,Curaçao,0.2333333333333333,False,0.714,0.0
 Kenji Gorré,Curaçao,0.2333333333333333,False,0.71205,0.0
@@ -708,8 +707,8 @@ Brandley Kuwas,Curaçao,0.2333333333333333,False,0.72585,0.0
 Gervane Kastaneer,Curaçao,0.2333333333333333,False,0.71395,0.0
 Tahith Chong,Curaçao,0.0878255562834958,False,0.26585,0.0
 Kevin Felida,Curaçao,0.0826666666666666,False,0.25835,0.0
-Kaishū Sano,Japan,0.0488214585997668,False,0.24025,0.0
-Piero Hincapié,Ecuador,0.0711628628163028,False,0.2711,0.0
+Félix Torres,Ecuador,0.0532413261446484,False,0.2067,0.0
+Kento Shiogai,Japan,0.1107410514633112,False,0.523,0.0
 Joel Ordóñez,Ecuador,0.0439609352206643,False,0.17075,0.0
 Jordy Alcívar,Ecuador,0.0826666666666666,False,0.31715,0.0
 Pervis Estupiñán,Ecuador,0.0416548559086688,False,0.15195,0.0
@@ -719,8 +718,8 @@ Kevin Rodríguez,Ecuador,0.1471850879252775,False,0.56215,0.0
 Enner Valencia (captain),Ecuador,0.2333333333333333,False,0.87825,0.0
 Pedro Vite,Ecuador,0.0826666666666666,False,0.30835,0.0
 Jordy Caicedo,Ecuador,0.2333333333333333,False,0.8781,0.0
-Félix Torres,Ecuador,0.0532413261446484,False,0.2067,0.0
-İrfan Can Kahveci,Turkey,0.2333333333333333,False,0.6992,0.0
+Ángelo Preciado,Ecuador,0.1144709375727802,False,0.4267,0.0
+Piero Hincapié,Ecuador,0.0711628628163028,False,0.2711,0.0
 Mert Müldür,Turkey,0.0566479878392335,False,0.16775,0.0
 Yunus Akgün,Turkey,0.169221242283372,False,0.50775,0.0
 Barış Alper Yılmaz,Turkey,0.2333333333333333,False,0.7118,0.0
@@ -729,8 +728,8 @@ Samet Akaydin,Turkey,0.0706171252822066,False,0.2101,0.0
 Can Uzun,Turkey,0.1424522594821872,False,0.4252,0.0
 Chris Richards,United States,0.0505674415255844,False,0.2814,0.0
 Tyler Adams,United States,0.0557589240407831,False,0.3131,0.0
-Leandro Bacuna (captain),Curaçao,0.0826666666666666,False,0.2506,0.0
-Brenden Aaronson,United States,0.0989990192909274,False,0.5396,0.0
+Giovanni Reyna,United States,0.0477931418019475,False,1.26065,0.0
+Jeremy Antonisse,Curaçao,0.2333333333333333,False,0.7238,0.0
 Tim Ream (captain),United States,0.0460869739824395,False,0.26065,0.0
 Sebastian Berhalter,United States,0.0826666666666666,False,0.45645,0.0
 Cristian Roldan,United States,0.0826666666666666,False,0.45735,0.0
@@ -740,8 +739,8 @@ Godfried Roemeratoe,Curaçao,0.0826666666666666,False,0.25205,0.0
 Juninho Bacuna,Curaçao,0.0826666666666666,False,0.253,0.0
 Livano Comenencia,Curaçao,0.0826666666666666,False,1.25165,0.0
 Jürgen Locadia,Curaçao,0.2333333333333333,False,0.72325,0.0
-Giovanni Reyna,United States,0.0477931418019475,False,1.26065,0.0
-Seko Fofana,Ivory Coast,0.0871403771280153,False,0.378,0.0
+Leandro Bacuna (captain),Curaçao,0.0826666666666666,False,0.2506,0.0
+Brenden Aaronson,United States,0.0989990192909274,False,0.5396,0.0
 Franck Kessié (captain),Ivory Coast,0.0826666666666666,False,1.3636,0.0
 Simon Adingra,Ivory Coast,0.1543337971329967,False,0.6887,0.0
 Christopher Opéri,Ivory Coast,0.0466225433138939,False,0.20715,0.0
@@ -750,8 +749,8 @@ Ibrahim Sangaré,Ivory Coast,0.0478870534728235,False,0.2115,0.0
 Nicolas Pépé,Ivory Coast,0.1522364060718727,False,0.66555,0.0
 Emmanuel Agbadou,Ivory Coast,0.048514574180418,False,0.2187,0.0
 Evan Ndicka,Ivory Coast,0.0445781262270344,False,0.19375,0.0
-Ángelo Preciado,Ecuador,0.1144709375727802,False,0.4267,0.0
-Parfait Guiagon,Ivory Coast,0.0826666666666666,False,0.36785,0.0
+Bazoumana Touré,Ivory Coast,0.1251026354777603,False,0.55305,0.0
+Denil Castillo,Ecuador,0.0826403305852426,False,0.30895,0.0
 Christ Inao Oulaï,Ivory Coast,0.0826666666666666,False,0.3618,0.0
 Kō Itakura,Japan,0.0575541338845863,False,0.27505,0.0
 Ao Tanaka,Japan,0.0716306058564656,False,0.34515,0.0
@@ -761,8 +760,8 @@ Daichi Kamada,Japan,0.0546068049846956,False,2.25535,0.0
 Tsuyoshi Watanabe,Japan,0.051906856826556,False,0.2468,0.0
 Yuito Suzuki,Japan,0.1470322982611289,False,0.72305,0.0
 Takehiro Tomiyasu,Japan,0.0512230599442028,False,0.24325,0.0
-Bazoumana Touré,Ivory Coast,0.1251026354777603,False,0.55305,0.0
-Denil Castillo,Ecuador,0.0826403305852426,False,0.30895,0.0
+Kaishū Sano,Japan,0.0488214585997668,False,0.24025,0.0
+Parfait Guiagon,Ivory Coast,0.0826666666666666,False,0.36785,0.0
 Nilson Angulo,Ecuador,0.1513506260819279,False,0.562,0.0
 Alan Franco,Ecuador,0.0901651280575007,False,0.34265,0.0
 Moisés Caicedo,Ecuador,0.05116686402558,False,0.20075,0.0
@@ -771,8 +770,8 @@ Yaimar Medina,Ecuador,0.0410954669367294,False,0.15525,0.0
 Antonio Rüdiger,Germany,0.0579703608687761,False,0.30885,0.0
 Jonathan Tah,Germany,0.0426475685989661,False,0.22045,0.0
 Aleksandar Pavlović,Germany,0.0496712280095454,False,0.26355,0.0
-Wilfried Singo,Ivory Coast,0.0505730058910666,False,0.22435,0.0
-Jamie Leweling,Germany,0.1496857566678661,False,0.79155,0.0
+Joshua Kimmich (captain),Germany,0.0793148067884213,False,0.41715,0.0
+Seko Fofana,Ivory Coast,0.0871403771280153,False,0.378,0.0
 Pascal Groß,Germany,0.0869384968921574,False,0.4612,0.0
 Nico Schlotterbeck,Germany,0.0507943892976834,False,1.27055,0.0
 Nathaniel Brown,Germany,0.065214819537085,False,1.3408,0.0
@@ -782,4 +781,5 @@ Malick Thiaw,Germany,0.0628136808938447,False,0.33215,0.0
 Assan Ouédraogo,Germany,0.1020274244327984,False,0.54055,0.0
 Ousmane Diomande,Ivory Coast,0.0417053959726388,False,0.17945,0.0
 Jean Michaël Seri,Ivory Coast,0.0826666666666666,False,0.37205,0.0
-Joshua Kimmich (captain),Germany,0.0793148067884213,False,0.41715,0.0
+Wilfried Singo,Ivory Coast,0.0505730058910666,False,0.22435,0.0
+Jamie Leweling,Germany,0.1496857566678661,False,0.79155,0.0
