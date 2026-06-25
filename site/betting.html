@@ -126,11 +126,11 @@ td:first-child{font-family:var(--font-body);font-weight:500}
       <div class="cols">
         <div class="panel">
           <div class="panel-h"><span data-i18n="b.shots">Tiri</span> · <span id="sh-home-team" style="color:var(--parchment)"></span></div>
-          <table><thead><tr><th data-i18n="b.sc_player">Giocatore</th><th data-i18n="b.sh_o05">Over 0.5</th><th data-i18n="b.sh_o15">Over 1.5</th><th data-i18n="b.sh_o25">Over 2.5</th></tr></thead><tbody id="sh-home"></tbody></table>
+          <table><thead><tr><th data-i18n="b.sc_player">Giocatore</th><th data-i18n="b.sh_o05">Over 0.5</th><th data-i18n="b.sh_o15">Over 1.5</th><th data-i18n="b.sh_o25">Over 2.5</th><th data-i18n="b.sot_o05">Porta 0.5</th><th data-i18n="b.sot_o15">Porta 1.5</th></tr></thead><tbody id="sh-home"></tbody></table>
         </div>
         <div class="panel">
           <div class="panel-h"><span data-i18n="b.shots">Tiri</span> · <span id="sh-away-team" style="color:var(--parchment)"></span></div>
-          <table><thead><tr><th data-i18n="b.sc_player">Giocatore</th><th data-i18n="b.sh_o05">Over 0.5</th><th data-i18n="b.sh_o15">Over 1.5</th><th data-i18n="b.sh_o25">Over 2.5</th></tr></thead><tbody id="sh-away"></tbody></table>
+          <table><thead><tr><th data-i18n="b.sc_player">Giocatore</th><th data-i18n="b.sh_o05">Over 0.5</th><th data-i18n="b.sh_o15">Over 1.5</th><th data-i18n="b.sh_o25">Over 2.5</th><th data-i18n="b.sot_o05">Porta 0.5</th><th data-i18n="b.sot_o15">Porta 1.5</th></tr></thead><tbody id="sh-away"></tbody></table>
         </div>
       </div>
       <div class="cols">
@@ -193,7 +193,7 @@ function render(){
   document.getElementById('sc-home').innerHTML=(m.scorers_h||[]).map(scRow).join('')||'<tr><td class="muted">—</td></tr>';
   document.getElementById('sc-away').innerHTML=(m.scorers_a||[]).map(scRow).join('')||'<tr><td class="muted">—</td></tr>';
   // tiri per partita (over 0.5 / 1.5 / 2.5)
-  const shRow=s=>`<tr><td>${s.player}</td><td class="pwin">${s.s1}%</td><td>${s.s2}%</td><td>${s.s3}%</td></tr>`;
+  const shRow=s=>`<tr><td>${s.player}</td><td class="pwin">${s.s1}%</td><td>${s.s2}%</td><td>${s.s3}%</td><td>${s.o1}%</td><td>${s.o2}%</td></tr>`;
   document.getElementById('sh-home-team').textContent=m.home;
   document.getElementById('sh-away-team').textContent=m.away;
   document.getElementById('sh-home').innerHTML=(m.shots_h||[]).map(shRow).join('')||'<tr><td class="muted">—</td></tr>';

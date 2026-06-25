@@ -125,8 +125,12 @@ def match_scorers(team, lam, n=5):
     return [{k:v for k,v in r.items() if k!="li"} for r in rows[:n]]
 
 # ── tiri per partita: P(over 0.5 / 1.5 / 2.5 tiri) per giocatore ────────────
-PR["esh"] = PR.exp_shots_match.fillna(PR.pos.map({'FW':2.0,'MF':1.0,'DF':0.5,'GK':0.0})).fillna(0.7) if "exp_shots_match" in PR.columns else 0.7
+PR["esh"]  = PR.exp_shots_match.fillna(PR.pos.map({'FW':2.0,'MF':1.0,'DF':0.5,'GK':0.0})).fillna(0.7) if "exp_shots_match" in PR.columns else 0.7
+PR["esot"] = PR.exp_sot_match.fillna(PR.pos.map({'FW':0.8,'MF':0.4,'DF':0.2,'GK':0.0})).fillna(0.3) if "exp_sot_match" in PR.columns else 0.3
 SH_LAM_AVG = 1.3   # lambda-gol medio di una squadra: scala la dominanza nei tiri
+def _over(li):
+    e = math.exp(-li)
+    return (round((1-e)*100,1), round((1-e*(1+li))*100,1), round((1-e*(1+li+li*li/2))*100,1))
 def match_shots(team, lh, n=6):
     sub = PR[PR.team == team]
     if not len(sub): return []
@@ -135,11 +139,11 @@ def match_shots(team, lh, n=6):
     for _, p in sub.iterrows():
         li = float(p.esh) * ctx
         if li < 0.3: continue
-        e = math.exp(-li)
+        lio = min(float(p.esot) * ctx, li)            # in porta <= totali
+        s1, s2, s3 = _over(li); o1, o2, _ = _over(lio)
         rows.append({"player": _re.sub(r'\s*\(captain\)', '', str(p.player)).strip(),
-                     "li": li, "s1": round((1-e)*100,1),
-                     "s2": round((1-e*(1+li))*100,1),
-                     "s3": round((1-e*(1+li+li*li/2))*100,1)})
+                     "li": li, "s1": s1, "s2": s2, "s3": s3,   # tiri totali over 0.5/1.5/2.5
+                     "o1": o1, "o2": o2})                       # tiri in porta over 0.5/1.5
     rows.sort(key=lambda x: -x["li"])
     return [{k:v for k,v in r.items() if k!="li"} for r in rows[:n]]
 

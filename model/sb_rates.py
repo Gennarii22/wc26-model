@@ -22,14 +22,15 @@ def clean(s):  # via "(captain)" e simili, poi normalizza accenti
 def pull(dbpath):
     con=sqlite3.connect(dbpath)
     q=f"""select p.player_name, p.usual_position pos, count(*) apps, sum(p.started) nstart,
-             sum(p.minutes) mins, sum(p.goals) g, sum(p.npxg) npxg, sum(p.xg) xg, sum(p.shots) sh
+             sum(p.minutes) mins, sum(p.goals) g, sum(p.npxg) npxg, sum(p.xg) xg,
+             sum(p.shots) sh, sum(p.shots_on_target) sot
           from player_match_stats p join matches m on p.match_id=m.match_id
           where m.season in ({','.join('?'*len(SEASONS))}) and p.minutes>0
           group by p.player_name, p.usual_position"""
     df=pd.read_sql(q,con,params=SEASONS); con.close()
     df['nn']=df.player_name.apply(clean)
     g=df.groupby('nn').agg(apps=('apps','sum'),nstart=('nstart','sum'),mins=('mins','sum'),
-        g=('g','sum'),npxg=('npxg','sum'),xg=('xg','sum'),sh=('sh','sum')).reset_index()
+        g=('g','sum'),npxg=('npxg','sum'),xg=('xg','sum'),sh=('sh','sum'),sot=('sot','sum')).reset_index()
     pos=df.dropna(subset=['pos']).groupby('nn').pos.agg(lambda s:s.mode().iloc[0] if len(s.mode()) else None)
     g['pos']=g.nn.map(pos)
     return g
@@ -39,7 +40,7 @@ nat =pull(os.path.join(BS,'nations_boxscore.db'))
 
 # ── TASSI: pool club+naz (somma = pesa per esposizione, il club domina) ───────
 pool=pd.concat([club,nat]).groupby('nn').agg(mins=('mins','sum'),g=('g','sum'),
-      npxg=('npxg','sum'),xg=('xg','sum'),sh=('sh','sum')).reset_index()
+      npxg=('npxg','sum'),xg=('xg','sum'),sh=('sh','sum'),sot=('sot','sum')).reset_index()
 pool['n90']=pool.mins/90; pool['pen_xg']=(pool.xg-pool.npxg).clip(lower=0)
 posmap=pd.concat([club,nat]).dropna(subset=['pos']).groupby('nn').pos.agg(lambda s:s.mode().iloc[0] if len(s.mode()) else '2')
 def macro(p): return {'0':'GK','1':'DEF','2':'MID','3':'FWD'}.get(str(p).strip().replace('.0',''),'MID')
@@ -61,6 +62,9 @@ pool['pen_per90']=pool.pen_xg/pool.n90
 #    shrinkage leggero verso la media-ruolo (4 partite di prior).
 _shrole = pool[pool.n90>=3].groupby('role').apply(lambda s: s.sh.sum()/max(s.n90.sum(),1e-9))
 pool['sh90'] = (pool.sh.fillna(0) + 4*pool.role.map(_shrole).fillna(1.0)) / (pool.n90 + 4)
+# tiri IN PORTA/90, stessa logica
+_sotrole = pool[pool.n90>=3].groupby('role').apply(lambda s: s.sot.sum()/max(s.n90.sum(),1e-9))
+pool['sot90'] = (pool.sot.fillna(0) + 4*pool.role.map(_sotrole).fillna(0.4)) / (pool.n90 + 4)
 
 # ── MINUTI ATTESI: ruolo reale in NAZIONALE, fallback club ────────────────────
 nat['pstart']=nat.nstart/nat.apps.clip(lower=1); nat['minpg']=nat.mins/nat.apps.clip(lower=1)
@@ -75,7 +79,7 @@ def exp_minutes(nn):
 
 # ── Aggancio rosa 2026 ────────────────────────────────────────────────────────
 sq=pd.read_csv(os.path.join(BASE,'data','squads_2026.csv')); sq['nn']=sq.player.apply(clean)
-m=sq.merge(pool[['nn','mins','op_rate90','pen_per90','role','g','npxg','sh90']],on='nn',how='left')
+m=sq.merge(pool[['nn','mins','op_rate90','pen_per90','role','g','npxg','sh90','sot90']],on='nn',how='left')
 ROLEPRIOR={'FW':0.30,'MF':0.12,'DF':0.05,'GK':0.0}
 m['op_rate90']=m.op_rate90.fillna(m.pos.map(ROLEPRIOR)).fillna(0.10)
 m['mn']=m.mins.fillna(0)
@@ -86,6 +90,10 @@ m['exp_min']=m.exp_min.fillna(m.pos.map({'FW':70,'MF':62,'DF':72,'GK':90})).fill
 SHPRIOR={'FW':2.2,'MF':1.2,'DF':0.6,'GK':0.0}
 m['sh90']=m.sh90.fillna(m.pos.map(SHPRIOR)).fillna(0.8)
 m['exp_shots_match']=m.sh90*(m.exp_min/90.0)
+SOTPRIOR={'FW':0.85,'MF':0.42,'DF':0.20,'GK':0.0}
+m['sot90']=m.sot90.fillna(m.pos.map(SOTPRIOR)).fillna(0.3)
+m['sot90']=np.minimum(m.sot90, m.sh90)   # i tiri in porta non superano i tiri totali
+m['exp_sot_match']=m.sot90*(m.exp_min/90.0)
 
 # ── RIGORISTA designato: 1 per nazionale (max pen_per90, con dati) ────────────
 m['pen_per90']=m.pen_per90.fillna(0)
