@@ -147,6 +147,28 @@ def match_shots(team, lh, n=6):
     rows.sort(key=lambda x: -x["li"])
     return [{k:v for k,v in r.items() if k!="li"} for r in rows[:n]]
 
+# ── cartellini totali di partita: over/under (tassi-squadra ESPN + shrinkage) ─
+try:
+    TC = pd.read_csv(f"{BASE}/data/team_cards.csv").set_index("team")
+    CMETA = json.load(open(f"{BASE}/data/cards_meta.json"))
+except Exception:
+    TC = None; CMETA = {"team_mean": 1.25}
+CARD_K = 3.0                      # forza dello shrinkage verso la media (campioni piccoli)
+CARD_MU = CMETA.get("team_mean", 1.25)
+STAGE_F = {"GROUP": 1.0, "R32": 1.05, "R16": 1.10, "QF": 1.15, "SF": 1.20, "F": 1.20}
+def card_rate(team):
+    if TC is None or team not in TC.index: return CARD_MU
+    r = TC.loc[team]
+    return float((r["cards"] + CARD_K * CARD_MU) / (r["matches"] + CARD_K))
+def match_cards(h, a, stage):
+    exp = (card_rate(h) + card_rate(a)) * STAGE_F.get(str(stage).upper(), 1.0)
+    exp = max(exp, 0.2)
+    lines = {}
+    for L in (1.5, 2.5, 3.5, 4.5):
+        ov = float(poisson.sf(int(L), exp))      # P(totale > L) = P(>= L+0.5)
+        lines[f"o{int(L*10)}"] = round(ov * 100, 1)
+    return {"exp": round(exp, 2), "over": lines}
+
 out = {"updated": (STATE["updated"] if STATE else "pre-torneo"), "matches": []}
 for h, aw, ven, city, date, stage in sorted(fixtures, key=lambda x: x[4]):
     played = (h, aw) in KNOWN
@@ -168,6 +190,7 @@ for h, aw, ven, city, date, stage in sorted(fixtures, key=lambda x: x[4]):
         "ga_dist": [round(float(poisson.pmf(i, la)), 4) for i in range(7)],
         "scorers_h": match_scorers(h, lh), "scorers_a": match_scorers(aw, la),
         "shots_h": match_shots(h, lh), "shots_a": match_shots(aw, la),
+        "cards": match_cards(h, aw, stage),
     })
 
 with open(f"{BASE}/betting_data.js", "w") as f:

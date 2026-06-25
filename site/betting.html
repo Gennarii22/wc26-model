@@ -134,6 +134,10 @@ td:first-child{font-family:var(--font-body);font-weight:500}
         </div>
       </div>
       <div class="cols">
+        <div class="panel">
+          <div class="panel-h"><span data-i18n="b.cards">Cartellini partita</span> · <span id="cd-exp" style="color:var(--brass)"></span></div>
+          <table><thead><tr><th data-i18n="b.cd_line">Linea</th><th data-i18n="b.cd_over">Over</th><th data-i18n="b.cd_under">Under</th></tr></thead><tbody id="cd-body"></tbody></table>
+        </div>
         <div class="panel hm">
           <div class="panel-h" style="padding:0 0 12px" data-i18n="b.heat">Mappa risultati esatti (P%)</div>
           <div id="heat"></div>
@@ -198,6 +202,13 @@ function render(){
   document.getElementById('sh-away-team').textContent=m.away;
   document.getElementById('sh-home').innerHTML=(m.shots_h||[]).map(shRow).join('')||'<tr><td class="muted">—</td></tr>';
   document.getElementById('sh-away').innerHTML=(m.shots_a||[]).map(shRow).join('')||'<tr><td class="muted">—</td></tr>';
+  // cartellini totali di partita (over/under)
+  const cd=m.cards;
+  if(cd){
+    document.getElementById('cd-exp').textContent=`${t('b.cd_exp')} ${cd.exp}`;
+    document.getElementById('cd-body').innerHTML=[['1.5','o15'],['2.5','o25'],['3.5','o35'],['4.5','o45']]
+      .map(([lab,k])=>`<tr><td>${lab}</td><td class="pwin">${cd.over[k]}%</td><td>${(100-cd.over[k]).toFixed(1)}%</td></tr>`).join('');
+  }
   const mx=Math.max(...m.matrix.flat());
   let h='<div class="hmgrid"><div class="hml"></div>';
   for(let j=0;j<7;j++)h+=`<div class="hml">${m.away.slice(0,3)} ${j}</div>`;
