@@ -17,7 +17,7 @@ import urllib.request
 import numpy as np
 import pandas as pd
 import joblib
-from scipy.stats import poisson
+from scipy.stats import poisson, nbinom
 
 OUT = os.environ.get("WC_OUT") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 BASE = os.environ.get("WC_BASE") or os.path.dirname(os.path.abspath(__file__))
@@ -164,12 +164,15 @@ def card_rate(team):
     if TC is None or team not in TC.index: return CARD_MU
     r = TC.loc[team]
     return float((r["cards"] + CARD_K * CARD_MU) / (r["matches"] + CARD_K))
+# dispersione cartellini (var/media dai dati): >1 = sovradispersi → Binomiale Negativa
+CARD_DISP = max(CMETA.get("var_total", 2.84) / max(CMETA.get("mean_total", 2.5), 0.1), 1.02)
 def match_cards(h, a, stage):
     exp = (card_rate(h) + card_rate(a)) * STAGE_F.get(str(stage).upper(), 1.0)
     exp = max(exp, 0.2)
+    r = exp / (CARD_DISP - 1.0); p = r / (r + exp)   # NB: var = exp×disp, code più realistiche del Poisson
     lines = {}
     for L in (1.5, 2.5, 3.5, 4.5):
-        ov = float(poisson.sf(int(L), exp))      # P(totale > L) = P(>= L+0.5)
+        ov = float(nbinom.sf(int(L), r, p))           # P(totale > L)
         lines[f"o{int(L*10)}"] = round(ov * 100, 1)
     return {"exp": round(exp, 2), "over": lines}
 
