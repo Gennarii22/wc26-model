@@ -34,11 +34,12 @@ STATE = None
 if os.path.exists(f"{BASE}/state_2026.json"):
     STATE = json.load(open(f"{BASE}/state_2026.json"))
     print(f"▶ Stato live caricato ({STATE['updated']}): {len(STATE['results'])} risultati reali, ELO aggiornati")
-KNOWN = {}
+KNOWN = {}   # frozenset({home,away}) → (home, away, hs, as, pen_home, pen_away) — indip. da casa/trasferta
 if STATE:
     for r in STATE["results"]:
-        KNOWN[(r["home"], r["away"])] = (int(r["home_score"]), int(r["away_score"]),
-                                         r.get("pen_home"), r.get("pen_away"))
+        KNOWN[frozenset((r["home"], r["away"]))] = (
+            r["home"], r["away"], int(r["home_score"]), int(r["away_score"]),
+            r.get("pen_home"), r.get("pen_away"))
 
 # ── 1. Squadre e forza ─────────────────────────────────────────────────────
 teams = pd.read_csv(f"{OUT}/worldcup_teams.csv")
@@ -119,11 +120,11 @@ def lambdas(th, ta, venue):
 GROUP_PAIRS = set()
 def _register_group_pairs(fixtures):
     for h, aw, *_ in fixtures:
-        GROUP_PAIRS.add((h, aw))
+        GROUP_PAIRS.add(frozenset((h, aw)))
 KNOWN_KO = {}   # frozenset({i1,i2}) → indice vincitore
 def _build_known_ko():
-    for (h, aw), (hs_, as2, ph, pa) in KNOWN.items():
-        if (h, aw) in GROUP_PAIRS: continue
+    for h, aw, hs_, as2, ph, pa in KNOWN.values():
+        if frozenset((h, aw)) in GROUP_PAIRS: continue
         if h not in IDX or aw not in IDX: continue
         if hs_ > as2: wnr = IDX[h]
         elif as2 > hs_: wnr = IDX[aw]
@@ -165,8 +166,10 @@ Snoise = S_vec[None, :] + RNG.normal(0, SIGMA_S, (n, nt))   # forza per-sim corr
 fix = {}
 n_fixed = 0
 for h, aw, ven, city, date in group_fixtures:
-    if (h, aw) in KNOWN:                       # risultato REALE → fissato in tutte le sim
-        hs_, as2, _, _ = KNOWN[(h, aw)]
+    rec = KNOWN.get(frozenset((h, aw)))        # risultato REALE → fissato in tutte le sim
+    if rec:
+        rh, _, rhs, ras, _, _ = rec
+        hs_, as2 = (rhs, ras) if rh == h else (ras, rhs)   # orienta sul calendario
         fix[(h, aw)] = (np.full(n, hs_, np.int64), np.full(n, as2, np.int64))
         n_fixed += 1
         continue

@@ -35,7 +35,8 @@ for c in ["log_gdppc_ppp_best", "log_population"]: t26[c] = t26[c].fillna(t26[c]
 
 STATE = json.load(open(f"{BASE}/state_2026.json")) if os.path.exists(f"{BASE}/state_2026.json") else None
 t26["elo_cur"] = t26.team_name.map(STATE["elo"]).fillna(t26.elo_pre_tournament) if STATE else t26.elo_pre_tournament
-KNOWN = {(r["home"], r["away"]) for r in (STATE["results"] if STATE else [])}
+KNOWN = {frozenset((r["home"], r["away"])) for r in (STATE["results"] if STATE else [])}   # indip. da casa/trasferta
+RES = {frozenset((r["home"], r["away"])): r for r in (STATE["results"] if STATE else [])}    # risultato reale per match
 
 S = (b*t26.elo_cur/100 + M["c_mv"]*t26.log_market_value + M["c_gdp"]*t26.log_gdppc_ppp_best
      + M["c_pop"]*t26.log_population + M["c_age"]*t26.avg_age + M["c_t5"]*t26.pct_top5_leagues)
@@ -128,9 +129,11 @@ def match_scorers(team, lam, n=5):
 PR["esh"]  = PR.exp_shots_match.fillna(PR.pos.map({'FW':2.0,'MF':1.0,'DF':0.5,'GK':0.0})).fillna(0.7) if "exp_shots_match" in PR.columns else 0.7
 PR["esot"] = PR.exp_sot_match.fillna(PR.pos.map({'FW':0.8,'MF':0.4,'DF':0.2,'GK':0.0})).fillna(0.3) if "exp_sot_match" in PR.columns else 0.3
 SH_LAM_AVG = 1.3   # lambda-gol medio di una squadra: scala la dominanza nei tiri
-def _over(li):
-    e = math.exp(-li)
-    return (round((1-e)*100,1), round((1-e*(1+li))*100,1), round((1-e*(1+li+li*li/2))*100,1))
+def _ge(li):
+    """P(>=1), P(>=2), P(>=3), P(>=4) per Poisson(li)."""
+    e = math.exp(-li); p0=e; p1=e*li; p2=e*li*li/2; p3=e*li**3/6
+    ge1=1-p0; ge2=ge1-p1; ge3=ge2-p2; ge4=ge3-p3
+    return ge1, ge2, ge3, ge4
 def match_shots(team, lh, n=6):
     sub = PR[PR.team == team]
     if not len(sub): return []
@@ -140,10 +143,11 @@ def match_shots(team, lh, n=6):
         li = float(p.esh) * ctx
         if li < 0.3: continue
         lio = min(float(p.esot) * ctx, li)            # in porta <= totali
-        s1, s2, s3 = _over(li); o1, o2, _ = _over(lio)
-        rows.append({"player": _re.sub(r'\s*\(captain\)', '', str(p.player)).strip(),
-                     "li": li, "s1": s1, "s2": s2, "s3": s3,   # tiri totali over 0.5/1.5/2.5
-                     "o1": o1, "o2": o2})                       # tiri in porta over 0.5/1.5
+        _, t2, t3, t4 = _ge(li)                        # totali: over 1.5/2.5/3.5
+        o1, o2, o3, _ = _ge(lio)                       # in porta: over 0.5/1.5/2.5
+        rows.append({"player": _re.sub(r'\s*\(captain\)', '', str(p.player)).strip(), "li": li,
+                     "t15": round(t2*100,1), "t25": round(t3*100,1), "t35": round(t4*100,1),
+                     "g05": round(o1*100,1), "g15": round(o2*100,1), "g25": round(o3*100,1)})
     rows.sort(key=lambda x: -x["li"])
     return [{k:v for k,v in r.items() if k!="li"} for r in rows[:n]]
 
@@ -171,7 +175,12 @@ def match_cards(h, a, stage):
 
 out = {"updated": (STATE["updated"] if STATE else "pre-torneo"), "matches": []}
 for h, aw, ven, city, date, stage in sorted(fixtures, key=lambda x: x[4]):
-    played = (h, aw) in KNOWN
+    played = frozenset((h, aw)) in KNOWN
+    rr = RES.get(frozenset((h, aw)))                 # risultato reale, orientato sulla partita
+    real = None
+    if rr:
+        real = {"hs": rr["home_score"], "as": rr["away_score"]} if rr["home"] == h \
+               else {"hs": rr["away_score"], "as": rr["home_score"]}
     d = STR[h] - STR[aw]
     hh = HADV if h == ven else 0.0; ha = HADV if aw == ven else 0.0
     lh = float(np.exp(a + w + d + hh)); la = float(np.exp(a + w - d + ha))
@@ -180,7 +189,7 @@ for h, aw, ven, city, date, stage in sorted(fixtures, key=lambda x: x[4]):
                         key=lambda x: -x[1])[:8]
     out["matches"].append({
         "home": h, "away": aw, "date": date, "city": city, "venue": ven,
-        "stage": stage, "group": GROUP_OF.get(h, ""), "played": played,
+        "stage": stage, "group": GROUP_OF.get(h, ""), "played": played, "real": real,
         "elo_h": ELO[h], "elo_a": ELO[aw], "mv_h": MV.get(h), "mv_a": MV.get(aw),
         "lh": round(lh, 2), "la": round(la, 2),
         "markets": {k: round(v, 4) for k, v in mk.items()},
