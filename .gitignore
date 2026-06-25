@@ -12,3 +12,4 @@ WorldCup DB/
 .env
 **/.env
 model/team_probs_before.csv
+.claude/

@@ -57,6 +57,11 @@ pool['g90']=pool.g/pool.n90
 pool['op_rate90']=0.85*pool.op_rate90 + 0.15*(pool.g90-pool.pen_xg/pool.n90).clip(lower=0)  # blend finitura elite
 pool['pen_per90']=pool.pen_xg/pool.n90
 
+# ── TIRI/90: i tiri sono molto piu' stabili dei gol (il volume si ripete) ─────
+#    shrinkage leggero verso la media-ruolo (4 partite di prior).
+_shrole = pool[pool.n90>=3].groupby('role').apply(lambda s: s.sh.sum()/max(s.n90.sum(),1e-9))
+pool['sh90'] = (pool.sh.fillna(0) + 4*pool.role.map(_shrole).fillna(1.0)) / (pool.n90 + 4)
+
 # ── MINUTI ATTESI: ruolo reale in NAZIONALE, fallback club ────────────────────
 nat['pstart']=nat.nstart/nat.apps.clip(lower=1); nat['minpg']=nat.mins/nat.apps.clip(lower=1)
 club['pstart']=club.nstart/club.apps.clip(lower=1)
@@ -70,12 +75,17 @@ def exp_minutes(nn):
 
 # ── Aggancio rosa 2026 ────────────────────────────────────────────────────────
 sq=pd.read_csv(os.path.join(BASE,'data','squads_2026.csv')); sq['nn']=sq.player.apply(clean)
-m=sq.merge(pool[['nn','mins','op_rate90','pen_per90','role','g','npxg']],on='nn',how='left')
+m=sq.merge(pool[['nn','mins','op_rate90','pen_per90','role','g','npxg','sh90']],on='nn',how='left')
 ROLEPRIOR={'FW':0.30,'MF':0.12,'DF':0.05,'GK':0.0}
 m['op_rate90']=m.op_rate90.fillna(m.pos.map(ROLEPRIOR)).fillna(0.10)
 m['mn']=m.mins.fillna(0)
 m['exp_min']=m.nn.apply(exp_minutes)
 m['exp_min']=m.exp_min.fillna(m.pos.map({'FW':70,'MF':62,'DF':72,'GK':90})).fillna(60)
+
+# ── TIRI attesi per partita (rate × minuti) — per i mercati over-tiri ──────────
+SHPRIOR={'FW':2.2,'MF':1.2,'DF':0.6,'GK':0.0}
+m['sh90']=m.sh90.fillna(m.pos.map(SHPRIOR)).fillna(0.8)
+m['exp_shots_match']=m.sh90*(m.exp_min/90.0)
 
 # ── RIGORISTA designato: 1 per nazionale (max pen_per90, con dati) ────────────
 m['pen_per90']=m.pen_per90.fillna(0)

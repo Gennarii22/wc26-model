@@ -124,6 +124,25 @@ def match_scorers(team, lam, n=5):
     rows.sort(key=lambda x: -x["li"])
     return [{k:v for k,v in r.items() if k!="li"} for r in rows[:n]]
 
+# ── tiri per partita: P(over 0.5 / 1.5 / 2.5 tiri) per giocatore ────────────
+PR["esh"] = PR.exp_shots_match.fillna(PR.pos.map({'FW':2.0,'MF':1.0,'DF':0.5,'GK':0.0})).fillna(0.7) if "exp_shots_match" in PR.columns else 0.7
+SH_LAM_AVG = 1.3   # lambda-gol medio di una squadra: scala la dominanza nei tiri
+def match_shots(team, lh, n=6):
+    sub = PR[PR.team == team]
+    if not len(sub): return []
+    ctx = float(np.clip(lh / SH_LAM_AVG, 0.7, 1.4))   # squadra dominante = piu' tiri
+    rows = []
+    for _, p in sub.iterrows():
+        li = float(p.esh) * ctx
+        if li < 0.3: continue
+        e = math.exp(-li)
+        rows.append({"player": _re.sub(r'\s*\(captain\)', '', str(p.player)).strip(),
+                     "li": li, "s1": round((1-e)*100,1),
+                     "s2": round((1-e*(1+li))*100,1),
+                     "s3": round((1-e*(1+li+li*li/2))*100,1)})
+    rows.sort(key=lambda x: -x["li"])
+    return [{k:v for k,v in r.items() if k!="li"} for r in rows[:n]]
+
 out = {"updated": (STATE["updated"] if STATE else "pre-torneo"), "matches": []}
 for h, aw, ven, city, date, stage in sorted(fixtures, key=lambda x: x[4]):
     played = (h, aw) in KNOWN
@@ -144,6 +163,7 @@ for h, aw, ven, city, date, stage in sorted(fixtures, key=lambda x: x[4]):
         "gh_dist": [round(float(poisson.pmf(i, lh)), 4) for i in range(7)],
         "ga_dist": [round(float(poisson.pmf(i, la)), 4) for i in range(7)],
         "scorers_h": match_scorers(h, lh), "scorers_a": match_scorers(aw, la),
+        "shots_h": match_shots(h, lh), "shots_a": match_shots(aw, la),
     })
 
 with open(f"{BASE}/betting_data.js", "w") as f:
