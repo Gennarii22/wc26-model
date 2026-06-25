@@ -7,3 +7,14 @@
   from = "/"
   to = "/index.html"
   status = 200
+
+# I file-dati cambiano a ogni update: niente cache del browser, sempre rivalidati.
+# Cosi' un reload mostra sempre i dati freschi (no "sembra fermo").
+[[headers]]
+  for = "/dashboard_data.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+[[headers]]
+  for = "/betting_data.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
