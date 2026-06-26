@@ -1,7 +1,7 @@
 team,matches,yellows,reds,cards
 Algeria,2,1,0,1
 Argentina,2,2,0,2
-Australia,2,4,0,4
+Australia,3,5,0,5
 Austria,2,3,0,3
 Belgium,2,3,1,4
 Bosnia and Herzegovina,3,6,1,7
@@ -31,7 +31,7 @@ Netherlands,3,3,0,3
 New Zealand,2,2,0,2
 Norway,2,0,0,0
 Panama,2,3,0,3
-Paraguay,2,6,1,7
+Paraguay,3,7,1,8
 Portugal,2,4,0,4
 Qatar,3,4,2,6
 Saudi Arabia,2,3,0,3
@@ -43,7 +43,7 @@ Spain,2,1,0,1
 Sweden,3,5,0,5
 Switzerland,3,3,0,3
 Tunisia,3,1,0,1
-Turkey,2,2,0,2
-United States,2,4,0,4
+Turkey,3,2,0,2
+United States,3,5,0,5
 Uruguay,2,2,0,2
 Uzbekistan,2,2,0,2
