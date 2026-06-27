@@ -3,7 +3,7 @@ Algeria,2,1,0,1
 Argentina,2,2,0,2
 Australia,3,5,0,5
 Austria,2,3,0,3
-Belgium,2,3,1,4
+Belgium,3,3,1,4
 Bosnia and Herzegovina,3,6,1,7
 Brazil,3,5,0,5
 Canada,3,5,0,5
@@ -14,13 +14,13 @@ Curaçao,3,7,0,7
 Czech Republic,3,1,0,1
 DR Congo,2,2,0,2
 Ecuador,3,5,0,5
-Egypt,2,3,0,3
+Egypt,3,6,0,6
 England,2,1,0,1
 France,3,1,0,1
 Germany,3,1,0,1
 Ghana,2,2,0,2
 Haiti,3,7,0,7
-Iran,2,2,0,2
+Iran,3,6,0,6
 Iraq,3,4,1,5
 Ivory Coast,3,4,0,4
 Japan,3,1,0,1
@@ -28,7 +28,7 @@ Jordan,2,1,0,1
 Mexico,3,2,1,3
 Morocco,3,1,0,1
 Netherlands,3,3,0,3
-New Zealand,2,2,0,2
+New Zealand,3,4,0,4
 Norway,3,1,0,1
 Panama,2,3,0,3
 Paraguay,3,7,1,8
