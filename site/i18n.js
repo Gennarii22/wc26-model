@@ -54,6 +54,7 @@ const I18N = {
   // ── Betting ─────────────────────────────────────────────────────────
   "b.h1":"Mondiale 2026 — Value & Quote",
   "b.sub":"probabilità dal modello (ELO live) · aggiornato: ",
+  "b.v_up":"In arrivo","b.v_past":"Passate","b.past_h":"Previsioni passate (reali, fatte prima della partita)","b.th_data":"Data","b.th_match":"Partita","b.th_pred":"Pronostico 1/X/2","b.th_ml":"Ris. atteso","b.th_real":"Risultato","b.th_hit":"Esito","b.hit_y":"centrato","b.hit_n":"no","b.fav_won":"Favorito del modello:",
   "b.tolink":"← Torneo & antepost",
   "b.mkts_h":"Mercati — clicca una riga per portarla nel calcolatore",
   "b.th_esito":"Esito","b.th_prob":"Probabilità","b.th_fair":"Quota fair",
@@ -115,6 +116,7 @@ const I18N = {
   // ── Betting ─────────────────────────────────────────────────────────
   "b.h1":"World Cup 2026 — Value & Odds",
   "b.sub":"probabilities from the model (live ELO) · updated: ",
+  "b.v_up":"Upcoming","b.v_past":"Past","b.past_h":"Past predictions (real, made before kickoff)","b.th_data":"Date","b.th_match":"Match","b.th_pred":"Pick 1/X/2","b.th_ml":"Exp. score","b.th_real":"Result","b.th_hit":"Outcome","b.hit_y":"correct","b.hit_n":"no","b.fav_won":"Model favourite:",
   "b.tolink":"← Tournament & outrights",
   "b.mkts_h":"Markets — click a row to send it to the calculator",
   "b.th_esito":"Outcome","b.th_prob":"Probability","b.th_fair":"Fair odds",

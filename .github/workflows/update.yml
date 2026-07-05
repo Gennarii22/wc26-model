@@ -44,7 +44,8 @@ jobs:
           python top_scorer_v2.py
           python gen_dashboard.py
           python gen_betting.py
-          cp dashboard_data.js betting_data.js ../site/
+          python snapshot_predictions.py
+          cp dashboard_data.js betting_data.js predictions_history.js ../site/
 
       - name: Post-partita su X (recency + 6 regole, posta solo se c'e' un edge)
         continue-on-error: true

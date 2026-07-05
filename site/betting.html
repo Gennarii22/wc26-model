@@ -71,6 +71,12 @@ td:first-child{font-family:var(--font-body);font-weight:500}
 .kpi.bad{border-color:rgba(176,85,59,.4);background:rgba(176,85,59,.08)}
 .kpi.bad .v{color:var(--neg)}
 .note{font-family:var(--font-mono);font-size:10.5px;color:var(--moss);line-height:1.7;letter-spacing:.02em}
+.vtoggle{display:flex;gap:8px;margin-bottom:16px}
+.vtoggle button{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:8px 16px;border:.5px solid var(--line);background:var(--ink-pure);color:var(--moss);border-radius:8px;cursor:pointer}
+.vtoggle button.on{border-color:var(--olive-signal);color:var(--brass);background:rgba(110,138,60,.10)}
+.pasttab{width:100%;border-collapse:collapse}
+.pasttab th{font-family:var(--font-mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--moss);text-align:left;padding:10px 14px;border-bottom:.5px solid var(--line)}
+.pasttab td{padding:9px 14px;border-bottom:.5px solid var(--line);font-size:13px}
 </style>
 </head>
 <body>
@@ -84,7 +90,21 @@ td:first-child{font-family:var(--font-body);font-weight:500}
     </div>
   </div>
 
-  <div class="layout">
+  <div class="vtoggle">
+    <button id="vt-up" class="on" onclick="setView('up')" data-i18n="b.v_up">In arrivo</button>
+    <button id="vt-past" onclick="setView('past')" data-i18n="b.v_past">Passate</button>
+  </div>
+
+  <div id="pastview" class="panel" style="display:none;padding:0;overflow-x:auto">
+    <div class="panel-h"><span data-i18n="b.past_h">Previsioni passate (reali, fatte prima della partita)</span> · <span id="past-acc" style="color:var(--brass)"></span></div>
+    <table class="pasttab"><thead><tr>
+      <th data-i18n="b.th_data">Data</th><th data-i18n="b.th_match">Partita</th>
+      <th data-i18n="b.th_pred">Pronostico 1/X/2</th><th data-i18n="b.th_ml">Ris. atteso</th>
+      <th data-i18n="b.th_real">Risultato</th><th data-i18n="b.th_hit">Esito</th>
+    </tr></thead><tbody id="past-body"></tbody></table>
+  </div>
+
+  <div class="layout" id="layout">
     <div class="mlist panel" id="mlist"></div>
 
     <div class="detail" id="detail">
@@ -162,8 +182,35 @@ td:first-child{font-family:var(--font-body);font-weight:500}
 </div>
 
 <script src="betting_data.js"></script>
+<script src="predictions_history.js"></script>
 <script>
 const D=window.BET;let cur=null,selMk=null;
+function setView(v){
+  document.getElementById('layout').style.display=(v==='up')?'':'none';
+  document.getElementById('pastview').style.display=(v==='past')?'':'none';
+  document.getElementById('vt-up').classList.toggle('on',v==='up');
+  document.getElementById('vt-past').classList.toggle('on',v==='past');
+  if(v==='past') renderPast();
+}
+function renderPast(){
+  const H=(window.WCH||[]).filter(x=>x.real);
+  let hit=0;
+  const pc=x=>x==null?'—':(x*100).toFixed(0)+'%';
+  const rows=H.map(v=>{
+    const r=v.real, fav=[['1',v.p1],['X',v.pX],['2',v.p2]].sort((a,b)=>(b[1]||0)-(a[1]||0))[0][0];
+    const out=r.hs>r['as']?'1':(r['as']>r.hs?'2':'X'); const ok=(fav===out); if(ok)hit++;
+    return `<tr>
+      <td class="muted">${v.date}</td>
+      <td class="team">${v.home} — ${v.away}</td>
+      <td><span class="${fav==='1'?'pwin':''}">${pc(v.p1)}</span> · <span class="${fav==='X'?'pwin':''}">${pc(v.pX)}</span> · <span class="${fav==='2'?'pwin':''}">${pc(v.p2)}</span></td>
+      <td class="muted">${v.ml||'—'}</td>
+      <td style="font-family:var(--font-mono)">${r.hs}-${r['as']}</td>
+      <td style="color:${ok?'var(--olive-signal)':'var(--neg)'};font-family:var(--font-mono)">${ok?t('b.hit_y'):t('b.hit_n')}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('past-body').innerHTML=rows||'<tr><td class="muted" colspan="6">—</td></tr>';
+  document.getElementById('past-acc').textContent=H.length?`${t('b.fav_won')} ${hit}/${H.length} (${(hit/H.length*100).toFixed(0)}%)`:'';
+}
 function setSub(){document.getElementById('sub').textContent=t('b.sub')+D.updated;}
 const upcoming=D.matches.filter(m=>!m.played);
 const list=document.getElementById('mlist');
@@ -254,7 +301,7 @@ function calc(){
    <div class="kpi ${ev>0?'good':''}"><div class="l">${t('b.kpi_stake')} (${kf}×K)</div><div class="v">${ev>0?stake.toFixed(2)+'€':'0€'}</div></div>`;
 }
 setSub();
-window.onLangChange=()=>{setSub();render();};
+window.onLangChange=()=>{setSub();render();if(document.getElementById('pastview').style.display!=='none')renderPast();};
 if(upcoming.length){cur=upcoming[0];document.querySelector('.mrow')?.classList.add('active');render();}
 </script>
 </body>
