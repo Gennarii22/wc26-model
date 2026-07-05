@@ -54,11 +54,13 @@ m26["venue_country"] = m26.city_name.map(lambda c: "Mexico" if c in MX else ("Ca
 fixtures = [(r.home_team_name, r.away_team_name, r.venue_country, r.city_name, r.match_date, "Gironi")
             for _, r in m26.iterrows()]
 
-# partite future da ESPN (aggiunge i KO quando saranno definiti)
-def espn_upcoming(days=7):
+# partite di ELIMINAZIONE da ESPN: TUTTI gli stati (giocate E future), finestra ampia.
+# NB: prima si prendevano solo le SCHEDULED future -> i KO gia' giocati sparivano dal
+# betting e la history non riceveva mai il risultato. Ora si scansiona anche il passato.
+def espn_ko(back=14, fwd=7):
     out = []
     today = datetime.date.today()
-    for k in range(days):
+    for k in range(-back, fwd):
         d = today + datetime.timedelta(days=k)
         url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates={d.strftime('%Y%m%d')}"
         try:
@@ -66,7 +68,6 @@ def espn_upcoming(days=7):
             data = json.load(urllib.request.urlopen(req, timeout=15))
             for e in data.get("events", []):
                 comp = e["competitions"][0]
-                if comp["status"]["type"]["name"] != "STATUS_SCHEDULED": continue
                 cm = {c["homeAway"]: c["team"]["displayName"] for c in comp["competitors"]}
                 city = comp.get("venue", {}).get("address", {}).get("city", "")
                 out.append((cm["home"], cm["away"], str(d), city))
@@ -81,10 +82,12 @@ def canon(x):
     x = ALIAS.get(x, x)
     return x if x in STR else None
 
-sched_pairs = {(h, aw) for h, aw, *_ in fixtures}
-for h, aw, d, city in espn_upcoming():
+# dedup per (coppia, data): i gironi hanno date diverse dai KO, ogni KO e' unico
+existing = {(frozenset((h, aw)), d) for h, aw, ven, city, d, stage in fixtures}
+for h, aw, d, city in espn_ko():
     ch, ca_ = canon(h), canon(aw)
-    if ch and ca_ and (ch, ca_) not in sched_pairs:
+    if ch and ca_ and (frozenset((ch, ca_)), d) not in existing:
+        existing.add((frozenset((ch, ca_)), d))
         ven = "Mexico" if city in MX else ("Canada" if city in CA else "United States")
         fixtures.append((ch, ca_, ven, city or "USA", d, "Eliminazione"))
 
