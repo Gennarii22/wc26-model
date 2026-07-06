@@ -13,13 +13,13 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-14,E,Ivory Coast,Ecuador,United States,Philadelphia,24.4,26.4,49.2,0.95,1.47,0-1
 2026-06-15,G,Belgium,Egypt,United States,Seattle,65.6,21.0,13.4,1.92,0.73,1-0
 2026-06-15,G,Iran,New Zealand,United States,Inglewood,43.5,27.4,29.2,1.34,1.05,1-1
-2026-06-15,H,Spain,Cape Verde,United States,Atlanta,96.5,2.3,0.5,4.57,0.31,4-0
+2026-06-15,H,Spain,Cape Verde,United States,Atlanta,96.7,2.0,0.4,4.73,0.3,4-0
 2026-06-15,H,Saudi Arabia,Uruguay,United States,Miami Gardens,12.3,20.1,67.6,0.71,1.99,0-1
 2026-06-16,J,Austria,Jordan,United States,Santa Clara,65.2,21.2,13.6,1.91,0.73,1-0
 2026-06-16,J,Argentina,Algeria,United States,Kansas City,71.2,18.4,10.3,2.12,0.66,2-0
 2026-06-16,I,France,Senegal,United States,East Rutherford,78.5,14.7,6.9,2.44,0.58,2-0
 2026-06-16,I,Iraq,Norway,United States,Foxborough,3.2,9.0,87.7,0.46,3.03,0-3
-2026-06-17,K,Portugal,DR Congo,United States,Houston,82.2,12.5,5.3,2.64,0.53,2-0
+2026-06-17,K,Portugal,DR Congo,United States,Houston,80.8,13.3,5.9,2.56,0.55,2-0
 2026-06-17,K,Uzbekistan,Colombia,Mexico,Mexico City,9.6,17.7,72.7,0.64,2.18,0-2
 2026-06-17,L,England,Croatia,United States,Arlington,66.8,20.5,12.7,1.96,0.71,1-0
 2026-06-17,L,Ghana,Panama,Canada,Toronto,44.8,27.2,28.1,1.37,1.02,1-1
@@ -37,13 +37,13 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-20,E,Ecuador,Curaçao,United States,Kansas City,86.8,9.6,3.6,2.95,0.47,2-0
 2026-06-21,G,Belgium,Iran,United States,Inglewood,73.2,17.5,9.3,2.2,0.64,2-0
 2026-06-21,G,New Zealand,Egypt,Canada,Vancouver,22.5,25.7,51.8,0.91,1.53,0-1
-2026-06-21,H,Spain,Saudi Arabia,United States,Atlanta,95.6,3.2,0.8,4.19,0.33,4-0
+2026-06-21,H,Spain,Saudi Arabia,United States,Atlanta,96.0,2.8,0.7,4.33,0.32,4-0
 2026-06-21,H,Uruguay,Cape Verde,United States,Miami Gardens,72.5,17.8,9.7,2.17,0.65,2-0
 2026-06-22,I,France,Iraq,United States,Philadelphia,95.1,3.6,0.9,4.06,0.35,4-0
 2026-06-22,I,Norway,Senegal,United States,East Rutherford,62.3,22.4,15.4,1.82,0.77,1-0
 2026-06-22,J,Argentina,Austria,United States,Arlington,72.7,17.7,9.6,2.18,0.64,2-0
 2026-06-22,J,Jordan,Algeria,United States,Santa Clara,12.7,20.5,66.8,0.71,1.96,0-1
-2026-06-23,K,Portugal,Uzbekistan,United States,Houston,84.4,11.2,4.4,2.78,0.5,2-0
+2026-06-23,K,Portugal,Uzbekistan,United States,Houston,83.0,12.0,5.0,2.69,0.52,2-0
 2026-06-23,K,Colombia,DR Congo,Mexico,Zapopan,69.9,19.1,11.0,2.07,0.68,2-0
 2026-06-23,L,England,Ghana,United States,Foxborough,89.1,8.1,2.8,3.16,0.44,3-0
 2026-06-23,L,Panama,Croatia,Canada,Toronto,9.3,17.4,73.4,0.64,2.2,0-2
@@ -61,13 +61,13 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-25,F,Tunisia,Netherlands,United States,Kansas City,5.7,13.1,81.1,0.54,2.58,0-2
 2026-06-26,I,Senegal,Iraq,Canada,Toronto,67.2,20.3,12.5,1.97,0.71,1-0
 2026-06-26,I,Norway,France,United States,Foxborough,20.9,25.2,53.9,0.88,1.59,0-1
-2026-06-26,H,Uruguay,Spain,Mexico,Zapopan,6.4,14.0,79.6,0.56,2.49,0-2
+2026-06-26,H,Uruguay,Spain,Mexico,Zapopan,5.7,13.1,81.1,0.54,2.58,0-2
 2026-06-26,G,New Zealand,Belgium,Canada,Vancouver,6.4,14.0,79.6,0.56,2.49,0-2
 2026-06-26,G,Egypt,Iran,United States,Seattle,44.1,27.3,28.6,1.35,1.04,1-1
 2026-06-26,H,Cape Verde,Saudi Arabia,United States,Houston,31.1,27.6,41.3,1.08,1.29,1-1
 2026-06-27,L,Panama,England,United States,East Rutherford,1.5,5.3,93.1,0.38,3.65,0-3
 2026-06-27,J,Algeria,Austria,United States,Kansas City,37.7,27.9,34.5,1.22,1.15,1-1
 2026-06-27,J,Jordan,Argentina,United States,Arlington,1.8,6.0,92.1,0.4,3.51,0-3
-2026-06-27,K,Colombia,Portugal,United States,Miami Gardens,23.2,26.0,50.9,0.93,1.51,0-1
+2026-06-27,K,Colombia,Portugal,United States,Miami Gardens,24.8,26.4,48.8,0.96,1.46,0-1
 2026-06-27,K,DR Congo,Uzbekistan,United States,Atlanta,39.0,27.8,33.2,1.24,1.13,1-1
 2026-06-27,L,Croatia,Ghana,United States,Philadelphia,65.1,21.2,13.7,1.91,0.74,1-0
