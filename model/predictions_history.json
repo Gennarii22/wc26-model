@@ -1623,7 +1623,10 @@
 "ml_p": 13.1,
 "over25": 0.4224,
 "gol": 0.4812,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "France|Morocco|2026-07-09": {
 "home": "France",
@@ -1668,6 +1671,21 @@
 "ml_p": 13.6,
 "over25": 0.486,
 "gol": 0.4463,
+"real": null
+},
+"Argentina|Switzerland|2026-07-11": {
+"home": "Argentina",
+"away": "Switzerland",
+"date": "2026-07-11",
+"stage": "Eliminazione",
+"group": "J",
+"p1": 0.571,
+"pX": 0.242,
+"p2": 0.187,
+"ml": "1-0",
+"ml_p": 13.6,
+"over25": 0.4586,
+"gol": 0.461,
 "real": null
 }
 }

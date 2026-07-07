@@ -3,7 +3,7 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-11,A,South Korea,Czech Republic,Mexico,Zapopan,42.2,27.5,30.3,1.31,1.07,1-1
 2026-06-12,B,Canada,Bosnia and Herzegovina,Canada,Toronto,59.0,22.5,18.4,1.84,0.92,1-0
 2026-06-12,D,United States,Paraguay,United States,Inglewood,49.7,25.0,25.3,1.59,1.06,1-1
-2026-06-13,B,Qatar,Switzerland,United States,Santa Clara,1.9,6.2,91.8,0.4,3.47,0-3
+2026-06-13,B,Qatar,Switzerland,United States,Santa Clara,1.8,5.9,92.2,0.4,3.52,0-3
 2026-06-13,C,Brazil,Morocco,United States,East Rutherford,25.2,26.6,48.2,0.97,1.45,0-1
 2026-06-13,C,Haiti,Scotland,United States,Foxborough,22.4,25.7,51.8,0.91,1.53,0-1
 2026-06-13,D,Australia,Turkey,Canada,Vancouver,32.2,27.7,40.0,1.11,1.27,1-1
@@ -20,12 +20,12 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-16,I,France,Senegal,United States,East Rutherford,78.5,14.7,6.9,2.44,0.58,2-0
 2026-06-16,I,Iraq,Norway,United States,Foxborough,3.2,9.0,87.7,0.46,3.03,0-3
 2026-06-17,K,Portugal,DR Congo,United States,Houston,80.8,13.3,5.9,2.56,0.55,2-0
-2026-06-17,K,Uzbekistan,Colombia,Mexico,Mexico City,9.6,17.7,72.7,0.64,2.18,0-2
+2026-06-17,K,Uzbekistan,Colombia,Mexico,Mexico City,9.9,18.1,72.0,0.65,2.15,0-2
 2026-06-17,L,England,Croatia,United States,Arlington,66.8,20.5,12.7,1.96,0.71,1-0
 2026-06-17,L,Ghana,Panama,Canada,Toronto,44.8,27.2,28.1,1.37,1.02,1-1
 2026-06-18,A,Czech Republic,South Africa,United States,Atlanta,45.4,27.1,27.5,1.38,1.01,1-1
 2026-06-18,A,Mexico,South Korea,Mexico,Zapopan,63.7,20.9,15.4,1.98,0.85,1-0
-2026-06-18,B,Switzerland,Bosnia and Herzegovina,United States,Inglewood,66.8,20.5,12.7,1.96,0.71,1-0
+2026-06-18,B,Switzerland,Bosnia and Herzegovina,United States,Inglewood,67.6,20.1,12.3,1.99,0.7,1-0
 2026-06-18,B,Canada,Qatar,Canada,Vancouver,88.6,8.2,3.2,3.25,0.52,3-0
 2026-06-19,D,Turkey,Paraguay,United States,Santa Clara,47.6,26.7,25.7,1.43,0.98,1-0
 2026-06-19,C,Scotland,Morocco,United States,Foxborough,6.8,14.6,78.5,0.57,2.44,0-2
@@ -44,7 +44,7 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-22,J,Argentina,Austria,United States,Arlington,73.4,17.4,9.2,2.21,0.64,2-0
 2026-06-22,J,Jordan,Algeria,United States,Santa Clara,12.7,20.5,66.8,0.71,1.96,0-1
 2026-06-23,K,Portugal,Uzbekistan,United States,Houston,83.0,12.0,5.0,2.69,0.52,2-0
-2026-06-23,K,Colombia,DR Congo,Mexico,Zapopan,69.9,19.1,11.0,2.07,0.68,2-0
+2026-06-23,K,Colombia,DR Congo,Mexico,Zapopan,69.2,19.4,11.4,2.04,0.69,2-0
 2026-06-23,L,England,Ghana,United States,Foxborough,89.1,8.1,2.8,3.16,0.44,3-0
 2026-06-23,L,Panama,Croatia,Canada,Toronto,9.3,17.4,73.4,0.64,2.2,0-2
 2026-06-24,C,Morocco,Haiti,United States,Atlanta,89.1,8.1,2.7,3.16,0.44,3-0
@@ -52,7 +52,7 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-24,C,Scotland,Brazil,United States,Miami Gardens,12.2,20.1,67.8,0.7,1.99,0-1
 2026-06-24,A,South Africa,South Korea,United States,Guadalupe,22.5,25.7,51.8,0.91,1.53,0-1
 2026-06-24,A,Mexico,Czech Republic,Mexico,Mexico City,70.0,18.3,11.7,2.19,0.77,2-0
-2026-06-24,B,Canada,Switzerland,Canada,Vancouver,27.7,25.6,46.8,1.11,1.52,1-1
+2026-06-24,B,Canada,Switzerland,Canada,Vancouver,27.0,25.4,47.6,1.09,1.54,1-1
 2026-06-25,D,United States,Turkey,United States,Inglewood,37.6,26.4,36.0,1.31,1.28,1-1
 2026-06-25,D,Paraguay,Australia,United States,Santa Clara,29.2,27.4,43.4,1.05,1.34,1-1
 2026-06-25,E,Curaçao,Ivory Coast,United States,Philadelphia,7.4,15.3,77.3,0.59,2.38,0-2
@@ -68,6 +68,6 @@ date,group,home,away,venue,city,p1,px,p2,lh,la,score_ml
 2026-06-27,L,Panama,England,United States,East Rutherford,1.5,5.3,93.1,0.38,3.65,0-3
 2026-06-27,J,Algeria,Austria,United States,Kansas City,37.7,27.9,34.5,1.22,1.15,1-1
 2026-06-27,J,Jordan,Argentina,United States,Arlington,1.7,5.7,92.4,0.39,3.55,0-3
-2026-06-27,K,Colombia,Portugal,United States,Miami Gardens,24.8,26.4,48.8,0.96,1.46,0-1
+2026-06-27,K,Colombia,Portugal,United States,Miami Gardens,24.1,26.3,49.6,0.95,1.48,0-1
 2026-06-27,K,DR Congo,Uzbekistan,United States,Atlanta,39.0,27.8,33.2,1.24,1.13,1-1
 2026-06-27,L,Croatia,Ghana,United States,Philadelphia,65.1,21.2,13.7,1.91,0.74,1-0
