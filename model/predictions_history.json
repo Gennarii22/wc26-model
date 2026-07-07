@@ -1569,7 +1569,10 @@
 "ml_p": 12.5,
 "over25": 0.4818,
 "gol": 0.5278,
-"real": null
+"real": {
+"hs": 1,
+"as": 4
+}
 },
 "Portugal|Spain|2026-07-06": {
 "home": "Portugal",
@@ -1647,6 +1650,21 @@
 "ml_p": 12.7,
 "over25": 0.43,
 "gol": 0.4769,
+"real": null
+},
+"Spain|Belgium|2026-07-10": {
+"home": "Spain",
+"away": "Belgium",
+"date": "2026-07-10",
+"stage": "Eliminazione",
+"group": "H",
+"p1": 0.6389,
+"pX": 0.2172,
+"p2": 0.1439,
+"ml": "1-0",
+"ml_p": 13.6,
+"over25": 0.486,
+"gol": 0.4463,
 "real": null
 }
 }
