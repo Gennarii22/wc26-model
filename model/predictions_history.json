@@ -1605,7 +1605,10 @@
 "ml_p": 14.7,
 "over25": 0.6057,
 "gol": 0.3862,
-"real": null
+"real": {
+"hs": 3,
+"as": 2
+}
 },
 "Switzerland|Colombia|2026-07-07": {
 "home": "Switzerland",
