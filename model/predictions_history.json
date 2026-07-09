@@ -1641,7 +1641,10 @@
 "ml_p": 13.4,
 "over25": 0.4485,
 "gol": 0.4665,
-"real": null
+"real": {
+"hs": 2,
+"as": 0
+}
 },
 "Norway|England|2026-07-11": {
 "home": "Norway",
