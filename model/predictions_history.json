@@ -1674,7 +1674,10 @@
 "ml_p": 13.6,
 "over25": 0.486,
 "gol": 0.4463,
-"real": null
+"real": {
+"hs": 2,
+"as": 1
+}
 },
 "Argentina|Switzerland|2026-07-11": {
 "home": "Argentina",
@@ -1689,6 +1692,21 @@
 "ml_p": 13.6,
 "over25": 0.4586,
 "gol": 0.461,
+"real": null
+},
+"France|Spain|2026-07-14": {
+"home": "France",
+"away": "Spain",
+"date": "2026-07-14",
+"stage": "Eliminazione",
+"group": "I",
+"p1": 0.3343,
+"pX": 0.2781,
+"p2": 0.3875,
+"ml": "1-1",
+"ml_p": 13.1,
+"over25": 0.4225,
+"gol": 0.4811,
 "real": null
 }
 }
