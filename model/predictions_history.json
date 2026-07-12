@@ -1659,7 +1659,10 @@
 "ml_p": 12.7,
 "over25": 0.43,
 "gol": 0.4769,
-"real": null
+"real": {
+"hs": 1,
+"as": 2
+}
 },
 "Spain|Belgium|2026-07-10": {
 "home": "Spain",
