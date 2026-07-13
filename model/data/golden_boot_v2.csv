@@ -218,7 +218,7 @@ Mario Pašalić,Croatia,0.0901194421521196,False,0.3569,0.0
 Martin Baturina,Croatia,0.0823050675424688,False,1.335,0.0
 Petar Sučić,Croatia,0.0685502823826765,False,1.27025,0.0
 Toni Fruk,Croatia,0.0826666666666666,False,0.33315,0.0
-Raúl Jiménez,Mexico,0.3236369674494737,True,3.6099,0.0
+Igor Matanović,Croatia,0.2565684350310869,False,1.03125,0.0
 Luka Sučić,Croatia,0.0630333355979587,False,0.24845,0.0
 Luka Vušković,Croatia,0.0974279760420345,False,0.39845,0.0
 Marco Pašalić,Croatia,0.2333333333333333,False,0.92075,0.0
@@ -270,7 +270,7 @@ José Fajardo,Panama,0.2383770153289204,False,0.7265,0.0
 Cecilio Waterman,Panama,0.2333333333333333,False,0.702,0.0
 Alberto Quintero,Panama,0.0826666666666666,False,0.248,0.0
 Aníbal Godoy (captain),Panama,0.0826666666666666,False,0.2469,0.0
-Vladimír Darida,Czech Republic,0.0826666666666666,False,0.2506,0.0
+Azarias Londoño,Panama,0.2333333333333333,False,0.70055,0.0
 Cristian Martínez,Panama,0.0826666666666666,False,0.24455,0.0
 Ezri Konsa,England,0.0488503604390973,False,0.36885,0.0
 Nico O'Reilly,England,0.1270072642646773,False,0.9737,0.0
@@ -283,12 +283,12 @@ Marcus Rashford,England,0.2014217423823161,False,2.52175,0.0
 Jordan Henderson,England,0.0476866701421009,False,0.36155,0.0
 Kobbie Mainoo,England,0.0460557836022383,False,0.3447,0.0
 Morgan Rogers,England,0.1705972566659961,False,1.27825,0.0
-Robin Hranáč,Czech Republic,0.0530580257949389,False,0.1617,0.0
+Antoine Semenyo,Ghana,0.2463305928262554,False,0.9887,0.0
 Ollie Watkins,England,0.3734389617042197,False,2.81805,0.0
 Noni Madueke,England,0.217093747781753,False,1.65545,0.0
 Eberechi Eze,England,0.2035377683450658,False,1.52995,0.0
 Ivan Toney,England,0.2891286919194203,False,2.1682,0.0
-Štěpán Chaloupek,Czech Republic,0.0494269500819323,False,0.15165,0.0
+Reece James,England,0.0402399070082436,False,0.299,0.0
 Jarell Quansah,England,0.061343369253035,False,0.46835,0.0
 Caleb Yirenkyi,Ghana,0.0826666666666666,False,1.3251,0.0
 Thomas Partey,Ghana,0.0572423788194417,False,0.2252,0.0
@@ -515,6 +515,10 @@ Sphephelo Sithole,South Africa,0.0826666666666666,False,0.3181,0.0
 Iqraam Rayners,South Africa,0.2333333333333333,False,0.9308,0.0
 Evidence Makgopa,South Africa,0.2333333333333333,False,0.93185,0.0
 Brian Gutiérrez,Mexico,0.0826666666666666,False,0.41015,0.0
+Robin Hranáč,Czech Republic,0.0530580257949389,False,0.1617,0.0
+Štěpán Chaloupek,Czech Republic,0.0494269500819323,False,0.15165,0.0
+Ladislav Krejčí (captain),Czech Republic,0.061280480423188,False,1.1936,0.0
+Vladimír Darida,Czech Republic,0.0826666666666666,False,0.2506,0.0
 Adam Hložek,Czech Republic,0.2188662598470198,False,0.65275,0.0
 Patrik Schick,Czech Republic,0.369853008384862,False,1.10235,0.0
 Jan Kuchta,Czech Republic,0.2426577794418587,False,0.72475,0.0
@@ -522,15 +526,11 @@ Lukáš Červ,Czech Republic,0.0852194943839737,False,0.2584,0.0
 Mojmír Chytil,Czech Republic,0.191717762967086,False,0.572,0.0
 Pavel Šulc,Czech Republic,0.1969656667634494,False,0.5922,0.0
 Lukáš Provod,Czech Republic,0.0779193735217724,False,0.2356,0.0
-Michal Sadílek,Czech Republic,0.084021229374276,False,1.2495,0.0
+Raúl Jiménez,Mexico,0.3236369674494737,True,3.6099,0.0
 Tomáš Chorý,Czech Republic,0.3124168909539577,True,0.95155,0.0
 David Douděra,Czech Republic,0.1034435375857364,False,0.31055,0.0
 Tomáš Souček,Czech Republic,0.1697495130468456,False,0.51165,0.0
-Ladislav Krejčí (captain),Czech Republic,0.061280480423188,False,1.1936,0.0
-Igor Matanović,Croatia,0.2565684350310869,False,1.03125,0.0
-Jayden Adams,South Africa,0.0826666666666666,False,0.3378,0.0
-Antoine Semenyo,Ghana,0.2463305928262554,False,0.9887,0.0
-Reece James,England,0.0402399070082436,False,0.299,0.0
+Alexandr Sojka,Czech Republic,0.0826666666666666,False,0.2512,0.0
 Hugo Sochůrek,Czech Republic,0.0826666666666666,False,0.24415,0.0
 Denis Višinský,Czech Republic,0.0831682157549806,False,0.24625,0.0
 Edson Álvarez (captain),Mexico,0.0497421364348656,False,0.2448,0.0
@@ -538,7 +538,7 @@ Johan Vásquez,Mexico,0.0481515209897268,False,0.23235,0.0
 Érik Lira,Mexico,0.0826666666666666,False,0.40725,0.0
 Luis Romo,Mexico,0.0826666666666666,False,1.40535,0.0
 Álvaro Fidalgo,Mexico,0.0950533362613496,False,1.4683,0.0
-Alexandr Sojka,Czech Republic,0.0826666666666666,False,0.2512,0.0
+Michal Sadílek,Czech Republic,0.084021229374276,False,1.2495,0.0
 Ivan Šunjić,Bosnia and Herzegovina,0.0842178868238905,False,0.3408,0.0
 Amar Memić,Bosnia and Herzegovina,0.078399125428136,False,0.3038,0.0
 Amir Hadžiahmetović,Bosnia and Herzegovina,0.0624887294518351,False,0.2453,0.0
@@ -550,7 +550,7 @@ Jovo Lukić,Bosnia and Herzegovina,0.2333333333333333,False,1.9272,0.0
 Ermin Mahmić,Bosnia and Herzegovina,0.0826666666666666,False,2.3317,0.0
 Mathieu Choinière,Canada,0.0826666666666666,False,0.4125,0.0
 Stephen Eustáquio,Canada,0.0975431175158103,False,1.4912,0.0
-Azarias Londoño,Panama,0.2333333333333333,False,0.70055,0.0
+Jayden Adams,South Africa,0.0826666666666666,False,0.3378,0.0
 Cyle Larin,Canada,0.3038925569660617,False,3.51935,0.0
 Liam Millar,Canada,0.0493333333333333,False,0.24245,0.0
 Tani Oluwaseyi,Canada,0.1102302668331088,False,0.5476,0.0
