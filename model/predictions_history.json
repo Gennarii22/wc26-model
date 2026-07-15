@@ -1731,6 +1731,39 @@
 "ml_p": 13.1,
 "over25": 0.4225,
 "gol": 0.4812,
+"real": {
+"hs": 1,
+"as": 2
+}
+},
+"France|England|2026-07-18": {
+"home": "France",
+"away": "England",
+"date": "2026-07-18",
+"stage": "Eliminazione",
+"group": "I",
+"p1": 0.4246,
+"pX": 0.275,
+"p2": 0.3004,
+"ml": "1-1",
+"ml_p": 13.0,
+"over25": 0.4255,
+"gol": 0.4795,
+"real": null
+},
+"Spain|Argentina|2026-07-19": {
+"home": "Spain",
+"away": "Argentina",
+"date": "2026-07-19",
+"stage": "Eliminazione",
+"group": "H",
+"p1": 0.5251,
+"pX": 0.2556,
+"p2": 0.2193,
+"ml": "1-0",
+"ml_p": 13.3,
+"over25": 0.4445,
+"gol": 0.4687,
 "real": null
 }
 }
