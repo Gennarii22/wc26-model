@@ -300,7 +300,10 @@
 "ml_p": 12.8,
 "over25": 0.4326,
 "gol": 0.4754,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Mexico|South Korea|2026-06-18": {
 "home": "Mexico",
@@ -315,7 +318,10 @@
 "ml_p": 11.7,
 "over25": 0.5264,
 "gol": 0.5007,
-"real": null
+"real": {
+"hs": 1,
+"as": 0
+}
 },
 "Switzerland|Bosnia and Herzegovina|2026-06-18": {
 "home": "Switzerland",
@@ -330,7 +336,10 @@
 "ml_p": 13.7,
 "over25": 0.4776,
 "gol": 0.4508,
-"real": null
+"real": {
+"hs": 4,
+"as": 1
+}
 },
 "Canada|Qatar|2026-06-18": {
 "home": "Canada",
@@ -345,7 +354,10 @@
 "ml_p": 13.1,
 "over25": 0.7046,
 "gol": 0.3998,
-"real": null
+"real": {
+"hs": 6,
+"as": 0
+}
 },
 "Scotland|Morocco|2026-06-19": {
 "home": "Scotland",
@@ -1712,13 +1724,13 @@
 "date": "2026-07-15",
 "stage": "Eliminazione",
 "group": "L",
-"p1": 0.387,
+"p1": 0.3865,
 "pX": 0.2782,
-"p2": 0.3349,
+"p2": 0.3353,
 "ml": "1-1",
 "ml_p": 13.1,
 "over25": 0.4225,
-"gol": 0.4811,
+"gol": 0.4812,
 "real": null
 }
 }
