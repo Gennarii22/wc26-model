@@ -12,7 +12,10 @@
 "ml_p": 14.5,
 "over25": 0.6387,
 "gol": 0.3703,
-"real": null
+"real": {
+"hs": 7,
+"as": 1
+}
 },
 "Ivory Coast|Ecuador|2026-06-14": {
 "home": "Ivory Coast",
@@ -27,7 +30,10 @@
 "ml_p": 13.6,
 "over25": 0.468,
 "gol": 0.4559,
-"real": null
+"real": {
+"hs": 1,
+"as": 0
+}
 },
 "Netherlands|Japan|2026-06-14": {
 "home": "Netherlands",
@@ -42,7 +48,10 @@
 "ml_p": 12.9,
 "over25": 0.4259,
 "gol": 0.4792,
-"real": null
+"real": {
+"hs": 2,
+"as": 2
+}
 },
 "Sweden|Tunisia|2026-06-14": {
 "home": "Sweden",
@@ -57,7 +66,10 @@
 "ml_p": 12.9,
 "over25": 0.4263,
 "gol": 0.4789,
-"real": null
+"real": {
+"hs": 5,
+"as": 1
+}
 },
 "Belgium|Egypt|2026-06-15": {
 "home": "Belgium",
@@ -72,7 +84,10 @@
 "ml_p": 13.5,
 "over25": 0.5072,
 "gol": 0.4352,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Iran|New Zealand|2026-06-15": {
 "home": "Iran",
@@ -87,7 +102,10 @@
 "ml_p": 13.1,
 "over25": 0.423,
 "gol": 0.4809,
-"real": null
+"real": {
+"hs": 2,
+"as": 2
+}
 },
 "Spain|Cape Verde|2026-06-15": {
 "home": "Spain",
@@ -102,7 +120,10 @@
 "ml_p": 14.3,
 "over25": 0.8843,
 "gol": 0.246,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "Saudi Arabia|Uruguay|2026-06-15": {
 "home": "Saudi Arabia",
@@ -117,7 +138,10 @@
 "ml_p": 14.3,
 "over25": 0.5451,
 "gol": 0.4159,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "France|Senegal|2026-06-16": {
 "home": "France",
@@ -132,7 +156,10 @@
 "ml_p": 13.5,
 "over25": 0.5015,
 "gol": 0.4382,
-"real": null
+"real": {
+"hs": 3,
+"as": 1
+}
 },
 "Iraq|Norway|2026-06-16": {
 "home": "Iraq",
@@ -147,7 +174,10 @@
 "ml_p": 14.5,
 "over25": 0.5673,
 "gol": 0.4049,
-"real": null
+"real": {
+"hs": 1,
+"as": 4
+}
 },
 "Argentina|Algeria|2026-06-16": {
 "home": "Argentina",
@@ -162,7 +192,10 @@
 "ml_p": 13.6,
 "over25": 0.4899,
 "gol": 0.4442,
-"real": null
+"real": {
+"hs": 3,
+"as": 0
+}
 },
 "Austria|Jordan|2026-06-16": {
 "home": "Austria",
@@ -177,7 +210,10 @@
 "ml_p": 13.6,
 "over25": 0.4658,
 "gol": 0.4571,
-"real": null
+"real": {
+"hs": 3,
+"as": 1
+}
 },
 "Portugal|DR Congo|2026-06-17": {
 "home": "Portugal",
@@ -192,7 +228,10 @@
 "ml_p": 14.6,
 "over25": 0.6247,
 "gol": 0.377,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Uzbekistan|Colombia|2026-06-17": {
 "home": "Uzbekistan",
@@ -207,7 +246,10 @@
 "ml_p": 13.7,
 "over25": 0.4692,
 "gol": 0.4552,
-"real": null
+"real": {
+"hs": 1,
+"as": 3
+}
 },
 "England|Croatia|2026-06-17": {
 "home": "England",
@@ -222,7 +264,10 @@
 "ml_p": 13.6,
 "over25": 0.4596,
 "gol": 0.4605,
-"real": null
+"real": {
+"hs": 4,
+"as": 2
+}
 },
 "Ghana|Panama|2026-06-17": {
 "home": "Ghana",
@@ -237,7 +282,10 @@
 "ml_p": 13.0,
 "over25": 0.4253,
 "gol": 0.4795,
-"real": null
+"real": {
+"hs": 1,
+"as": 0
+}
 },
 "Czech Republic|South Africa|2026-06-18": {
 "home": "Czech Republic",
@@ -252,7 +300,10 @@
 "ml_p": 13.5,
 "over25": 0.4528,
 "gol": 0.4642,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Mexico|South Korea|2026-06-18": {
 "home": "Mexico",
@@ -267,7 +318,10 @@
 "ml_p": 11.5,
 "over25": 0.5053,
 "gol": 0.5134,
-"real": null
+"real": {
+"hs": 1,
+"as": 0
+}
 },
 "Switzerland|Bosnia and Herzegovina|2026-06-18": {
 "home": "Switzerland",
@@ -282,7 +336,10 @@
 "ml_p": 13.6,
 "over25": 0.4854,
 "gol": 0.4466,
-"real": null
+"real": {
+"hs": 4,
+"as": 1
+}
 },
 "Canada|Qatar|2026-06-18": {
 "home": "Canada",
@@ -297,7 +354,10 @@
 "ml_p": 13.5,
 "over25": 0.7564,
 "gol": 0.3707,
-"real": null
+"real": {
+"hs": 6,
+"as": 0
+}
 },
 "Scotland|Morocco|2026-06-19": {
 "home": "Scotland",
@@ -312,7 +372,10 @@
 "ml_p": 13.4,
 "over25": 0.5058,
 "gol": 0.4359,
-"real": null
+"real": {
+"hs": 0,
+"as": 1
+}
 },
 "Brazil|Haiti|2026-06-19": {
 "home": "Brazil",
@@ -327,7 +390,10 @@
 "ml_p": 14.5,
 "over25": 0.5663,
 "gol": 0.4054,
-"real": null
+"real": {
+"hs": 3,
+"as": 0
+}
 },
 "United States|Australia|2026-06-19": {
 "home": "United States",
@@ -342,7 +408,10 @@
 "ml_p": 12.5,
 "over25": 0.4817,
 "gol": 0.5279,
-"real": null
+"real": {
+"hs": 2,
+"as": 0
+}
 },
 "Turkey|Paraguay|2026-06-19": {
 "home": "Turkey",
@@ -357,7 +426,10 @@
 "ml_p": 13.3,
 "over25": 0.4426,
 "gol": 0.4698,
-"real": null
+"real": {
+"hs": 0,
+"as": 1
+}
 },
 "Germany|Ivory Coast|2026-06-20": {
 "home": "Germany",
@@ -372,7 +444,10 @@
 "ml_p": 13.1,
 "over25": 0.4377,
 "gol": 0.4725,
-"real": null
+"real": {
+"hs": 2,
+"as": 1
+}
 },
 "Ecuador|Curaçao|2026-06-20": {
 "home": "Ecuador",
@@ -387,7 +462,10 @@
 "ml_p": 14.5,
 "over25": 0.7135,
 "gol": 0.3348,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "Netherlands|Sweden|2026-06-20": {
 "home": "Netherlands",
@@ -402,7 +480,10 @@
 "ml_p": 13.6,
 "over25": 0.4847,
 "gol": 0.447,
-"real": null
+"real": {
+"hs": 5,
+"as": 1
+}
 },
 "Tunisia|Japan|2026-06-20": {
 "home": "Tunisia",
@@ -417,7 +498,10 @@
 "ml_p": 13.6,
 "over25": 0.4864,
 "gol": 0.4461,
-"real": null
+"real": {
+"hs": 0,
+"as": 4
+}
 },
 "Belgium|Iran|2026-06-21": {
 "home": "Belgium",
@@ -432,7 +516,10 @@
 "ml_p": 13.6,
 "over25": 0.5118,
 "gol": 0.4328,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "New Zealand|Egypt|2026-06-21": {
 "home": "New Zealand",
@@ -447,7 +534,10 @@
 "ml_p": 13.0,
 "over25": 0.4236,
 "gol": 0.4805,
-"real": null
+"real": {
+"hs": 1,
+"as": 3
+}
 },
 "Spain|Saudi Arabia|2026-06-21": {
 "home": "Spain",
@@ -462,7 +552,10 @@
 "ml_p": 14.4,
 "over25": 0.8297,
 "gol": 0.277,
-"real": null
+"real": {
+"hs": 4,
+"as": 0
+}
 },
 "Uruguay|Cape Verde|2026-06-21": {
 "home": "Uruguay",
@@ -477,7 +570,10 @@
 "ml_p": 14.7,
 "over25": 0.6051,
 "gol": 0.3865,
-"real": null
+"real": {
+"hs": 2,
+"as": 2
+}
 },
 "France|Iraq|2026-06-22": {
 "home": "France",
@@ -492,7 +588,10 @@
 "ml_p": 14.3,
 "over25": 0.6881,
 "gol": 0.3468,
-"real": null
+"real": {
+"hs": 3,
+"as": 0
+}
 },
 "Norway|Senegal|2026-06-22": {
 "home": "Norway",
@@ -507,7 +606,10 @@
 "ml_p": 13.2,
 "over25": 0.4393,
 "gol": 0.4717,
-"real": null
+"real": {
+"hs": 3,
+"as": 2
+}
 },
 "Argentina|Austria|2026-06-22": {
 "home": "Argentina",
@@ -522,7 +624,10 @@
 "ml_p": 13.6,
 "over25": 0.5113,
 "gol": 0.4331,
-"real": null
+"real": {
+"hs": 2,
+"as": 0
+}
 },
 "Jordan|Algeria|2026-06-22": {
 "home": "Jordan",
@@ -537,7 +642,10 @@
 "ml_p": 13.6,
 "over25": 0.4835,
 "gol": 0.4476,
-"real": null
+"real": {
+"hs": 1,
+"as": 2
+}
 },
 "Portugal|Uzbekistan|2026-06-23": {
 "home": "Portugal",
@@ -552,7 +660,10 @@
 "ml_p": 14.2,
 "over25": 0.542,
 "gol": 0.4175,
-"real": null
+"real": {
+"hs": 5,
+"as": 0
+}
 },
 "Colombia|DR Congo|2026-06-23": {
 "home": "Colombia",
@@ -567,7 +678,10 @@
 "ml_p": 14.0,
 "over25": 0.529,
 "gol": 0.4241,
-"real": null
+"real": {
+"hs": 1,
+"as": 0
+}
 },
 "England|Ghana|2026-06-23": {
 "home": "England",
@@ -582,7 +696,10 @@
 "ml_p": 14.4,
 "over25": 0.6918,
 "gol": 0.3451,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "Panama|Croatia|2026-06-23": {
 "home": "Panama",
@@ -597,7 +714,10 @@
 "ml_p": 13.5,
 "over25": 0.5042,
 "gol": 0.4368,
-"real": null
+"real": {
+"hs": 0,
+"as": 1
+}
 },
 "Mexico|Czech Republic|2026-06-24": {
 "home": "Mexico",
@@ -612,7 +732,10 @@
 "ml_p": 11.7,
 "over25": 0.5202,
 "gol": 0.5044,
-"real": null
+"real": {
+"hs": 3,
+"as": 0
+}
 },
 "South Africa|South Korea|2026-06-24": {
 "home": "South Africa",
@@ -627,7 +750,10 @@
 "ml_p": 13.7,
 "over25": 0.4689,
 "gol": 0.4554,
-"real": null
+"real": {
+"hs": 1,
+"as": 0
+}
 },
 "Canada|Switzerland|2026-06-24": {
 "home": "Canada",
@@ -642,7 +768,10 @@
 "ml_p": 12.5,
 "over25": 0.4817,
 "gol": 0.5279,
-"real": null
+"real": {
+"hs": 1,
+"as": 2
+}
 },
 "Bosnia and Herzegovina|Qatar|2026-06-24": {
 "home": "Bosnia and Herzegovina",
@@ -657,7 +786,10 @@
 "ml_p": 13.6,
 "over25": 0.4933,
 "gol": 0.4425,
-"real": null
+"real": {
+"hs": 3,
+"as": 1
+}
 },
 "Scotland|Brazil|2026-06-24": {
 "home": "Scotland",
@@ -672,7 +804,10 @@
 "ml_p": 13.6,
 "over25": 0.4887,
 "gol": 0.4449,
-"real": null
+"real": {
+"hs": 0,
+"as": 3
+}
 },
 "Morocco|Haiti|2026-06-24": {
 "home": "Morocco",
@@ -687,7 +822,10 @@
 "ml_p": 14.7,
 "over25": 0.5898,
 "gol": 0.3939,
-"real": null
+"real": {
+"hs": 4,
+"as": 2
+}
 },
 "United States|Turkey|2026-06-25": {
 "home": "United States",
@@ -702,7 +840,10 @@
 "ml_p": 12.3,
 "over25": 0.4856,
 "gol": 0.5254,
-"real": null
+"real": {
+"hs": 2,
+"as": 3
+}
 },
 "Paraguay|Australia|2026-06-25": {
 "home": "Paraguay",
@@ -717,7 +858,10 @@
 "ml_p": 13.0,
 "over25": 0.4238,
 "gol": 0.4804,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "Curaçao|Ivory Coast|2026-06-25": {
 "home": "Curaçao",
@@ -732,7 +876,10 @@
 "ml_p": 14.3,
 "over25": 0.5438,
 "gol": 0.4166,
-"real": null
+"real": {
+"hs": 0,
+"as": 2
+}
 },
 "Ecuador|Germany|2026-06-25": {
 "home": "Ecuador",
@@ -747,7 +894,10 @@
 "ml_p": 12.7,
 "over25": 0.4298,
 "gol": 0.477,
-"real": null
+"real": {
+"hs": 2,
+"as": 1
+}
 },
 "Japan|Sweden|2026-06-25": {
 "home": "Japan",
@@ -762,7 +912,10 @@
 "ml_p": 13.6,
 "over25": 0.457,
 "gol": 0.4619,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Tunisia|Netherlands|2026-06-25": {
 "home": "Tunisia",
@@ -777,7 +930,10 @@
 "ml_p": 13.8,
 "over25": 0.522,
 "gol": 0.4276,
-"real": null
+"real": {
+"hs": 1,
+"as": 3
+}
 },
 "Egypt|Iran|2026-06-26": {
 "home": "Egypt",
@@ -792,7 +948,10 @@
 "ml_p": 13.1,
 "over25": 0.4219,
 "gol": 0.4815,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "New Zealand|Belgium|2026-06-26": {
 "home": "New Zealand",
@@ -807,7 +966,10 @@
 "ml_p": 14.1,
 "over25": 0.5325,
 "gol": 0.4223,
-"real": null
+"real": {
+"hs": 1,
+"as": 5
+}
 },
 "Cape Verde|Saudi Arabia|2026-06-26": {
 "home": "Cape Verde",
@@ -822,7 +984,10 @@
 "ml_p": 12.8,
 "over25": 0.4286,
 "gol": 0.4777,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "Uruguay|Spain|2026-06-26": {
 "home": "Uruguay",
@@ -837,7 +1002,10 @@
 "ml_p": 14.3,
 "over25": 0.5472,
 "gol": 0.4149,
-"real": null
+"real": {
+"hs": 0,
+"as": 1
+}
 },
 "Norway|France|2026-06-26": {
 "home": "Norway",
@@ -852,7 +1020,10 @@
 "ml_p": 13.3,
 "over25": 0.4447,
 "gol": 0.4686,
-"real": null
+"real": {
+"hs": 1,
+"as": 4
+}
 },
 "Senegal|Iraq|2026-06-26": {
 "home": "Senegal",
@@ -867,7 +1038,10 @@
 "ml_p": 13.6,
 "over25": 0.486,
 "gol": 0.4463,
-"real": null
+"real": {
+"hs": 5,
+"as": 0
+}
 },
 "Algeria|Austria|2026-06-27": {
 "home": "Algeria",
@@ -882,7 +1056,10 @@
 "ml_p": 13.1,
 "over25": 0.4234,
 "gol": 0.4806,
-"real": null
+"real": {
+"hs": 3,
+"as": 3
+}
 },
 "Jordan|Argentina|2026-06-27": {
 "home": "Jordan",
@@ -897,7 +1074,10 @@
 "ml_p": 14.2,
 "over25": 0.6655,
 "gol": 0.3576,
-"real": null
+"real": {
+"hs": 1,
+"as": 3
+}
 },
 "Colombia|Portugal|2026-06-27": {
 "home": "Colombia",
@@ -912,7 +1092,10 @@
 "ml_p": 13.1,
 "over25": 0.4391,
 "gol": 0.4717,
-"real": null
+"real": {
+"hs": 0,
+"as": 0
+}
 },
 "DR Congo|Uzbekistan|2026-06-27": {
 "home": "DR Congo",
@@ -927,7 +1110,10 @@
 "ml_p": 12.9,
 "over25": 0.4343,
 "gol": 0.4745,
-"real": null
+"real": {
+"hs": 3,
+"as": 1
+}
 },
 "Panama|England|2026-06-27": {
 "home": "Panama",
@@ -942,7 +1128,10 @@
 "ml_p": 14.5,
 "over25": 0.6423,
 "gol": 0.3686,
-"real": null
+"real": {
+"hs": 0,
+"as": 2
+}
 },
 "Croatia|Ghana|2026-06-27": {
 "home": "Croatia",
@@ -957,7 +1146,10 @@
 "ml_p": 14.2,
 "over25": 0.5404,
 "gol": 0.4183,
-"real": null
+"real": {
+"hs": 2,
+"as": 1
+}
 },
 "Switzerland|Canada|2026-06-24": {
 "home": "Switzerland",
@@ -1593,7 +1785,10 @@
 "ml_p": 13.1,
 "over25": 0.6183,
 "gol": 0.4478,
-"real": null
+"real": {
+"hs": 2,
+"as": 0
+}
 },
 "South Korea|Czech Republic|2026-06-11": {
 "home": "South Korea",
@@ -1608,7 +1803,10 @@
 "ml_p": 13.0,
 "over25": 0.4235,
 "gol": 0.4805,
-"real": null
+"real": {
+"hs": 2,
+"as": 1
+}
 },
 "Canada|Bosnia and Herzegovina|2026-06-12": {
 "home": "Canada",
@@ -1623,7 +1821,10 @@
 "ml_p": 12.3,
 "over25": 0.5633,
 "gol": 0.4791,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "United States|Paraguay|2026-06-12": {
 "home": "United States",
@@ -1638,7 +1839,10 @@
 "ml_p": 12.3,
 "over25": 0.4866,
 "gol": 0.5248,
-"real": null
+"real": {
+"hs": 4,
+"as": 1
+}
 },
 "Qatar|Switzerland|2026-06-13": {
 "home": "Qatar",
@@ -1653,7 +1857,10 @@
 "ml_p": 14.1,
 "over25": 0.6741,
 "gol": 0.3535,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Brazil|Morocco|2026-06-13": {
 "home": "Brazil",
@@ -1668,7 +1875,10 @@
 "ml_p": 13.1,
 "over25": 0.4229,
 "gol": 0.4809,
-"real": null
+"real": {
+"hs": 1,
+"as": 1
+}
 },
 "Haiti|Scotland|2026-06-13": {
 "home": "Haiti",
@@ -1683,7 +1893,10 @@
 "ml_p": 13.1,
 "over25": 0.4376,
 "gol": 0.4726,
-"real": null
+"real": {
+"hs": 0,
+"as": 1
+}
 },
 "Australia|Turkey|2026-06-13": {
 "home": "Australia",
@@ -1698,6 +1911,9 @@
 "ml_p": 12.8,
 "over25": 0.4318,
 "gol": 0.4759,
-"real": null
+"real": {
+"hs": 2,
+"as": 0
+}
 }
 }
